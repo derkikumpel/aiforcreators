@@ -1,4 +1,4 @@
-/* Reset basics */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,51 +6,66 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(circle at top left, #0a0f1a, #000);
-  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(145deg, #000814, #001d3d);
+  color: #e0f7fa;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 2rem;
+  text-align: center;
 }
 
 .hero {
   max-width: 800px;
   padding: 2rem;
   border-radius: 16px;
-  background: rgba(20, 20, 40, 0.8);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  background: rgba(0, 10, 20, 0.85);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
 }
 
 h1 {
-  font-size: 3rem;
-  color: #00ffe1;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
+  color: #00ffe1;
   text-shadow: 0 0 10px #00ffe1aa;
 }
 
-p {
-  font-size: 1.25rem;
+.subtitle {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #ccc;
+  color: #c0e6f7;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.6rem;
   font-size: 1rem;
   background: #00ffe1;
-  color: #000;
+  color: #001d3d;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
-  box-shadow: 0 0 10px #00ffe1aa, 0 0 20px #00ffe1aa;
-  transition: background 0.3s ease;
+  box-shadow: 0 0 12px #00ffe1aa, 0 0 18px #00ffe1aa;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
-  background: #00d8c4;
+  background: #00e0c0;
+  transform: scale(1.05);
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
 }
