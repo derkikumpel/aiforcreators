@@ -2,8 +2,6 @@
 layout: default
 title: Home
 ---
-## Top AI Chemistry Tools
+## Welcome!
 
-{% for tool in site.data.tools %}
-- [{{ tool.name }}]({{ tool.url }}) - {{ tool.category }} ({{ tool.price }})
-{% endfor %}
+This is the best AI tool directory for chemists and chemistry enthusiasts!
