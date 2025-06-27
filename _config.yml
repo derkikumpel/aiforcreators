@@ -1,8 +1,0 @@
-title: AI for Chemists
-description: Curated AI tools for chemical research
-
-theme: minima
-plugins:
-  - jekyll-sass-converter
-sass:
-  sass_dir: _sass
