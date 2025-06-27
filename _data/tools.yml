@@ -1,1 +1,8 @@
-
+- name: "AlphaFold"
+  url: "https://alphafold.ebi.ac.uk"
+  category: "Protein Folding"
+  price: "Free"
+- name: "ChemOS"
+  url: "https://example.com/chemos"
+  category: "Lab Automation"
+  price: "$99/month"
