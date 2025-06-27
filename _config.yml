@@ -2,11 +2,13 @@
 # This file contains configuration flags to customize your site
 #
 
+# Grundkonfiguration
 title: AI for Chemists
-description: Curated directory of AI tools for chemical research
+description: The best AI tools for chemical research
 baseurl: ""
-url: "https://aiforchemists.info" # Deine Domain
-plugins:
-  - jekyll-sitemap # Für SEO
+url: "https://aiforchemists.info"
+theme: minima  # Standard-Jekyll-Theme
+
+# Custom-Einstellungen
 tools:
   categories: ["Drug Discovery", "Molecular Modeling", "Lab Automation"]
