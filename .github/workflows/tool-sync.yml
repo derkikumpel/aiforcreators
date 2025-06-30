@@ -39,3 +39,10 @@ jobs:
           git commit -m "Auto-update: screenshots & detail pages"
           git push
         continue-on-error: true
+
+      - name: Clean up old workflows (optional)
+        run: |
+          rm -f .github/workflows/generate-details.yml
+          rm -f .github/workflows/screenshot-upload.yml
+          echo "Old workflow files removed (if they existed)."
+
