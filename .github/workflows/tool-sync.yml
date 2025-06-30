@@ -43,4 +43,3 @@ jobs:
           rm -f .github/workflows/generate-details.yml
           rm -f .github/workflows/screenshot-upload.yml
           echo "Old workflow files removed (if they existed)."
-
