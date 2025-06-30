@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'data/tools.json'
-      - '.github/workflows/tool-sync.yml
+      - '.github/workflows/tool-sync.yml'
   workflow_dispatch:
 
 jobs:
