@@ -7,24 +7,46 @@
   --tag-active: #39ff14;
 }
 
-.site-logo {
-  height: 40px;
-  width: 40px;
-  border-radius: 8px;
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #000;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin-left: 1rem;
 }
 
-.site-header {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  background: #000; /* oder dunkles Blau */
+.site-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+}
+
+.site-title {
+  font-size: 1.2rem;
+  color: #0f0; /* Neongrün */
+  font-weight: bold;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #0a0a0a;
+}
+
+.hero-section h1 {
+  font-size: 2rem;
+  color: #0f0;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: #ccc;
 }
 
 body {
