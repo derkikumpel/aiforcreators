@@ -24,3 +24,4 @@ A curated list of AI-powered tools for chemists, built as a fast, automated webs
 ```bash
 npm install
 npm run screenshot
+
