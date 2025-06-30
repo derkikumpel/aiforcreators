@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
 
-// Lade tools.json
 const tools = JSON.parse(fs.readFileSync('./data/tools.json', 'utf-8'));
 
 (async () => {
