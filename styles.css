@@ -75,10 +75,12 @@ p {
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 0 10px #0f0a;
-  display: flex;
-  flex-direction: column;
   transition: transform 0.2s ease;
   overflow: hidden;
+  height: 360px; /* oder 380px, je nach Design */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .tool-card:hover {
