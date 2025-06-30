@@ -1,84 +1,92 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const toolsContainer = document.getElementById("tools-container");
-  const filterContainer = document.getElementById("filter-container");
+const toolsContainer = document.getElementById("tools-container");
+const filterContainer = document.getElementById("filter-container");
+const placeholderImage = "assets/placeholder.jpg";
 
-  let selectedTags = new Set();
-
-  const res = await fetch("data/tools.json");
-  const tools = await res.json();
-
-  // Alle Tags sammeln
-  const allTags = [...new Set(tools.flatMap(t => t.tags.map(tag => capitalize(tag))))].sort();
-
-  // Filter-Buttons erstellen
-  allTags.forEach(tag => {
-    const btn = document.createElement("button");
-    btn.className = "filter-button";
-    btn.textContent = tag;
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("active");
-      if (selectedTags.has(tag)) {
-        selectedTags.delete(tag);
-      } else {
-        selectedTags.add(tag);
-      }
-      renderTools();
-    });
-    filterContainer.appendChild(btn);
+fetch("data/tools.json")
+  .then((response) => response.json())
+  .then((tools) => {
+    generateFilters(tools);
+    displayTools(tools);
   });
 
-  function capitalize(word) {
-    return word.charAt(0).toUpperCase() + word.slice(1);
-  }
+function generateFilters(tools) {
+  const tags = new Set();
+  tools.forEach((tool) => tool.tags.forEach((tag) => tags.add(capitalize(tag))));
+  
+  [...tags].sort().forEach((tag) => {
+    const label = document.createElement("label");
+    label.className = "filter-label";
 
-  function renderTools() {
-    toolsContainer.innerHTML = "";
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = tag.toLowerCase();
+    checkbox.addEventListener("change", applyFilters);
 
-    const filtered = tools.filter(tool => {
-      if (selectedTags.size === 0) return true;
-      const tags = tool.tags.map(capitalize);
-      return [...selectedTags].every(tag => tags.includes(tag));
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + tag));
+    filterContainer.appendChild(label);
+  });
+}
+
+function applyFilters() {
+  const selected = Array.from(document.querySelectorAll("input:checked")).map(cb => cb.value);
+
+  fetch("data/tools.json")
+    .then((response) => response.json())
+    .then((tools) => {
+      if (selected.length === 0) {
+        displayTools(tools);
+      } else {
+        const filtered = tools.filter((tool) =>
+          selected.every((tag) => tool.tags.map(t => t.toLowerCase()).includes(tag))
+        );
+        displayTools(filtered);
+      }
+    });
+}
+
+function displayTools(tools) {
+  toolsContainer.innerHTML = "";
+
+  tools.forEach((tool) => {
+    const card = document.createElement("div");
+    card.className = "tool-card";
+
+    const img = document.createElement("img");
+    img.src = tool.image || placeholderImage;
+    img.alt = tool.name;
+    img.onerror = () => (img.src = placeholderImage);
+
+    const title = document.createElement("h2");
+    title.textContent = tool.name;
+
+    const desc = document.createElement("p");
+    desc.textContent = tool.description.substring(0, 150) + "...";
+
+    const tagDiv = document.createElement("div");
+    tagDiv.className = "tool-tags";
+    tool.tags.forEach((tag) => {
+      const tagSpan = document.createElement("span");
+      tagSpan.className = "tag";
+      tagSpan.textContent = capitalize(tag);
+      tagDiv.appendChild(tagSpan);
     });
 
-    filtered.forEach(tool => {
-      const card = document.createElement("div");
-      card.className = "tool-card";
+    const detailsLink = document.createElement("a");
+    detailsLink.href = `tools/${tool.slug}.html`;
+    detailsLink.className = "details-link";
+    detailsLink.textContent = "View Details";
 
-      const img = document.createElement("img");
-      img.src = tool.image || "logo/logoAfC.png";
-      img.alt = `${tool.name} preview`;
-      img.onerror = () => {
-        img.src = "assets/placeholder.png";
-      };
+    card.appendChild(img);
+    card.appendChild(title);
+    card.appendChild(desc);
+    card.appendChild(tagDiv);
+    card.appendChild(detailsLink);
 
-      const name = document.createElement("h2");
-      name.textContent = tool.name;
+    toolsContainer.appendChild(card);
+  });
+}
 
-      const desc = document.createElement("p");
-      desc.textContent = tool.description;
-
-      const link = document.createElement("a");
-      link.href = `/tools/${tool.slug}.html`;
-      link.textContent = "View Details";
-      link.className = "tool-link";
-
-      const tagList = document.createElement("div");
-      tagList.className = "tag-list";
-      tool.tags.forEach(tag => {
-        const tagEl = document.createElement("span");
-        tagEl.className = "tag";
-        tagEl.textContent = capitalize(tag);
-        tagList.appendChild(tagEl);
-      });
-
-      card.appendChild(img);
-      card.appendChild(name);
-      card.appendChild(desc);
-      card.appendChild(link);
-      card.appendChild(tagList);
-      toolsContainer.appendChild(card);
-    });
-  }
-
-  renderTools();
-});
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
