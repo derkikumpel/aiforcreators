@@ -1,18 +1,21 @@
 [
   {
     "name": "ChemSpace",
+    "slug": "chemspace",
     "url": "https://chem-space.com",
     "description": "A massive compound database and AI-based virtual screening tool for hit discovery and lead optimization.",
     "tags": ["compound database", "virtual screening", "AI"]
   },
   {
     "name": "DeepChem",
+    "slug": "deepchem",
     "url": "https://deepchem.io",
     "description": "An open-source deep learning toolkit for drug discovery, quantum chemistry, and biology.",
     "tags": ["deep learning", "QSAR", "molecular modeling"]
   },
   {
     "name": "IBM RXN for Chemistry",
+    "slug": "ibmrxn",
     "url": "https://rxn.res.ibm.com",
     "description": "A cloud-based AI platform for retrosynthesis planning, reaction prediction, and synthesis route optimization.",
     "tags": ["retrosynthesis", "reaction prediction", "cloud-based"]
