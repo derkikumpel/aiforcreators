@@ -1,13 +1,15 @@
 {
   "name": "aiforchemists",
   "version": "1.0.0",
+  "description": "Auto-generated AI tool listing site for chemists",
   "type": "module",
   "scripts": {
-    "screenshot": "node scripts/screenshot-upload.mjs"
+    "screenshot": "node screenshot-upload.mjs",
+    "generate": "node generate-details.mjs"
   },
   "dependencies": {
-    "puppeteer": "^21.3.8",
-    "cloudinary": "^1.41.3",
-    "fs-extra": "^11.2.0"
+    "cloudinary": "^1.41.0",
+    "fs-extra": "^11.2.0",
+    "puppeteer": "^22.8.2"
   }
 }
