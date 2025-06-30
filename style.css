@@ -1,83 +1,19 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0e0e1a;
+  font-family: Arial, sans-serif;
+  background-color: #0e0e1a;
   color: #ffffff;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  padding: 1rem;
 }
 
 header {
-  background: #101020;
-  padding: 3rem 0 2rem;
   text-align: center;
-  border-bottom: 2px solid #1a1a3d;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #00ffe0;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #ccc;
-}
-
-.tool-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 0;
-}
-
-.tool-card {
-  background: #1a1a2e;
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid #2a2a40;
-  transition: transform 0.2s ease;
-}
-
-.tool-card:hover {
-  transform: scale(1.03);
-}
-
-.tool-card h2 {
-  color: #00d9ff;
-  margin-bottom: 0.5rem;
-}
-
-.tool-card p {
-  font-size: 0.95rem;
-  color: #aaa;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1.2rem;
-  background: #00ffe0;
-  color: #0e0e1a;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.9rem;
-  color: #666;
+  margin-bottom: 2rem;
 }
 
 .filters {
   text-align: center;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .filter-btn {
@@ -96,6 +32,57 @@ footer {
   color: #0e0e1a;
 }
 
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.tool-card {
+  background-color: #1a1a2e;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 224, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: scale(1.02);
+}
+
+.tool-card img.tool-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 3px #00ffe0);
+}
+
+.tool-card h2 {
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
+}
+
+.tool-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.tool-card .btn {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background-color: #00ffe0;
+  color: #0e0e1a;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tags {
+  margin-top: 0.5rem;
+}
+
 .tag {
   display: inline-block;
   background: #333;
@@ -106,4 +93,3 @@ footer {
   border-radius: 6px;
   opacity: 0.8;
 }
-
