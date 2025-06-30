@@ -52,6 +52,71 @@ async function generateDetailPage(tool) {
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
+import fs from 'fs-extra';
+import path from 'path';
+
+async function generateDetailPages() {
+  const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
+  const tools = await fs.readJson(toolsPath);
+
+  const detailsDir = path.join(process.cwd(), 'tools');
+  await fs.ensureDir(detailsDir);
+
+  for (const tool of tools) {
+    const htmlContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${tool.name} - AI Tools for Chemists</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <button onclick="history.back()" class="back-button">← Back</button>
+
+  <main>
+    <h1>${tool.name}</h1>
+    <img src="${tool.image || '/images/placeholder.png'}" alt="${tool.name} screenshot" class="detail-image"/>
+    <p>${tool.description}</p>
+    <p><a href="${tool.url}" target="_blank" rel="noopener noreferrer">Visit Official Site</a></p>
+  </main>
+
+  <style>
+    .back-button {
+      background-color: #39ff14;
+      border: none;
+      color: #000;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #2bb213;
+    }
+    .detail-image {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(57,255,20,0.5);
+    }
+  </style>
+</body>
+</html>`;
+
+    const filename = path.join(detailsDir, `${tool.slug}.html`);
+    await fs.writeFile(filename, htmlContent, 'utf-8');
+    console.log(`Generated detail page: ${filename}`);
+  }
+}
+
+generateDetailPages().catch(console.error);
+
   <div class="detail-container">
     <h1>${tool.name}</h1>
     <img src="${tool.image}" alt="${tool.name}" class="detail-image"/>
