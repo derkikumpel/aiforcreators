@@ -1,47 +1,90 @@
 import fs from 'fs-extra';
 import path from 'path';
+import puppeteer from 'puppeteer';
+import { v2 as cloudinary } from 'cloudinary';
 
-const tools = await fs.readJson('./data/tools.json');
+const toolsPath = './data/tools.json';
+const outputDir = './tools';
+const placeholderImage = './logo/logoAfc.png';
 
-await fs.ensureDir('./tools');
+// Optional: Cloudinary (set as env or directly here)
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME || 'yourcloud',
+  api_key: process.env.CLOUDINARY_API_KEY || 'apikey',
+  api_secret: process.env.CLOUDINARY_API_SECRET || 'apisecret'
+});
 
-function generateDescription(name, shortDesc, tags) {
-  return `${name} is an AI-driven tool designed to support modern chemists in their daily work. ${shortDesc} It provides features such as ${tags.slice(0, 2).join(" and ")}, making it a valuable resource for professionals in research and industry. Whether you're engaged in drug discovery, materials science, or computational modeling, ${name} helps streamline complex workflows and enables faster, data-driven decisions. Its interface is accessible, and integration with various chemistry platforms makes it both powerful and practical for diverse use cases.`;
+async function generateScreenshot(url, slug) {
+  const filePath = `screenshots/${slug}.png`;
+
+  try {
+    const browser = await puppeteer.launch({ headless: 'new' });
+    const page = await browser.newPage();
+    await page.goto(url, { timeout: 20000, waitUntil: 'domcontentloaded' });
+    await page.setViewport({ width: 1200, height: 800 });
+    await fs.ensureDir('screenshots');
+    await page.screenshot({ path: filePath });
+    await browser.close();
+
+    const result = await cloudinary.uploader.upload(filePath, {
+      folder: 'aiforchemists',
+      public_id: slug,
+      overwrite: true
+    });
+
+    return result.secure_url;
+  } catch (err) {
+    console.error(`❌ Screenshot failed for ${url}:`, err.message);
+    return placeholderImage;
+  }
 }
 
-for (const tool of tools) {
+async function generateDetailPage(tool) {
+  const filePath = path.join(outputDir, `${tool.slug}.html`);
+  if (await fs.pathExists(filePath)) return;
+
   const html = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${tool.name} – AI Tools for Chemists</title>
+  <title>${tool.name} – AI Tool</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a href="/" class="logo-link">
-      <img src="../logo/logoAfC.png" alt="AI Tools for Chemists Logo" class="site-logo" />
-    </a>
-  </header>
-
-  <main class="tool-detail">
-    <div class="tool-detail-left">
-      <h1>${tool.name}</h1>
-      <p>${generateDescription(tool.name, tool.description, tool.tags)}</p>
-      ${tool.free ? `<a href="${tool.url}" class="tool-link-button" target="_blank">Try Free</a>` : ""}
-    </div>
-    <div class="tool-detail-right">
-      <img src="${tool.image || '../assets/placeholder.png'}" alt="${tool.name} Screenshot" />
-    </div>
-  </main>
+  <div class="detail-container">
+    <h1>${tool.name}</h1>
+    <img src="${tool.image}" alt="${tool.name}" class="detail-image"/>
+    <p>${tool.description}</p>
+    <a href="${tool.url}" target="_blank" class="external-link">Visit ${tool.name}</a>
+  </div>
 </body>
-</html>
-`;
+</html>`;
 
-  const outPath = path.join('tools', `${tool.slug}.html`);
-  await fs.writeFile(outPath, html);
+  await fs.outputFile(filePath, html);
+  console.log(`✅ Generated: ${tool.slug}.html`);
 }
 
-console.log('✅ All tool detail pages generated!');
+async function main() {
+  const tools = await fs.readJSON(toolsPath);
+  const updated = [];
+
+  for (const tool of tools) {
+    const updatedTool = { ...tool };
+
+    if (!tool.image || tool.image.includes('placeholder')) {
+      const img = await generateScreenshot(tool.url, tool.slug);
+      updatedTool.image = img;
+      console.log(`📷 Screenshot for ${tool.slug}`);
+    }
+
+    await generateDetailPage(updatedTool);
+    updated.push(updatedTool);
+  }
+
+  await fs.writeJSON(toolsPath, updated, { spaces: 2 });
+  console.log('✅ All tools updated with details and screenshots.');
+}
+
+main();
+
