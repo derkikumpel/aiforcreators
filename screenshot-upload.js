@@ -1,7 +1,7 @@
-const puppeteer = require('puppeteer');
-const cloudinary = require('cloudinary').v2;
-const fs = require('fs-extra');
-const path = require('path');
+import puppeteer from 'puppeteer';
+import { v2 as cloudinary } from 'cloudinary';
+import fs from 'fs-extra';
+import path from 'path';
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -11,7 +11,7 @@ cloudinary.config({
 
 async function takeScreenshot(url, filename) {
   const browser = await puppeteer.launch({
-    args: ['--no-sandbox', '--disable-setuid-sandbox'] // wichtig für GitHub Actions
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 720 });
@@ -30,18 +30,16 @@ async function uploadImage(filename, publicId) {
 }
 
 async function main() {
+  const __dirname = path.dirname(new URL(import.meta.url).pathname);
   const toolsPath = path.join(__dirname, 'data', 'tools.json');
   let tools = await fs.readJson(toolsPath);
 
-  // Erstelle Ordner screenshots, falls nicht vorhanden
   const screenshotDir = path.join(__dirname, 'screenshots');
   await fs.ensureDir(screenshotDir);
 
   for (const tool of tools) {
     console.log(`Processing ${tool.name}...`);
-
     const screenshotFile = path.join(screenshotDir, `${tool.slug}.png`);
-
     try {
       await takeScreenshot(tool.url, screenshotFile);
       const imageUrl = await uploadImage(screenshotFile, `tools/${tool.slug}`);
@@ -58,3 +56,4 @@ async function main() {
 }
 
 main();
+
