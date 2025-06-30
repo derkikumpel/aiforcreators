@@ -6,54 +6,59 @@ body {
   padding: 0;
 }
 
-main {
-  padding: 20px;
+a { color: #0ff; text-decoration: none; }
+
+.hero {
+  background: linear-gradient(120deg, #000022, #001122);
+  padding: 30px 20px;
+  text-align: center;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
+.hero .subtitle {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.hero input {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 400px;
 }
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 .tool-card {
   background: #111;
   border-radius: 8px;
   padding: 15px;
-  color: #eee;
-  box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.2);
   text-align: center;
 }
 
 .tool-card img {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 0 3px #0ff);
-}
-
-.tool-card h3 {
-  margin: 0 0 10px;
-}
-
-.tool-card p {
-  min-height: 60px;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
 }
 
 .btn {
   background: #0ff;
   color: #000;
-  padding: 8px 16px;
+  padding: 10px 16px;
   border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
   display: inline-block;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .btn:hover {
@@ -61,17 +66,33 @@ h1 {
   color: #fff;
 }
 
+.tool-detail .container.horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.preview-image {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
+
+.description {
+  flex: 1;
+}
+
 .tags {
-  margin-top: 15px;
+  margin: 10px 0;
 }
 
 .tag {
   display: inline-block;
   background-color: #0ff;
   color: #000;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin-right: 6px;
-  font-weight: bold;
+  padding: 5px 10px;
+  margin: 4px 4px 0 0;
+  border-radius: 5px;
   font-size: 0.85rem;
 }

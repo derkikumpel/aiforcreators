@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tool Detail</title>
+  <title>Tool Details</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="tool.js"></script>
 </head>
 <body>
   <main class="tool-detail">
-    <div class="container">
-      <img id="tool-logo" class="tool-logo" alt="Tool Logo" />
-      <h1 id="tool-name">Loading...</h1>
-      <p id="tool-description"></p>
-      <a id="tool-link" class="btn" href="#" target="_blank" rel="noopener noreferrer">Visit Tool</a>
-      <div id="tool-tags" class="tags"></div>
-      <p><a href="index.html">← Back to all tools</a></p>
+    <div class="container horizontal">
+      <div class="preview">
+        <img id="tool-preview" class="preview-image" alt="Tool Preview" />
+      </div>
+      <div class="description">
+        <h1 id="tool-name">Loading...</h1>
+        <p id="tool-description"></p>
+        <div id="tool-tags" class="tags"></div>
+        <a id="tool-link" class="btn" href="#" target="_blank" rel="noopener noreferrer">Visit Tool</a>
+        <p><a href="index.html">← Back to all tools</a></p>
+      </div>
     </div>
   </main>
 </body>

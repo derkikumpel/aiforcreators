@@ -7,28 +7,52 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="hero">
+    <div class="container">
+      <h1>AI Tools for Chemists</h1>
+      <p class="subtitle">Discover the best AI-powered applications transforming chemistry, drug discovery, and materials science.</p>
+      <input type="text" id="searchInput" placeholder="Search tools..." />
+    </div>
+  </header>
   <main>
-    <h1>AI Tools for Chemists</h1>
     <div id="tools-container" class="tools-grid"></div>
   </main>
 
   <script>
+    let allTools = [];
+
     fetch('data/tools.json')
       .then(res => res.json())
       .then(tools => {
-        const container = document.getElementById('tools-container');
-        tools.forEach(tool => {
-          const card = document.createElement('div');
-          card.className = 'tool-card';
-          card.innerHTML = `
-            <img src="https://www.google.com/s2/favicons?sz=128&domain_url=${tool.url}" alt="${tool.name} logo" />
-            <h3>${tool.name}</h3>
-            <p>${tool.description}</p>
-            <a href="tool.html?tool=${tool.slug}" class="btn">Details</a>
-          `;
-          container.appendChild(card);
-        });
+        allTools = tools;
+        renderTools(tools);
       });
+
+    function renderTools(tools) {
+      const container = document.getElementById('tools-container');
+      container.innerHTML = '';
+      tools.forEach(tool => {
+        const card = document.createElement('div');
+        card.className = 'tool-card';
+        card.innerHTML = `
+          <img src="https://image.thum.io/get/width/600/crop/800/noanimate/${tool.url}" alt="${tool.name} preview" />
+          <h3>${tool.name}</h3>
+          <p>${tool.description}</p>
+          <a href="tool.html?tool=${tool.slug}" class="btn">Learn More</a>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', e => {
+      const query = e.target.value.toLowerCase();
+      const filtered = allTools.filter(tool =>
+        tool.name.toLowerCase().includes(query) ||
+        tool.description.toLowerCase().includes(query) ||
+        (tool.tags && tool.tags.join(' ').toLowerCase().includes(query))
+      );
+      renderTools(filtered);
+    });
   </script>
 </body>
 </html>

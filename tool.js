@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.title = tool.name + ' | AI Tools for Chemists';
       document.getElementById('tool-name').textContent = tool.name;
       document.getElementById('tool-description').textContent = tool.description;
-      document.getElementById('tool-logo').src = `https://www.google.com/s2/favicons?sz=128&domain_url=${tool.url}`;
-      document.getElementById('tool-logo').alt = tool.name + ' logo';
+      const preview = document.getElementById('tool-preview');
+      preview.src = `https://image.thum.io/get/width/1000/crop/800/noanimate/${tool.url}`;
+      preview.alt = tool.name + ' preview';
       const link = document.getElementById('tool-link');
       link.href = tool.url;
-      link.textContent = 'Visit ' + tool.name;
 
       const tagsDiv = document.getElementById('tool-tags');
       tagsDiv.innerHTML = '';
