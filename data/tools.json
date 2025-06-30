@@ -1,1 +1,63 @@
+[
+  {
+    "name": "MoleculeNet",
+    "url": "https://moleculenet.org",
+    "description": "A benchmark dataset platform designed to evaluate and compare machine learning models for molecular properties.",
+    "tags": ["dataset", "benchmark", "molecular modeling"]
+  },
+  {
+    "name": "DeepChem",
+    "url": "https://deepchem.io",
+    "description": "An open-source Python library that simplifies the use of deep learning in drug discovery, materials science, and quantum chemistry.",
+    "tags": ["deep learning", "drug discovery", "open source"]
+  },
+  {
+    "name": "Chemprop",
+    "url": "https://chemprop.csail.mit.edu",
+    "description": "A powerful neural network-based tool for molecular property prediction, used for QSAR and virtual screening.",
+    "tags": ["QSAR", "prediction", "neural networks"]
+  },
+  {
+    "name": "IBM RXN for Chemistry",
+    "url": "https://rxn.res.ibm.com",
+    "description": "A cloud-based AI platform for forward and retrosynthesis prediction, reaction planning, and molecule design.",
+    "tags": ["retrosynthesis", "reaction prediction", "cloud-based"]
+  },
+  {
+    "name": "AutoQSAR",
+    "url": "https://www.schrodinger.com/autoqsar",
+    "description": "Automates QSAR model building using machine learning, with robust validation and model interpretation tools.",
+    "tags": ["QSAR", "automated modeling", "ML"]
+  },
+  {
+    "name": "ChemTS",
+    "url": "https://github.com/tsudalab/ChemTS",
+    "description": "A deep reinforcement learning framework for automatic molecular generation targeting specific chemical properties.",
+    "tags": ["molecule generation", "reinforcement learning", "open source"]
+  },
+  {
+    "name": "MolGAN",
+    "url": "https://github.com/nicola-decao/MolGAN",
+    "description": "A generative adversarial network (GAN) for generating small molecules with graph structures.",
+    "tags": ["GAN", "molecular generation", "deep learning"]
+  },
+  {
+    "name": "ChemicalX",
+    "url": "https://deepchem.readthedocs.io/en/latest/api_reference/chemicalx.html",
+    "description": "A deep learning library tailored for drug-drug interaction prediction, compatible with PyTorch.",
+    "tags": ["DDI", "deep learning", "PyTorch"]
+  },
+  {
+    "name": "AIZynthFinder",
+    "url": "https://github.com/MolecularAI/aizynthfinder",
+    "description": "An open-source tool for retrosynthetic route planning using Monte Carlo tree search and neural networks.",
+    "tags": ["retrosynthesis", "route planning", "AI"]
+  },
+  {
+    "name": "ChemSpace",
+    "url": "https://chem-space.com",
+    "description": "A massive compound database and AI-based virtual screening tool for hit discovery and lead optimization.",
+    "tags": ["compound database", "virtual screening", "AI"]
+  }
+]
 
