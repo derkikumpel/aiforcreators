@@ -26,7 +26,7 @@ jobs:
         run: npm install puppeteer cloudinary fs-extra
 
       - name: Run screenshot upload & generate pages
-        run: node scripts/screenshot-upload.mjs && npm run generate
+        run: npm run screenshot && npm run generate
 
       - name: Commit & Push changes
         run: |
