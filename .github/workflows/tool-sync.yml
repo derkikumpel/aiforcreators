@@ -1,10 +1,11 @@
 name: Tool Sync & Page Generator
 
 on:
+workflow_dispatch:
   push:
     paths:
       - 'data/tools.json'
-      - '.github/workflows/tool-sync.yml'
+      - '.github/workflows/tool-sync.yml
 
 jobs:
   build:
