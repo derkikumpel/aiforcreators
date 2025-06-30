@@ -4,8 +4,8 @@
   "description": "Auto-generated AI tool listing site for chemists",
   "type": "module",
   "scripts": {
-    "screenshot": "node screenshot-upload.mjs",
-    "generate": "node generate-details.mjs"
+    "screenshot": "node scripts/screenshot-upload.mjs",
+    "generate": "node scripts/generate-details.mjs"
   },
   "dependencies": {
     "cloudinary": "^1.41.0",
