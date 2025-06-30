@@ -1,71 +1,76 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(145deg, #000814, #001d3d);
-  color: #e0f7fa;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  background: #0e0e1a;
+  color: #ffffff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background: #101020;
+  padding: 3rem 0 2rem;
   text-align: center;
+  border-bottom: 2px solid #1a1a3d;
 }
 
-.hero {
-  max-width: 800px;
-  padding: 2rem;
-  border-radius: 16px;
-  background: rgba(0, 10, 20, 0.85);
-  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+header h1 {
+  font-size: 2.5rem;
+  color: #00ffe0;
 }
 
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  color: #00ffe1;
-  text-shadow: 0 0 10px #00ffe1aa;
-}
-
-.subtitle {
+header p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #c0e6f7;
+  color: #ccc;
 }
 
-.cta-button {
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.tool-card {
+  background: #1a1a2e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #2a2a40;
+  transition: transform 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: scale(1.03);
+}
+
+.tool-card h2 {
+  color: #00d9ff;
+  margin-bottom: 0.5rem;
+}
+
+.tool-card p {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.btn {
   display: inline-block;
-  padding: 0.8rem 1.6rem;
-  font-size: 1rem;
-  background: #00ffe1;
-  color: #001d3d;
-  text-decoration: none;
-  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background: #00ffe0;
+  color: #0e0e1a;
+  border-radius: 8px;
   font-weight: bold;
-  box-shadow: 0 0 12px #00ffe1aa, 0 0 18px #00ffe1aa;
-  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
 }
 
-.cta-button:hover {
-  background: #00e0c0;
-  transform: scale(1.05);
-}
-
-/* Mobile Optimization */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-  .subtitle {
-    font-size: 1rem;
-  }
-  .cta-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.95rem;
-  }
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #666;
 }
