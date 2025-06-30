@@ -74,3 +74,36 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+
+.filters {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.filter-btn {
+  background: #222;
+  border: 1px solid #00ffe0;
+  color: #00ffe0;
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #00ffe0;
+  color: #0e0e1a;
+}
+
+.tag {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  margin: 0.2rem;
+  border-radius: 6px;
+  opacity: 0.8;
+}
+
