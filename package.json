@@ -1,3 +1,13 @@
-"scripts": {
-  "screenshot": "node scripts/screenshot-upload.mjs"
+{
+  "name": "aiforchemists",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "screenshot": "node scripts/screenshot-upload.mjs"
+  },
+  "dependencies": {
+    "puppeteer": "^21.3.8",
+    "cloudinary": "^1.41.3",
+    "fs-extra": "^11.2.0"
+  }
 }
