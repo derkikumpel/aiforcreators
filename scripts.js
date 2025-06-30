@@ -4,16 +4,23 @@ fetch('data/tools.json')
     const grid = document.getElementById('tool-grid');
     const buttons = document.querySelectorAll('.filter-btn');
 
+    function getFaviconUrl(url) {
+      return `https://www.google.com/s2/favicons?sz=64&domain_url=${url}`;
+    }
+
     function createCard(tool) {
       const card = document.createElement('div');
       card.className = 'tool-card';
       card.dataset.tags = tool.tags.join(',').toLowerCase();
 
       card.innerHTML = `
+        <img src="${getFaviconUrl(tool.url)}" alt="${tool.name} logo" class="tool-logo" />
         <h2>${tool.name}</h2>
         <p>${tool.description}</p>
         <a href="${tool.url}" class="btn" target="_blank">Visit</a>
-        <div class="tags">${tool.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ')}</div>
+        <div class="tags">
+          ${tool.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ')}
+        </div>
       `;
       return card;
     }
