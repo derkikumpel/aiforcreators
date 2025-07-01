@@ -8,7 +8,7 @@
     "discover": "node scripts/discover-tools-gpt.mjs",
     "fetch": "node scripts/fetch-tools-gpt.mjs",
     "screenshot": "node scripts/screenshot-tools.mjs",
-    "generate": "node scripts/generate-pages.mjs"
+    "generate": "node scripts/generate-detail-pages.js"
   },
   "author": "Dein Name",
   "license": "MIT",
