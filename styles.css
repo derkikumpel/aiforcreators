@@ -44,3 +44,17 @@ body {
   object-fit: cover;
   background: url('../assets/placeholder.png') no-repeat center;
 }
+
+.tool-tags {
+  margin: 1rem 0;
+}
+.tag {
+  display: inline-block;
+  background: #2d3748;
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
