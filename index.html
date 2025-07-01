@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Tools for Chemists</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" href="logo/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a href="/" class="logo-link">
-      <img src="logo/logoAfC.png" alt="AI Tools for Chemists Logo" class="site-logo">
-    </a>
+    <img src="assets/logoAfC.png" alt="AI for Chemists" class="logo">
+    <h1>AI Tools for Chemistry</h1>
+    <p>Curated collection of AI-powered chemistry tools</p>
   </header>
 
-  <div class="container">
-    <h1>AI Tools for Chemists</h1>
-    <p>Discover powerful tools to enhance your chemistry research using artificial intelligence.</p>
-    
-    <div id="filter-container"></div>
-    <main id="tools-container"></main>
+  <div class="filter-container">
+    <input type="text" id="search" placeholder="Search tools...">
+    <div id="tag-filters"></div>
   </div>
 
-  <script src="main.js"></script>
-  
-  <footer>
-  <p>© 2025 AI Tools for Chemists. All rights reserved.</p>
-  <nav>
-    <p><a href="/terms.html">Terms of Use</a> |
-    <a href="/privacy.html">Privacy Policy</a></p>
-  </nav>
-</footer>
+  <main id="tools-grid"></main>
 
+  <footer>
+    <p>Automatically updated • Last sync: <span id="update-date"></span></p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>
 
