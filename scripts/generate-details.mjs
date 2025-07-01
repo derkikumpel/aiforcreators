@@ -116,6 +116,11 @@ async function main() {
     await generateDetailPage(updatedTool);
     updatedTools.push(updatedTool);
     console.log(`✅ Finished: ${tool.slug}\n`);
+
+    if (!tool.slug || !tool.name || !tool.url) {
+    console.warn(`⚠️ Skipping tool with missing data: ${JSON.stringify(tool)}`);
+    continue;
+    }
   }
 
   await fs.writeJSON(toolsPath, updatedTools, { spaces: 2 });
