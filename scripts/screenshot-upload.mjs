@@ -1,10 +1,6 @@
 import { chromium } from 'playwright';
-import { install } from 'playwright-core'; // WICHTIG: Neu hinzugefügt
 import { v2 as cloudinary } from 'cloudinary';
 import fs from 'fs-extra';
-
-// Browser explizit installieren
-await install('chromium');
 
 // Cloudinary konfigurieren
 cloudinary.config({
@@ -16,10 +12,16 @@ cloudinary.config({
 async function captureScreenshot(tool) {
   let browser;
   try {
-    browser = await chromium.launch({ headless: true });
+    browser = await chromium.launch({ 
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'] // Wichtig für GitHub Actions
+    });
     const page = await browser.newPage();
     await page.setViewportSize({ width: 1280, height: 720 });
-    await page.goto(tool.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.goto(tool.url, { 
+      waitUntil: 'networkidle',
+      timeout: 60000 
+    });
     
     const screenshot = await page.screenshot({ fullPage: false });
     const result = await cloudinary.uploader.upload(screenshot, {
@@ -31,7 +33,7 @@ async function captureScreenshot(tool) {
     return result.secure_url;
   } catch (error) {
     console.error(`⚠️ Screenshot failed for ${tool.name}:`, error.message);
-    return 'assets/placeholder.png'; // Fallback
+    return 'assets/placeholder.png';
   } finally {
     if (browser) await browser.close();
   }
