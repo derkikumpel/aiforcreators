@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "update": "node scripts/discover-tools.mjs && node scripts/screenshot-upload.mjs && node scripts/generate-pages.mjs"
+    "screenshot": "node scripts/screenshot-upload.mjs",
+    "generate": "node scripts/generate-pages.mjs",
+    "update": "npm run screenshot && npm run generate",
+    "install-browsers": "npx playwright install --with-deps chromium"
   },
   "dependencies": {
     "playwright": "^1.42.1",
-    "openai": "^4.28.0",
+    "playwright-core": "^1.42.1",
     "cloudinary": "^1.37.3",
     "fs-extra": "^11.2.0"
   }
