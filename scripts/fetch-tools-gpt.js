@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import fs from 'fs-extra';
-import { OpenAI } from 'openai';
+import OpenAI from 'openai';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -15,9 +15,8 @@ async function fetchToolDescriptions(tools) {
 
   for (const tool of tools) {
     try {
-      const prompt = `Schreibe eine kurze, professionelle Beschreibung für das AI-Tool "${tool.name}" im Bereich Chemie.`;
+      const prompt = `Schreibe eine kurze, professionelle Beschreibung von 150-250 Wötern für das AI-Tool "${tool.name}" im Bereich Chemie.`;
       console.log(`\nGeneriere Beschreibung für Tool: ${tool.name}`);
-      console.log(`Prompt:\n${prompt}`);
 
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
@@ -25,7 +24,6 @@ async function fetchToolDescriptions(tools) {
       });
 
       const description = completion.choices[0].message.content.trim();
-      console.log(`Beschreibung erhalten:\n${description}`);
 
       updatedTools.push({ ...tool, description });
       console.log(`✅ Beschreibung für ${tool.name} generiert.`);
