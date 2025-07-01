@@ -1,71 +1,60 @@
-name: Auto-Update Tools
+name: Auto Update
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # Sonntags um Mitternacht
+    - cron: '0 3 * * *'  # täglich um 3 Uhr morgens
   workflow_dispatch:
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Repository auschecken
+        uses: actions/checkout@v4
 
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Setup Node.js
+      - name: Node.js einrichten
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
 
-      - name: Install dependencies
-        run: |
-          npm install
-          npx playwright install chromium
+      - name: Abhängigkeiten installieren
+        run: npm install
 
-      - name: Generate content
-        run: npm run update
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          CLOUDINARY_NAME: ${{ secrets.CLOUDINARY_NAME }}
-          CLOUDINARY_KEY: ${{ secrets.CLOUDINARY_KEY }}
-          CLOUDINARY_SECRET: ${{ secrets.CLOUDINARY_SECRET }}
+      - name: Tools entdecken (GPT-basiert)
+        run: node scripts/discover-tools-gpt.mjs
 
-      - name: Commit changes
+      - name: Tool-Beschreibungen aktualisieren
+        run: npm run fetch
+
+      - name: Screenshots erstellen
+        run: npm run screenshot
+
+      - name: Detailseiten generieren
+        run: npm run generate
+
+      - name: Änderungen committen und pushen
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git diff --quiet && echo "No changes to commit" || git commit -m "Auto-update tools and pages"
+          git add data/tools.json content/tools/*.md content/screenshots/
+          git commit -m "Automatische Aktualisierung der Tools"
           git push
+        continue-on-error: true  # Falls nichts geändert wurde, nicht fehlschlagen
 
   deploy:
-    needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
+    needs: build
     steps:
-      - uses: actions/checkout@v4
+      - name: Repository auschecken
+        uses: actions/checkout@v4
 
-      - name: Setup Pages
+      - name: GitHub Pages konfigurieren
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: Seiten-Artefakt hochladen
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./
+          path: ./public  # Pfad zu deiner gebauten Seite (anpassen wenn nötig)
 
-      - name: Deploy to GitHub Pages
+      - name: GitHub Pages deployen
         uses: actions/deploy-pages@v4
