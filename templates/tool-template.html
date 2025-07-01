@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TOOL_NAME}} – AI Tool for Chemists</title>
+  <meta name="description" content="{{TOOL_DESCRIPTION}}" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="back-link">← Back to Overview</a>
+  </header>
+
+  <main class="tool-detail">
+    <h1>{{TOOL_NAME}}</h1>
+    <img src="{{TOOL_IMAGE}}" alt="{{TOOL_NAME}} Screenshot" class="tool-screenshot" />
+
+    <p class="tool-description">{{TOOL_DESCRIPTION}}</p>
+
+    <div class="tool-tags">
+      {{#TAGS}}
+        <span class="tag">{{.}}</span>
+      {{/TAGS}}
+    </div>
+
+    <a href="{{TOOL_URL}}" class="visit-button" target="_blank" rel="noopener">🔗 Visit Tool Website</a>
+  </main>
+
+  <footer class="footer">
+    <p>Part of the <strong>AI Tools for Chemists</strong> initiative.</p>
+  </footer>
+</body>
+</html>
