@@ -5,8 +5,7 @@
   "scripts": {
     "discover": "node scripts/discover-tools.mjs",
     "screenshot": "node scripts/screenshot-upload.mjs",
-    "generate": "node scripts/generate-pages.mjs",
-    "update": "npm run discover && npm run screenshot && npm run generate"
+    "generate": "node scripts/generate-pages.mjs"
   },
   "dependencies": {
     "playwright": "^1.42.1",
