@@ -94,19 +94,28 @@ async function generateDetailPage(tool) {
 
 async function main() {
   const tools = await fs.readJSON(toolsPath);
+  console.log(`🔍 Found ${tools.length} tools, starting generation...\n`);
+
   const updatedTools = [];
 
   for (const tool of tools) {
+    console.log(`➡️ Processing: ${tool.name} (${tool.slug})`);
+
     const updatedTool = { ...tool };
 
     if (!tool.image || tool.image.includes('placeholder')) {
+      console.log(`📸 Generating screenshot for: ${tool.slug}`);
       const imgUrl = await generateScreenshot(tool.url, tool.slug);
       updatedTool.image = imgUrl;
-      console.log(`📷 Screenshot generated for ${tool.slug}`);
+      console.log(`✅ Screenshot done: ${tool.slug}`);
+    } else {
+      console.log(`📎 Using existing image for ${tool.slug}`);
     }
 
+    console.log(`📝 Generating detail page for: ${tool.slug}`);
     await generateDetailPage(updatedTool);
     updatedTools.push(updatedTool);
+    console.log(`✅ Finished: ${tool.slug}\n`);
   }
 
   await fs.writeJSON(toolsPath, updatedTools, { spaces: 2 });
