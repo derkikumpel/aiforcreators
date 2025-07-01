@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "fetch": "node scripts/fetch-tools-gpt.js",
     "screenshot": "node scripts/screenshot-upload.mjs",
-    "generate": "node scripts/generate-pages.mjs",
-    "update": "npm run screenshot && npm run generate"
+    "generate": "node scripts/generate-detail-pages.js",
+    "update": "npm run fetch && npm run screenshot && npm run generate"
   },
   "dependencies": {
     "playwright": "^1.42.1",
     "cloudinary": "^1.37.3",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.2.0",
+    "openai": "^4.20.0"
   }
 }
