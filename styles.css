@@ -53,7 +53,7 @@ p1 {
 }
 
 .filter-button {
-  background-color: #2b572d;
+  background-color: #2e422f;
   border: 1px solid #0f0;
   color: #0f0;
   padding: 0.4rem 0.8rem;
@@ -78,7 +78,7 @@ p1 {
 
 /* Tool Card */
 .tool-card {
-  background-color: #2b572d;
+  background-color: #2e422f;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 0 10px #0f0a;
