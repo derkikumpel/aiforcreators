@@ -11,9 +11,13 @@ const openai = new OpenAI({
 async function fetchToolDescriptions(tools) {
   const updatedTools = [];
 
+  console.log(`Starte die Generierung von Beschreibungen für ${tools.length} Tools.`);
+
   for (const tool of tools) {
     try {
       const prompt = `Schreibe eine kurze, professionelle Beschreibung für das AI-Tool "${tool.name}" im Bereich Chemie.`;
+      console.log(`\nGeneriere Beschreibung für Tool: ${tool.name}`);
+      console.log(`Prompt:\n${prompt}`);
 
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
@@ -21,6 +25,7 @@ async function fetchToolDescriptions(tools) {
       });
 
       const description = completion.choices[0].message.content.trim();
+      console.log(`Beschreibung erhalten:\n${description}`);
 
       updatedTools.push({ ...tool, description });
       console.log(`✅ Beschreibung für ${tool.name} generiert.`);
@@ -35,12 +40,17 @@ async function fetchToolDescriptions(tools) {
 
 async function main() {
   try {
+    console.log('Lese tools.json...');
     const tools = await fs.readJson('./data/tools.json');
+    console.log(`tools.json geladen, enthält ${tools.length} Tools.`);
+
     const toolsWithDescriptions = await fetchToolDescriptions(tools);
+
+    console.log('Schreibe aktualisierte Tools zurück in tools.json...');
     await fs.writeJson('./data/tools.json', toolsWithDescriptions, { spaces: 2 });
-    console.log('✅ Alle Beschreibungen erfolgreich aktualisiert.');
+    console.log('✅ Alle Beschreibungen erfolgreich aktualisiert und gespeichert.');
   } catch (error) {
-    console.error('❌ Fehler beim Lesen/Schreiben der tools.json:', error.message);
+    console.error('❌ Fehler beim Lesen oder Schreiben der tools.json:', error.message);
   }
 }
 
