@@ -26,8 +26,17 @@ Antwort nur das JSON-Array, keine weitere Erklärung.
       temperature: 0.7,
     });
 
-    const content = completion.choices[0].message.content.trim();
-    const tools = JSON.parse(content);
+    const raw = completion.choices[0].message.content.trim();
+
+    // JSON sauber aus dem GPT-Text rausschneiden (zwischen erstem [ und letztem ])
+    const jsonStart = raw.indexOf('[');
+    const jsonEnd = raw.lastIndexOf(']');
+    if (jsonStart === -1 || jsonEnd === -1) {
+      throw new Error('Kein JSON-Array im GPT-Response gefunden');
+    }
+
+    const jsonString = raw.substring(jsonStart, jsonEnd + 1);
+    const tools = JSON.parse(jsonString);
 
     await fs.writeJson('./data/tools.json', tools, { spaces: 2 });
     console.log(`✅ Tools gespeichert: ${tools.length} Einträge`);
