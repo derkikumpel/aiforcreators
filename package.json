@@ -1,15 +1,17 @@
 {
   "name": "aiforchemists",
   "version": "1.0.0",
-  "description": "Auto-generated AI tool listing site for chemists",
   "type": "module",
   "scripts": {
+    "discover": "node scripts/discover-tools.mjs",
     "screenshot": "node scripts/screenshot-upload.mjs",
-    "generate": "node scripts/generate-details.mjs"
+    "generate": "node scripts/generate-pages.mjs",
+    "update": "npm run discover && npm run screenshot && npm run generate"
   },
   "dependencies": {
-    "cloudinary": "^1.41.0",
-    "fs-extra": "^11.2.0",
-    "puppeteer": "^22.8.2"
+    "playwright": "^1.42.1",
+    "openai": "^4.28.0",
+    "cloudinary": "^1.37.3",
+    "fs-extra": "^11.2.0"
   }
 }
