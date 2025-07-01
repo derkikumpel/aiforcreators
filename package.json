@@ -2,12 +2,13 @@
   "name": "aiforchemists",
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "fetch": "node scripts/fetch-tools-gpt.js",
-    "screenshot": "node scripts/screenshot-upload.mjs",
-    "generate": "node scripts/generate-detail-pages.js",
-    "update": "npm run fetch && npm run screenshot && npm run generate"
-  },
+ "scripts": {
+  "discover": "node scripts/discover-tools.mjs",
+  "fetch": "node scripts/fetch-tools-gpt.js",
+  "screenshot": "node scripts/screenshot-upload.mjs",
+  "generate": "node scripts/generate-detail-pages.js",
+  "update": "npm run discover && npm run fetch && npm run screenshot && npm run generate"
+},
   "dependencies": {
     "cloudinary": "^1.37.3",
     "dotenv": "^16.0.3",
