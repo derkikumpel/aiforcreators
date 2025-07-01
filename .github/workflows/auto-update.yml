@@ -1,7 +1,7 @@
-name: Auto-Update
+name: Auto-Update Tools
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Sonntags um Mitternacht
+    - cron: '0 0 * * 0' # Sonntags um Mitternacht
   workflow_dispatch:
 
 jobs:
@@ -9,20 +9,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm install
-      - run: node scripts/discover-tools.mjs
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      - run: node scripts/screenshot-upload.mjs
+      
+      - name: Install dependencies
+        run: |
+          npm install playwright playwright-core cloudinary fs-extra
+          npx playwright install --with-deps chromium
+      
+      - name: Run screenshot upload
+        run: node scripts/screenshot-upload.mjs
         env:
           CLOUDINARY_NAME: ${{ secrets.CLOUDINARY_NAME }}
           CLOUDINARY_KEY: ${{ secrets.CLOUDINARY_KEY }}
           CLOUDINARY_SECRET: ${{ secrets.CLOUDINARY_SECRET }}
-      - run: node scripts/generate-pages.mjs
-      - uses: peaceiris/actions-gh-pages@v3
+      
+      - name: Generate pages
+        run: node scripts/generate-pages.mjs
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
