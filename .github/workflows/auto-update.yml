@@ -31,9 +31,14 @@ jobs:
         run: npm run fetch
 
       - name: Screenshots erstellen
+        env:
+          # Falls dein Screenshot-Script API-Key braucht, hier mitgeben:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: npm run screenshot
 
       - name: Detailseiten generieren
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: npm run generate
 
       - name: Änderungen committen und pushen
@@ -41,7 +46,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/tools.json content/tools/*.md content/screenshots/
-          git commit -m "Automatische Aktualisierung der Tools"
+          git commit -m "Automatische Aktualisierung der Tools" --no-verify
           git push
         continue-on-error: true  # Falls nichts geändert wurde, nicht fehlschlagen
 
