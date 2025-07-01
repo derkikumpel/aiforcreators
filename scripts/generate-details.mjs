@@ -117,7 +117,3 @@ main().catch(err => {
   console.error('❌ Error in generation script:', err);
   process.exit(1);
 });
-
-
-main();
-
