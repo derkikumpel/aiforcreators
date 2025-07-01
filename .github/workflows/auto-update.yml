@@ -21,6 +21,8 @@ jobs:
         run: npm install
 
       - name: Tools entdecken (GPT-basiert)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node scripts/discover-tools-gpt.mjs
 
       - name: Tool-Beschreibungen aktualisieren
