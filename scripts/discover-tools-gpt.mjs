@@ -12,8 +12,8 @@ Gib für jedes Tool die folgenden Felder als JSON zurück:
 - name (string)
 - slug (string, name in Kleinbuchstaben, Leerzeichen durch Bindestrich)
 - url (string)
-- description (string, 1 Satz)
-- tags (Array von Strings, max. 3 Tags)
+- description (string, 150 Wörter, maximal 250)
+- tags (Array von Strings, max. 6 Tags)
 - category (string, z.B. synthesis, analysis, database)
 
 Antwort nur das JSON-Array, keine weitere Erklärung.
