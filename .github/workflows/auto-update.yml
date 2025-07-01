@@ -36,6 +36,11 @@ jobs:
 
       - name: Generate content
         run: npm run update
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CLOUDINARY_NAME: ${{ secrets.CLOUDINARY_NAME }}
+          CLOUDINARY_KEY: ${{ secrets.CLOUDINARY_KEY }}
+          CLOUDINARY_SECRET: ${{ secrets.CLOUDINARY_SECRET }}
 
       - name: Commit changes
         run: |
@@ -44,12 +49,6 @@ jobs:
           git add .
           git diff --quiet && echo "No changes to commit" || git commit -m "Auto-update tools and pages"
           git push
-          
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          CLOUDINARY_NAME: ${{ secrets.CLOUDINARY_NAME }}
-          CLOUDINARY_KEY: ${{ secrets.CLOUDINARY_KEY }}
-          CLOUDINARY_SECRET: ${{ secrets.CLOUDINARY_SECRET }}
 
   deploy:
     needs: build
