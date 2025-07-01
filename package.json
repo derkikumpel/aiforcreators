@@ -5,12 +5,10 @@
   "scripts": {
     "screenshot": "node scripts/screenshot-upload.mjs",
     "generate": "node scripts/generate-pages.mjs",
-    "update": "npm run screenshot && npm run generate",
-    "install-browsers": "npx playwright install --with-deps chromium"
+    "update": "npm run screenshot && npm run generate"
   },
   "dependencies": {
     "playwright": "^1.42.1",
-    "playwright-core": "^1.42.1",
     "cloudinary": "^1.37.3",
     "fs-extra": "^11.2.0"
   }
