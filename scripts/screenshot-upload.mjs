@@ -37,6 +37,12 @@ async function captureScreenshot(tool) {
   } finally {
     if (browser) await browser.close();
   }
+
+  // Fügen Sie diesen Code in die captureScreenshot-Funktion ein
+  await page.goto(tool.url, { 
+  waitUntil: 'networkidle',
+  timeout: 60000 // 60 Sekunden Timeout
+  }).catch(e => console.log(`⚠️ Timeout für ${tool.url}, fahre fort mit Teil-Ladung`));
 }
 
 // Hauptfunktion
