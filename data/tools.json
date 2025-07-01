@@ -4,7 +4,8 @@
     "slug": "chemspace",
     "url": "https://chem-space.com",
     "description": "AI-powered compound database for drug discovery",
-    "tags": ["drug-discovery", "database", "screening"],
-    "image": ""
+    "tags": ["drug-discovery", "database"],
+    "image": "",
+    "category": "synthesis"
   }
 ]
