@@ -26,6 +26,8 @@ jobs:
         run: node scripts/discover-tools-gpt.mjs
 
       - name: Tool-Beschreibungen aktualisieren
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: npm run fetch
 
       - name: Screenshots erstellen
