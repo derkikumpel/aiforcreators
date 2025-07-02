@@ -1,3 +1,6 @@
+/* Schriftart */
+@import url('https://fonts.googleapis.com/css2?family=Arial+Nova+Condensed&display=swap');
+
 /* Grundfarben */
 :root {
   --bg-color: #2e422f;
@@ -8,85 +11,96 @@
   --max-width: 1200px;
 }
 
-/* Schriftart für die gesamte Seite */
 body {
-  font-family: 'Arial Nova Cond', Arial, sans-serif;
   margin: 0;
+  font-family: 'Arial Nova Condensed', Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
-/* HEADER */
 header {
   display: flex;
-  align-items: center; /* vertikal zentrieren */
+  align-items: center;
   padding: 1rem 2rem;
   background-color: #1e2c1f;
   box-shadow: 0 0 20px var(--accent-color);
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .logo {
-  height: 150px; /* 3x größer */
-  margin-right: 1.5rem;
+  width: 150px; /* 3x größer */
+  height: auto;
+  flex-shrink: 0;
 }
 
 .header-text {
+  margin-left: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertikal zentrieren */
-  color: var(--accent-color);
+  justify-content: center;
 }
 
 .header-text h1 {
-  margin: 0 0 0.2rem 0;
+  margin: 0 0 0.3rem 0;
+  color: var(--accent-color);
   font-size: 2rem;
 }
 
-.header-text .subtitle {
-  font-weight: 400;
+.header-text p {
+  margin: 0;
   font-size: 1rem;
-  color: #a1d882; /* etwas heller */
+  font-weight: 400;
+  color: #c4d6b0;
 }
 
-/* FILTER FORM */
+/* Filterbereich */
 #filter-form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   max-width: var(--max-width);
-  margin: 1rem auto;
-  color: var(--accent-color);
+  margin: 1.5rem auto;
+  padding: 0 1rem;
 }
 
 #filter-form label {
+  background-color: var(--card-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: none;
+  color: var(--accent-color);
+  font-weight: 600;
+  user-select: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  cursor: pointer;
-  user-select: none;
-  font-weight: 600;
-  text-transform: capitalize; /* Großbuchstaben Anfang */
+  transition: background-color 0.2s;
+}
+
+#filter-form label:hover {
+  background-color: #4a7550;
 }
 
 #filter-form input[type="checkbox"] {
+  cursor: pointer;
   width: 18px;
   height: 18px;
-  cursor: pointer;
+  accent-color: var(--accent-color);
   margin: 0;
-  accent-color: var(--accent-color); /* moderner grüner Check */
 }
 
-/* TOOL GRID */
+/* Grid für Tool-Karten */
 #toolGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  padding: 0 1rem 3rem;
   max-width: var(--max-width);
-  margin: 0 auto 2rem auto;
-  padding: 0 1rem;
+  margin: 0 auto;
   box-sizing: border-box;
-  justify-content: center; /* Zentriert wenn weniger als 3 Karten */
-  min-height: 500px; /* Platzhalterhöhe, damit nicht alles springt */
+  min-height: 400px; /* sorgt dafür, dass auch bei wenigen Karten Platz bleibt */
 }
 
 .tool-card {
@@ -97,6 +111,7 @@ header {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 350px;
 }
 
 .tool-card:hover {
@@ -109,10 +124,14 @@ header {
   height: 160px;
   object-fit: cover;
   border-bottom: 2px solid var(--accent-color);
+  background: #223322;
 }
 
 .tool-info {
   padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .tool-info h3 {
@@ -124,7 +143,7 @@ header {
 .tool-info p {
   font-size: 0.95rem;
   line-height: 1.4;
-  min-height: 3.3em; /* Platz für 2 Zeilen Beschreibung */
+  flex-grow: 1;
 }
 
 .tool-info a {
@@ -139,21 +158,19 @@ header {
   text-decoration: underline;
 }
 
-/* FOOTER */
+/* Footer / Update-Datum */
 footer {
   padding: 1rem 2rem;
   text-align: center;
   font-size: 0.9rem;
   color: #cccccc;
   background: #1e2c1f;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
-/* RESPONSIVE */
-@media (max-width: 960px) {
-  #filter-form {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+/* Responsive Optimierung */
+@media (max-width: 900px) {
   #toolGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -161,19 +178,30 @@ footer {
 
 @media (max-width: 600px) {
   header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
   .logo {
-    margin-bottom: 0.5rem;
+    width: 120px;
+  }
+
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-text p {
+    font-size: 0.9rem;
   }
 
   #filter-form {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
   }
 
   #toolGrid {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 }
+
