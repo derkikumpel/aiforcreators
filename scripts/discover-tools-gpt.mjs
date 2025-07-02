@@ -15,7 +15,7 @@ async function discoverTools() {
     - short_description (string, 30–50 words)
     - long_description (string, 150–250 words)
     - tags (array of up to 6 strings)
-    -  category (string, e.g., synthesis, analysis, database)
+    - category (string, e.g., synthesis, analysis, database)
 
     Respond only with the JSON array. No additional explanation.
 `;
