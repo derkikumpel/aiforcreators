@@ -54,39 +54,35 @@ header {
   color: #c4d6b0;
 }
 
-/* Filterbereich */
+/* Tag-Filter: Kompakter Stil */
 #filter-form {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  max-width: var(--max-width);
-  margin: 1.5rem auto;
-  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
 }
 
 #filter-form label {
-  padding: 0.5rem 0.5rem;
-  border-radius: 0;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
   cursor: pointer;
-  color: var(--text-color); /* weiß */
-  font-weight: normal;
-  user-select: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  background: none;
-  box-shadow: none;
+  gap: 0.4rem;
+  transition: background-color 0.2s ease;
 }
 
 #filter-form label:hover {
-  background-color: transparent;
+  background-color: #e0e0e0;
 }
 
 #filter-form input[type="checkbox"] {
-  cursor: pointer;
-  width: 18px;
-  height: 18px;
-  accent-color: var(--accent-color);
+  accent-color: #007acc;
+  width: 14px;
+  height: 14px;
   margin: 0;
 }
 
