@@ -60,8 +60,11 @@ main {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 0 5px var(--accent-color);
   transition: background-color 0.2s;
+}
+
+#filter-form label:hover {
+  background-color: #4c6d55;
 }
 
 #filter-form input[type="checkbox"] {
