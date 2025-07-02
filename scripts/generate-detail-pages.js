@@ -1,32 +1,50 @@
 import fs from 'fs-extra';
 import path from 'path';
 
-const template = ({ name, url, description, category, image }) => `<!DOCTYPE html>
+const template = (tool) => `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="${description}" />
-  <title>${name} – AI Tool für Chemiker</title>
+  <meta name="description" content="${tool.short_description}" />
+  <title>${tool.name} – Chem-AI Tool</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body class="tool-page">
-  <main>
-    <a href="../index.html">← Zurück zur Übersicht</a>
-    <h1>${name}</h1>
-    <img src="${image || '../assets/placeholder.png'}" alt="${name}" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;" />
-    <p><strong>Kategorie:</strong> ${category}</p>
-    <p>${description}</p>
-    <p><a href="${url}" target="_blank" rel="noopener">🔗 Zur offiziellen Seite</a></p>
+  <header>
+    <a href="/"><img src="/assets/logoAfC.png" alt="Logo" class="logo" /></a>
+    <h1>${tool.name}</h1>
+  </header>
+  <main class="tool-detail">
+    <img src="${tool.screenshot || '../assets/placeholder.png'}" alt="${tool.name}" class="tool-image" />
+    <div class="tool-meta">
+      <p class="long-description">${tool.long_description}</p>
+      <div class="meta-section">
+        <h3>Tags</h3>
+        <ul>
+          ${(tool.tags || []).map(tag => `<li>${capitalizeWords(tag)}</li>`).join('')}
+        </ul>
+      </div>
+      <div class="meta-section">
+        <h3>Category</h3>
+        <p>${tool.category}</p>
+      </div>
+      <a class="visit-button" href="${tool.url}" target="_blank">Visit Website</a>
+    </div>
   </main>
+  <footer>
+    <p>&copy; 2025 Chem-AI Directory</p>
+  </footer>
 </body>
 </html>`;
 
-async function generateDetailPages() {
-  const toolsPath = './data/tools.json';
-  const outputDir = './tools';
+function capitalizeWords(str) {
+  return str.replace(/\b\w/g, c => c.toUpperCase());
+}
 
-  const tools = await fs.readJson(toolsPath);
+async function generateDetailPages() {
+  const tools = await fs.readJson('./data/tools.json');
+  const outputDir = './tools';
   await fs.ensureDir(outputDir);
 
   for (const tool of tools) {
