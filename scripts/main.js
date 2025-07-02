@@ -1,6 +1,6 @@
-// Hilfsfunktion: Erstes Zeichen groß (für Filter-Labels)
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+// Hilfsfunktion: Jedes Wort großschreiben (für Filter-Labels)
+function capitalizeWords(str) {
+  return str.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1));
 }
 
 // tools.json laden
@@ -15,26 +15,26 @@ async function loadTools() {
   }
 }
 
-// Alle Kategorien aus Tools extrahieren, großgeschrieben und sortiert, unique
-function extractCategories(tools) {
-  const cats = new Set();
+// Alle Tags aus Tools extrahieren, großgeschrieben und sortiert, unique
+function extractTags(tools) {
+  const tagSet = new Set();
   tools.forEach(tool => {
-    if (tool.category) {
-      cats.add(capitalize(tool.category));
-    }
+    (tool.tags || []).forEach(tag => {
+      tagSet.add(capitalizeWords(tag));
+    });
   });
-  return Array.from(cats).sort();
+  return Array.from(tagSet).sort();
 }
 
 // Filter-Checkboxen dynamisch erzeugen
-function renderFilters(categories) {
+function renderFilters(tags) {
   const form = document.getElementById('filter-form');
   form.innerHTML = '';
-  categories.forEach(cat => {
+  tags.forEach(tag => {
     const label = document.createElement('label');
     label.innerHTML = `
-      <input type="checkbox" name="category" value="${cat}" />
-      ${cat}
+      <input type="checkbox" name="tag" value="${tag}" />
+      ${tag}
     `;
     form.appendChild(label);
   });
@@ -47,16 +47,17 @@ function renderTools(tools) {
     container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #bbb;">No tools match your filters.</p>';
     return;
   }
+
   container.innerHTML = tools.map(tool => `
     <div class="tool-card">
       <img 
-        src="${tool.image || 'assets/placeholder.png'}" 
+        src="${tool.screenshot || 'assets/placeholder.png'}" 
         alt="${tool.name}" 
         onerror="this.src='assets/placeholder.png'" 
       />
       <div class="tool-info">
         <h3>${tool.name}</h3>
-        <p>${tool.description ? tool.description.substring(0, 100) + '…' : ''}</p>
+        <p>${tool.short_description || ''}</p>
         <a href="tools/${tool.slug}.html">Details →</a>
       </div>
     </div>
@@ -66,15 +67,15 @@ function renderTools(tools) {
 // Filter anwenden
 function applyFilters(tools) {
   const checkedBoxes = [...document.querySelectorAll('#filter-form input[type="checkbox"]:checked')];
-  const selectedCategories = checkedBoxes.map(cb => cb.value);
+  const selectedTags = checkedBoxes.map(cb => cb.value);
 
-  if (selectedCategories.length === 0) {
+  if (selectedTags.length === 0) {
     return tools;
   }
 
   return tools.filter(tool => {
-    if (!tool.category) return false;
-    return selectedCategories.includes(capitalize(tool.category));
+    const toolTags = (tool.tags || []).map(capitalizeWords);
+    return selectedTags.every(tag => toolTags.includes(tag));
   });
 }
 
@@ -106,12 +107,11 @@ async function loadLastUpdated() {
 document.addEventListener('DOMContentLoaded', async () => {
   const tools = await loadTools();
 
-  const categories = extractCategories(tools);
-  renderFilters(categories);
+  const tags = extractTags(tools);
+  renderFilters(tags);
   renderTools(tools);
   setupFiltering(tools);
 
-  // Aktualisierungsdatum und -zeit setzen
   const updateEl = document.getElementById('update-date');
   const updatedDate = await loadLastUpdated();
   if (updateEl && updatedDate) {
@@ -121,3 +121,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 });
+
