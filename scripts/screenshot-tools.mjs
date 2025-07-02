@@ -2,7 +2,7 @@ import fs from 'fs-extra';
 import { chromium } from 'playwright';
 import { v2 as cloudinary } from 'cloudinary';
 
-// Cloudinary config über env vars aus Secrets
+// Cloudinary-Konfiguration
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
   api_key: process.env.CLOUDINARY_KEY,
@@ -12,23 +12,30 @@ cloudinary.config({
 async function captureScreenshot(tool) {
   let browser;
   try {
+    console.log(`🌐 Öffne Browser für ${tool.name}: ${tool.url}`);
     browser = await chromium.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
+
     const page = await browser.newPage();
     await page.setViewportSize({ width: 1280, height: 720 });
 
-    await page.goto(tool.url, {
-      waitUntil: 'networkidle',
-      timeout: 60000,
-    }).catch(() => {
-      console.warn(`⚠️ Timeout oder Fehler beim Laden von ${tool.url}, versuche weiter...`);
+    const response = await page.goto(tool.url, {
+      waitUntil: 'domcontentloaded',
+      timeout: 30000,
     });
 
-    const screenshot = await page.screenshot({ fullPage: false });
-    const base64 = `data:image/png;base64,${screenshot.toString('base64')}`;
+    if (!response || !response.ok()) {
+      throw new Error(`Seite nicht erreichbar (Status: ${response?.status() || 'n/a'})`);
+    }
 
+    await page.waitForTimeout(3000); // etwas warten für visuelle Stabilität
+    const screenshotBuffer = await page.screenshot({ fullPage: false });
+
+    const base64 = `data:image/png;base64,${screenshotBuffer.toString('base64')}`;
+
+    console.log(`📤 Lade Screenshot zu Cloudinary hoch...`);
     const result = await cloudinary.uploader.upload(base64, {
       folder: 'chem-ai-tools',
       public_id: tool.slug,
@@ -37,7 +44,7 @@ async function captureScreenshot(tool) {
 
     return result.secure_url;
   } catch (error) {
-    console.error(`⚠️ Screenshot fehlgeschlagen für ${tool.name}:`, error.message);
+    console.error(`⚠️ Screenshot fehlgeschlagen für ${tool.name}: ${error.message || error}`);
     return 'assets/placeholder.png';
   } finally {
     if (browser) await browser.close();
@@ -47,7 +54,7 @@ async function captureScreenshot(tool) {
 async function main() {
   try {
     const tools = await fs.readJson('./data/tools.json');
-    console.log(`Starte Screenshots für ${tools.length} Tools.`);
+    console.log(`📸 Starte Screenshots für ${tools.length} Tools.`);
 
     for (let i = 0; i < tools.length; i++) {
       const tool = tools[i];
@@ -60,9 +67,8 @@ async function main() {
     await fs.writeJson('./data/tools.json', tools, { spaces: 2 });
     console.log('\n✅ Alle Screenshots erfolgreich aktualisiert und gespeichert.');
   } catch (error) {
-    console.error('❌ Fehler im Hauptprozess:', error.message);
+    console.error('❌ Fehler im Hauptprozess:', error.message || error);
   }
 }
 
 main();
-
