@@ -1,4 +1,4 @@
-// Hilfsfunktion: Jedes Wort großschreiben (für Filter-Labels)
+// Hilfsfunktion: Jedes Wort großschreiben (für Filter-Labels & Anzeige)
 function capitalizeWords(str) {
   return str.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1));
 }
@@ -40,7 +40,7 @@ function renderFilters(tags) {
   });
 }
 
-// Tools rendern
+// Tools rendern inkl. Tags
 function renderTools(tools) {
   const container = document.getElementById('toolGrid');
   if (tools.length === 0) {
@@ -48,20 +48,27 @@ function renderTools(tools) {
     return;
   }
 
-  container.innerHTML = tools.map(tool => `
-    <div class="tool-card">
-      <img 
-        src="${tool.screenshot || 'assets/placeholder.png'}" 
-        alt="${tool.name}" 
-        onerror="this.src='assets/placeholder.png'" 
-      />
-      <div class="tool-info">
-        <h3>${tool.name}</h3>
-        <p>${tool.short_description || ''}</p>
-        <a href="tools/${tool.slug}.html">Details →</a>
+  container.innerHTML = tools.map(tool => {
+    const tagsHTML = (tool.tags || [])
+      .map(tag => `<span class="tag">${capitalizeWords(tag)}</span>`)
+      .join(' ');
+
+    return `
+      <div class="tool-card">
+        <img 
+          src="${tool.screenshot || 'assets/placeholder.png'}" 
+          alt="${tool.name}" 
+          onerror="this.src='assets/placeholder.png'" 
+        />
+        <div class="tool-info">
+          <h3>${tool.name}</h3>
+          <div class="tool-tags">${tagsHTML}</div>
+          <p>${tool.short_description || ''}</p>
+          <a href="tools/${tool.slug}.html">Details →</a>
+        </div>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 // Filter anwenden
@@ -69,9 +76,7 @@ function applyFilters(tools) {
   const checkedBoxes = [...document.querySelectorAll('#filter-form input[type="checkbox"]:checked')];
   const selectedTags = checkedBoxes.map(cb => cb.value);
 
-  if (selectedTags.length === 0) {
-    return tools;
-  }
+  if (selectedTags.length === 0) return tools;
 
   return tools.filter(tool => {
     const toolTags = (tool.tags || []).map(capitalizeWords);
@@ -121,4 +126,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 });
-
