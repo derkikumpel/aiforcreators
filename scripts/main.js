@@ -89,7 +89,7 @@ function setupFiltering(tools) {
   });
 }
 
-// Zeitstempel
+// Zeitstempel laden
 async function loadLastUpdated() {
   try {
     const res = await fetch('data/last-updated.json');
@@ -112,13 +112,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupFiltering(tools);
 
   // Aktualisierungsdatum und -zeit setzen
-    const updateEl = document.getElementById('update-date');
-    const updatedDate = await loadLastUpdated();
-    if (updateEl && updatedDate) {
-      updateEl.textContent = updatedDate.toLocaleString('en-US', {
-        dateStyle: 'medium',
-        timeStyle: 'short'
-      });
-    }
+  const updateEl = document.getElementById('update-date');
+  const updatedDate = await loadLastUpdated();
+  if (updateEl && updatedDate) {
+    updateEl.textContent = updatedDate.toLocaleString('en-US', {
+      dateStyle: 'medium',
+      timeStyle: 'short'
+    });
   }
 });
