@@ -3,14 +3,30 @@
     "name": "DeepChem",
     "slug": "deepchem",
     "url": "https://deepchem.io",
-    "description": "DeepChem ist ein innovatives KI-Tool, das speziell für die Chemieentwicklung und molekulare Modellierung konzipiert wurde. Mit einer leistungsstarken Kombination aus maschinellem Lernen und chemischer Informatik ermöglicht DeepChem Forschern und Unternehmen, komplexe chemische Probleme effizient zu lösen und neue Verbindungen zu entdecken. Das Tool bietet eine benutzerfreundliche Plattform, die den Zugang zu fortschrittlichen Algorithmen und Datensätzen erleichtert, um den gesamten Forschungsprozess zu beschleunigen, von der Hypothesenbildung über die Simulation bis hin zur Validierung von Ergebnissen. \n\nDank seiner Integration von Deep-Learning-Techniken kann DeepChem präzise Vorhersagen über Moleküle treffen, einschließlich deren Eigenschaften, Reaktionsverhalten und biologischen Aktivitäten. Dies verbessert nicht nur die Effizienz der Forschung, sondern reduziert auch Kosten und Zeitaufwand für die Entwicklung neuer Medikamente, Materialien und chemischer Prozesse. \n\nDarüber hinaus wird DeepChem aktiv von einer Community aus Wissenschaftlern und Entwicklern unterstützt, die kontinuierlich zur Verbesserung des Tools beitragen und neue Anwendungsfälle erschließen. Ob in der akademischen Forschung oder in der Industrie – DeepChem revolutioniert die Art und Weise, wie chemische Wissenschaft betrieben wird, und ebnet den Weg für Innovationen in verschiedenen Bereichen der Chemie.",
+    "description": "DeepChem ist ein innovatives KI-Tool, das speziell für die Chemie- und Materialwissenschaften entwickelt wurde. Es nutzt umfassende Algorithmen des maschinellen Lernens, um komplexe chemische Probleme zu lösen und neue Erkenntnisse in der Molekülentwicklung zu gewinnen. Durch die Integration von Deep Learning-Technologien ermöglicht DeepChem Wissenschaftlern die Vorhersage von Moleküleigenschaften, die Simulation chemischer Reaktionen und die Identifikation potenzieller Arzneimittelstrukturen.\n\nMit einer benutzerfreundlichen Schnittstelle richtet sich DeepChem an Forscher und Ingenieure in akademischen und industriellen Bereichen. Die Plattform bietet Zugang zu einer Vielzahl von Datensätzen und Modellen, die auf realen chemischen Anwendungen basieren, und unterstützt damit die schnelle Entwicklung und Optimierung von chemischen Verbindungen.\n\nDarüber hinaus fördert DeepChem die Zusammenarbeit innerhalb der wissenschaftlichen Gemeinschaft, indem es open-source Lösungen bereitstellt, die kontinuierlich aktualisiert und verbessert werden. Dies ermöglicht es Nutzern, ihre eigenen Modelle und Algorithmen zu entwickeln und zu implementieren, um spezifische Herausforderungen in der Chemie anzugehen. Mit DeepChem wird die Brücke zwischen Chemie und Informatik geschlagen, was den Fortschritt in der Material- und Arzneimittelforschung maßgeblich beschleunigt.",
     "tags": [
       "maschinelles Lernen",
-      "Chemie",
-      "Datenanalyse",
-      "Arzneimittel",
+      "Cheminformatik",
+      "Drug Discovery",
       "Open Source",
-      "Modellierung"
+      "Datenanalyse",
+      "Neurale Netze"
+    ],
+    "category": "analysis",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "Schrödinger",
+    "slug": "schrodinger",
+    "url": "https://www.schrodinger.com",
+    "description": "Schrödinger ist ein führendes AI-Tool im Bereich der chemischen Forschung, das Wissenschaftlern und Unternehmen hilft, die komplexen Herausforderungen der Medikamentenentwicklung und Materialforschung zu meistern. Die Software kombiniert fortschrittliche Algorithmen für maschinelles Lernen mit robusten quantenmechanischen Modellen, um präzise Vorhersagen über Moleküle, deren Eigenschaften und Reaktionsverhalten zu treffen. \n\nDurch die Integration von Datenanalyse und Simulation ermöglicht Schrödinger eine schnellere Identifizierung vielversprechender Verbindungen und optimiert den gesamten Forschungsprozess. Mit einer benutzerfreundlichen Oberfläche bietet das Tool Zugang zu umfangreichen Datenbanken und ermöglicht komplexe Berechnungen in kurzer Zeit. \n\nSchrödinger wird in der pharmazeutischen Industrie, der Materialwissenschaft sowie der akademischen Forschung eingesetzt und trägt dazu bei, innovative Lösungen zu entwickeln, die sowohl kosteneffizient als auch umweltfreundlich sind. \n\nDurch die Kombination von Expertenwissen und modernster Technologie ist Schrödinger ein unverzichtbares Werkzeug für Chemiker, die an der Spitze der wissenschaftlichen Entdeckung stehen und die Grenzen des Möglichen erweitern möchten.",
+    "tags": [
+      "Molekulardynamik",
+      "Drug Discovery",
+      "Simulation",
+      "Docking",
+      "Biochemie",
+      "Software"
     ],
     "category": "analysis",
     "screenshot": "assets/placeholder.png"
@@ -19,126 +35,110 @@
     "name": "ChemAxon",
     "slug": "chemaxon",
     "url": "https://chemaxon.com",
-    "description": "ChemAxon ist ein führendes Softwareunternehmen, das innovative Lösungen für die chemische Informatik bietet. Mit einer umfangreichen Palette von Produkten ermöglicht ChemAxon Forschern und Unternehmen, chemische Daten effektiv zu verwalten, chemische Strukturen zu analysieren und molekulare Eigenschaften vorherzusagen. Die Softwarelösungen von ChemAxon unterstützen verschiedene Anwendungen, darunter die Medikamentenentwicklung, Materialwissenschaften und akademische Forschung.\n\nEin zentrales Element von ChemAxon ist der JChem-Toolkit, der eine leistungsstarke API bereitstellt, um chemische Struktur- und Substanzdaten in Software-Anwendungen zu integrieren. Darüber hinaus bietet ChemAxon webbasierte Plattformen wie Marvin für die Strukturvisualisierung und ChemAxon Instant JChem für das Management von chemischen Datensätzen an.\n\nDie benutzerfreundliche Bedienoberfläche und die nahtlose Integration in bestehende Systeme machen ChemAxon zu einem wertvollen Werkzeug für Unternehmen und Forscher, die innovative Lösungen in der Chemie entwickeln wollen. Zudem legt ChemAxon großen Wert auf Interoperabilität und Standards, wodurch die Zusammenarbeit zwischen verschiedenen Disziplinen und Systemen gefördert wird. Mit einem starken Fokus auf Kundenbedürfnisse und kontinuierlichen Innovationen positioniert sich ChemAxon als Vorreiter im Bereich der chemischen Softwarelösungen.",
+    "description": "ChemAxon ist ein innovatives Softwareunternehmen, das sich auf die Entwicklung leistungsstarker chemischer Informationslösungen spezialisiert hat. Mit einem umfassenden Portfolio an Werkzeugen unterstützt ChemAxon Chemiker, Forscher und Unternehmen in der professionellen Chemiedatenverwaltung und -analyse. Die Software bietet eine breite Palette von Funktionen, darunter Molekülvisualisierung, cheminformatik, chemische Datenbankmanagement und QSAR-Analysen. \n\nDurch die Integration von KI-Technologien ermöglicht ChemAxon eine effiziente Handhabung komplexer chemischer Daten und fördert die Zusammenarbeit in interdisziplinären Teams. Die benutzerfreundliche Oberfläche und anpassbaren Module erlauben eine einfache Integration in bestehende Workflows, wodurch die Produktivität signifikant gesteigert werden kann. \n\nMit einer starken Fokussierung auf Benutzerfreundlichkeit sowie einer robusten Unterstützung für verschiedenste chemische Formate ist ChemAxon eine bevorzugte Wahl für Unternehmen in der Pharma-, Biotech- und Materialwissenschaft. Die Lösungen des Unternehmens tragen dazu bei, innovative Ansätze in der Arzneimittelentwicklung zu beschleunigen, sowie die Sicherheit und Effizienz chemischer Prozesse zu verbessern. ChemAxon setzt damit neue Maßstäbe in der digitalen Chemieforschung und -entwicklung.",
     "tags": [
-      "Chemie",
-      "Software",
+      "Cheminformatik",
       "Datenmanagement",
-      "Arzneimittel",
       "Visualisierung",
-      "Pharma"
+      "Drug Discovery",
+      "Pharma",
+      "Biotechnologie"
     ],
     "category": "database",
-    "screenshot": "assets/placeholder.png"
-  },
-  {
-    "name": "Schrödinger",
-    "slug": "schrodinger",
-    "url": "https://schrodinger.com",
-    "description": "Schrödinger ist ein leistungsstarkes AI-Tool, das innovative Lösungen für die chemische Forschung und Entwicklung bietet. Durch den Einsatz modernster Methoden der quantenmechanischen Simulation eröffnet Schrödinger Wissenschaftlern neue Möglichkeiten in der Molekülmodellierung, dem Wirkstoffdesign und der Materialforschung. Die Software kombiniert präzise Berechnungen mit intuitiven Benutzeroberflächen, um komplexe chemische Probleme effizient zu lösen.\n\nMit Funktionen wie virtueller Screening, Optimierung von Molekülstrukturen und der Vorhersage von Eigenschaften ermöglicht Schrödinger eine schnellere Identifizierung vielversprechender Verbindungen und reduziert die Zeit und Kosten in der Forschungsphase. Die Integration von Künstlicher Intelligenz erlaubt es dem Tool, aus bestehenden Daten zu lernen und dadurch die Vorhersagegenauigkeit zu steigern.\n\nOb in der pharmazeutischen Industrie, bei der Materialentwicklung oder in akademischen Forschungsinitiativen - Schrödinger bietet eine integrierte Plattform, die Chemikern hilft, ihre Projekte schneller und effizienter voranzutreiben. Die umfassenden Funktionen und die benutzerfreundliche Gestaltung machen Schrödinger zu einem unverzichtbaren Werkzeug für Chemiker, die an der Spitze von Innovation und Entdeckung stehen möchten.",
-    "tags": [
-      "Molekulardesign",
-      "Simulation",
-      "Pharma",
-      "Chemie",
-      "Arzneimittel",
-      "Datenanalyse"
-    ],
-    "category": "synthesis",
-    "screenshot": "assets/placeholder.png"
-  },
-  {
-    "name": "Cresset",
-    "slug": "cresset",
-    "url": "https://cresset-group.com",
-    "description": "Cresset ist ein innovatives AI-Tool, das speziell für Chemiker und Forscher in der chemischen Industrie entwickelt wurde. Es nutzt fortschrittliche Algorithmen und maschinelles Lernen, um die Molekül-Design und Wirkstoffentdeckung zu optimieren. Durch die Analyse von chemischen Strukturen, Eigenschaften und biologischen Aktivitäten ermöglicht Cresset eine präzisere Vorhersage von Molekülinteraktionen und unterstützt somit die Identifikation vielversprechender Kandidaten für die Medikamentenentwicklung.\n\nDie Software bietet eine benutzerfreundliche Plattform, die es Forschern ermöglicht, komplexe chemische Daten einfach zu visualisieren und zu interpretieren. Mit Funktionen wie der 3D-Modellierung, der energetischen Bewertung und der virtuellen Screening-Analyse fördert Cresset die Effizienz und Effektivität von Forschungsprojekten. Zudem kann das Tool in bestehenden Workflows integriert werden, um die Zusammenarbeit zwischen interdisziplinären Teams zu verbessern.\n\nCresset stellt eine wertvolle Ressource für akademische Institutionen und die Pharma- sowie Chemieindustrie dar, indem es den Innovationsprozess beschleunigt und die Erfolgsquote bei der Wirkstoffentdeckung signifikant erhöht. Dank seiner leistungsstarken Funktionalitäten trägt Cresset dazu bei, die zukünftige Chemieforschung und -entwicklung entscheidend zu revolutionieren.",
-    "tags": [
-      "Arzneimittel",
-      "3D-Modellierung",
-      "Chemie",
-      "Optimierung",
-      "Pharma",
-      "Research"
-    ],
-    "category": "analysis",
-    "screenshot": "assets/placeholder.png"
-  },
-  {
-    "name": "Insilico Medicine",
-    "slug": "insilico-medicine",
-    "url": "https://insilico.com",
-    "description": "Insilico Medicine ist ein innovatives Unternehmen, das sich auf die Anwendung von Künstlicher Intelligenz (KI) im Bereich der Chemie und Medikamentenentwicklung spezialisiert hat. Mit einem interdisziplinären Ansatz kombiniert Insilico Medicine modernste KI-Technologien, maschinelles Lernen und fortschrittliche Computational-Science-Methoden, um die Entdeckung neuer Wirkstoffe zu beschleunigen und die Effizienz der Pharmakologie zu steigern. \n\nDas Unternehmen nutzt eine Vielzahl von Datenquellen, darunter Genomik, Proteomik und klinische Daten, um präzise Vorhersagen über die chemischen Eigenschaften und biologischen Aktivitäten von Molekülen zu treffen. Durch die Entwicklung eigener Plattformen, wie der \"Chemoinformatics\"- und \"Drug Discovery\"-Tools, können Forscher potenzielle Arzneimittelkandidaten schneller identifizieren und deren Entwicklungskosten signifikant senken. \n\nInsilico Medicine hat bereits in mehreren therapeutischen Bereichen, darunter Onkologie und neurodegenerative Erkrankungen, vielversprechende Ergebnisse erzielt. Durch die Integration von KI in den Forschungsprozess trägt Insilico Medicine aktiv zur Transformation der pharmazeutischen Industrie bei und fördert die Schaffung neuartiger Therapien, die den Bedürfnissen von Patienten weltweit gerecht werden.",
-    "tags": [
-      "KI",
-      "Arzneimittel",
-      "Entwicklung",
-      "Chemie",
-      "Präzisionsmedizin",
-      "Forschung"
-    ],
-    "category": "synthesis",
     "screenshot": "assets/placeholder.png"
   },
   {
     "name": "Atomwise",
     "slug": "atomwise",
     "url": "https://atomwise.com",
-    "description": "Atomwise ist ein innovatives KI-gestütztes Tool, das die Entdeckung und Entwicklung von Arzneimitteln revolutioniert. Durch den Einsatz modernster Algorithmen für maschinelles Lernen und tiefes Lernen ermöglicht Atomwise Wissenschaftlern, Proteinstrukturen zu analysieren und potenzielle Wirkstoffkandidaten mit hoher Genauigkeit vorherzusagen. Das Tool nutzt riesige Datenbanken chemischer Verbindungen und deren Eigenschaften, um eine umfassende virtuelle Screening-Plattform anzubieten, die die Identifizierung von Molekülen, die gezielt auf Krankheitsziele wirken, erheblich beschleunigt.\n\nDie Anwendung von Atomwise hat bereits zu vielversprechenden Fortschritten in verschiedenen Forschungsbereichen geführt, darunter Onkologie, entzündliche Erkrankungen und seltene genetische Störungen. Durch die Reduzierung der Zeit und der Kosten, die mit der traditionellen Arzneimittelentwicklung verbunden sind, fördert Atomwise die Effizienz und Innovationskraft in der Pharma- und Biotechnologiebranche.\n\nDank seiner benutzerfreundlichen Oberfläche und der Integration in bestehende Forschungsprozesse ist Atomwise eine wertvolle Ressource für Forschungseinrichtungen und Unternehmen, die auf der Suche nach neuen therapeutischen Lösungen sind. Das Tool steht im Einklang mit den neuesten Entwicklungen in der Chemoinformatik und bietet eine zukunftsweisende Plattform für die Arzneimittelentdeckung.",
+    "description": "Atomwise ist ein innovatives KI-gestütztes Tool, das in der Chemieforschung und Arzneimittelentwicklung eingesetzt wird. Mithilfe fortschrittlicher Algorithmen und maschinellen Lernens analysiert Atomwise komplexe molekulare Strukturen und ermöglicht so die Vorhersage ihrer interatomaren Wechselwirkungen. Dies beschleunigt den Prozess der Medikamentenentdeckung erheblich, indem potenzielle Wirkstoffkandidaten präzise identifiziert und bewertet werden.\n\nDas Tool nutzt eine umfangreiche Datenbank von chemischen Verbindungen und deren Eigenschaften, um neue Verbindungen zu entwerfen und deren Wirkungen auf biologische Zielstrukturen vorherzusagen. Atomwise bietet Wissenschaftlern die Möglichkeit, große Molekülbibliotheken in kurzer Zeit zu screenen, wodurch der Forschungsaufwand und die Kosten reduziert werden. \n\nDurch die Kombination von Deep Learning und Chemie schafft Atomwise neue Möglichkeiten für die Entwicklung von Therapien gegen Krankheiten, die traditionell schwer zu behandeln sind. Das Tool hat bereits in diversen Forschungsprojekten signifikante Erfolge erzielt, indem es dazu beigetragen hat, vielversprechende Verbindungen für klinische Studien zu identifizieren.\n\nAtomwise ist ein unverzichtbares Hilfsmittel für Forscher, die in der chemischen und pharmazeutischen Industrie tätig sind und zielt darauf ab, die Innovationsgeschwindigkeit in der Medikamentenentwicklung drastisch zu erhöhen.",
     "tags": [
       "KI",
-      "Arzneimittel",
-      "Screening",
-      "Simulation",
-      "Pharma",
-      "Forschung"
+      "Deep Learning",
+      "virtuelles Screening",
+      "Drug Discovery",
+      "Medikamentenentwicklung",
+      "Krebs"
     ],
     "category": "synthesis",
     "screenshot": "assets/placeholder.png"
   },
   {
-    "name": "Molsoft",
-    "slug": "molsoft",
-    "url": "https://molsoft.com",
-    "description": "Molsoft ist ein innovatives AI-Tool, das sich auf den Bereich der Chemie spezialisiert hat und Forschern sowie Wissenschaftlern hilft, komplexe molekulare Strukturen zu analysieren und zu visualisieren. Mit einer benutzerfreundlichen Oberfläche bietet Molsoft eine Vielzahl von Funktionen, die die molekulare Modellierung und Simulation erheblich erleichtern. Durch den Einsatz modernster Algorithmen und KI-Technologien ermöglicht das Tool die schnelle Identifizierung von Verbindungen, die Vorhersage von molekularen Eigenschaften und die Optimierung von chemischen Reaktionen.\n\nEin herausragendes Merkmal von Molsoft ist die Integration von Datenbanken mit umfangreichen chemischen Informationen, die es Nutzern ermöglicht, gezielt nach spezifischen Molekülen oder chemischen Reaktionen zu suchen. Darüber hinaus unterstützt Molsoft die Interpretation von Ergebnissen durch leistungsstarke grafische Darstellungen, die die Analyse von Wechselwirkungen und Bindungsenergien veranschaulichen.\n\nDie Vielseitigkeit von Molsoft macht es zu einem unverzichtbaren Werkzeug für Chemiker in der Forschung, in der pharmazeutischen Entwicklung und im Hochschulbereich. Durch die Automatisierung von Routineaufgaben und die Verbesserung der Effizienz bei der Datenanalyse trägt Molsoft dazu bei, innovative Lösungen im chemischen Sektor zu fördern und den Fortschritt in der synthetischen Chemie voranzutreiben.",
+    "name": "MolProbity",
+    "slug": "molprobity",
+    "url": "http://molprobity.biochem.duke.edu",
+    "description": "MolProbity ist ein innovatives AI-Tool, das in der chemischen Forschung und Strukturbiologie weit verbreitet ist. Es bietet Wissenschaftlern die Möglichkeit, hochkomplexe Proteinstrukturen auf ihre Qualität und Konformation hin zu analysieren und zu optimieren. Durch den Einsatz fortschrittlicher Algorithmen ermöglicht MolProbity eine präzise geometrische Bewertung von Molekülen, basierend auf einer Vielzahl von Kriterien wie Bindungslängen, Winkel und stereochemischen Aspekten.\n\nDas Tool integriert mehrere Analysen, wie z.B. die Identifizierung von Verdrängungen und den Vergleich mit Referenzdatenbanken, um potenzielle Fehlerquellen in der Molekülstruktur zu erkennen. Nutzer profitieren von einer intuitiven Benutzeroberfläche, die die Interpretation der Ergebnisse erleichtert und eine nahtlose Integration in bestehende Arbeitsabläufe ermöglicht. \n\nMolProbity unterstützt nicht nur die strukturelle Validierung, sondern trägt auch zur Verbesserung von Protein-Ligand-Interaktionen und zur Optimierung von Kristallstrukturen bei. Durch seine umfassende Analyse hat sich MolProbity als unverzichtbares Werkzeug für Chemiker, Biologen und Materialwissenschaftler etabliert, die an der Entschlüsselung der molekularen Grundlagen biologischer Prozesse arbeiten und neue therapeutische Ansätze entwickeln möchten.",
     "tags": [
-      "Chemie",
-      "Software",
+      "Strukturqualität",
+      "Proteine",
+      "Nukleinsäuren",
       "Visualisierung",
-      "Docking",
-      "Arzneimittel",
-      "Forschung"
+      "Drug Discovery",
+      "Biochemie"
     ],
     "category": "analysis",
     "screenshot": "assets/placeholder.png"
   },
   {
-    "name": "BioSymmetry",
-    "slug": "biosymmetry",
-    "url": "https://biosymmetry.com",
-    "description": "BioSymmetry ist ein hochmodernes KI-Tool, das speziell für die Chemie entwickel wurde, um die molekulare Simulation und das Design neuer Verbindungen zu revolutionieren. Durch den Einsatz fortschrittlicher Algorithmen und maschinellen Lernens ermöglicht BioSymmetry Wissenschaftlern, präzise Vorhersagen über die Eigenschaften und Reaktionen von Molekülen zu treffen. Das Tool unterstützt Forscher dabei, komplexe chemische Probleme effizienter zu lösen und beschleunigt den Prozess der Entdeckung neuer Medikamente, Materialien und chemischer Substanzen.\n\nDie benutzerfreundliche Oberfläche von BioSymmetry erlaubt eine nahtlose Integration in bestehenden Forschungsabläufe. Nutzer können Simulationen in Echtzeit durchführen, was eine sofortige Rückmeldung und Anpassung der Parameter ermöglicht. Darüber hinaus bietet BioSymmetry umfassende Datenanalysen und Visualisierungen, die es den Anwendern erleichtern, fundierte Entscheidungen zu treffen.\n\nBioSymmetry wird bereits in führenden Forschungsinstituten und Unternehmen der chemischen Industrie eingesetzt, um innovative Lösungen zu entwickeln und Wettbewerbsfähigkeit zu sichern. Durch die Kombination von Datenwissenschaft und chemischem Wissen hebt BioSymmetry die Forschung auf ein neues Niveau und trägt maßgeblich zur Transformation der chemischen Industrie bei.",
+    "name": "Cresset",
+    "slug": "cresset",
+    "url": "https://www.cresset-group.com",
+    "description": "Cresset ist ein innovatives KI-Tool, das speziell für die chemische und pharmazeutische Industrie entwickelt wurde. Es nutzt fortschrittliche Algorithmen und maschinelles Lernen, um komplexe chemische Daten zu analysieren und fundierte Vorhersagen über die chemische Verhalten von Molekülen zu treffen. Cresset bietet eine benutzerfreundliche Oberfläche, die es Wissenschaftlern ermöglicht, strukturelle und energetische Eigenschaften von Verbindungen schnell zu bewerten und zu visualisieren. \n\nMit Funktionen wie in-silico-Design, Arzneimitteloptimierung und Struktur-Aktivitäts-Beziehung (SAR) Analyse unterstützt Cresset Forscher dabei, neue Wirkstoffe effizienter zu identifizieren und zu entwickeln. Durch die Integration von Machine Learning-Modellen können wissenschaftliche Teams potentielle Kandidaten schneller priorisieren und so die Entwicklungszeiten erheblich verkürzen.\n\nDie Kombination aus chemischer Expertise und außergewöhnlicher Rechenleistung macht Cresset zu einem unverzichtbaren Werkzeug für Chemiker, die innovative Lösungen in der Materialwissenschaft und Arzneimittelforschung suchen. Die Software fördert nicht nur die Zusammenarbeit in interdisziplinären Teams, sondern trägt auch zur Reduzierung von Ressourcen- und Zeitaufwänden in der chemischen Entwicklung bei. Cresset ist damit ein Schlüsselwerkzeug für die Zukunft der chemischen Forschung und Entwicklung.",
     "tags": [
-      "KI",
-      "Biotechnologie",
-      "Arzneimittel",
-      "Datenanalyse",
+      "molekulares Design",
+      "Drug Discovery",
+      "Bindungsanalyse",
+      "Pharma",
       "Chemie",
-      "Forschung"
+      "Software"
     ],
     "category": "synthesis",
     "screenshot": "assets/placeholder.png"
   },
   {
-    "name": "OpenEye Scientific",
-    "slug": "openeye-scientific",
-    "url": "https://openeye.scientific.com",
-    "description": "OpenEye Scientific ist ein führendes Unternehmen im Bereich der chemischen Informatik, das innovative Softwarelösungen für die Forschung und Entwicklung in der Chemie und Biotechnologie anbietet. Mit einem Schwerpunkt auf moderner Molekulardatenverarbeitung unterstützt OpenEye Wissenschaftler dabei, komplexe chemische Probleme effizient zu lösen. \n\nDie Tools von OpenEye kombinieren hochentwickelte Algorithmen zur Molekülsimulation und -visualisierung mit benutzerfreundlichen Schnittstellen, die eine nahtlose Integration in bestehende Forschungsworkflows ermöglichen. Zu den Hauptprodukten gehört die robuste Software Suite \"OESuite\", die Funktionen für die molekulare Modellierung, Ligand- und Target-Screening sowie strukturbasiertes Design umfasst. \n\nOpenEye fördert die Zusammenarbeit zwischen Wissenschaftlern durch cloudbasierte Dienste, die den einfachen Austausch von Daten und Erkenntnissen ermöglichen. Durch kontinuierliche Weiterentwicklung und Anpassung an die neuesten wissenschaftlichen Erkenntnisse bleibt OpenEye an der Spitze der chemischen Forschung. Mit einem starken Fokus auf Effizienz und Genauigkeit ermöglicht OpenEye Scientific Forschern, schneller zu innovativen Lösungen zu gelangen und somit den Fortschritt in der chemischen Industrie voranzutreiben.",
+    "name": "ZINC",
+    "slug": "zinc",
+    "url": "http://zinc.docking.org",
+    "description": "ZINC ist ein innovatives AI-Tool, das speziell für die chemische Forschung und Entwicklung konzipiert wurde. Es bietet Wissenschaftlern und Chemikern eine leistungsstarke Plattform zur Durchforstung und Analyse umfangreicher chemischer Datenbanken. ZINC ermöglicht die effiziente Identifizierung und Auswahl von Chemikalien, indem es fortschrittliche Algorithmen zur Molekülabbildung und -synthese nutzt. Die Benutzer können gezielte Suchanfragen durchführen und maßgeschneiderte chemische Verbindungen generieren, die auf spezifische Forschungsbedürfnisse zugeschnitten sind.\n\nMit einer benutzerfreundlichen Oberfläche und integrierten Funktionen zur Visualisierung von Molekülstrukturen erleichtert ZINC die Zusammenarbeit zwischen Forschern und gefördert den kreativen Austausch innerhalb der wissenschaftlichen Gemeinschaft. Darüber hinaus bietet die Plattform umfassende Ressourcen für die Datenanalyse und -interpretation, sodass Nutzer fundierte Entscheidungen treffen können.\n\nDie Integration modernster KI-Technologien in ZINC unterstützt dabei, neue Erkenntnisse in der Chemie schneller zu gewinnen und beschleunigt den Innovationsprozess bei der Entwicklung neuer Materialien und Wirkstoffe. ZINC steht für eine zukunftsweisende Entwicklung, die chemische Forschung auf ein neues Level hebt und den Weg für bahnbrechende wissenschaftliche Entdeckungen ebnet.",
     "tags": [
+      "Datenbank",
+      "chemische Verbindungen",
+      "virtuelles Screening",
+      "Drug Discovery",
       "Chemie",
-      "Modellierung",
-      "Visualisierung",
-      "Arzneimittel",
-      "Pharma",
-      "Forschung"
+      "Pharma"
+    ],
+    "category": "database",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "OpenEye",
+    "slug": "openeye",
+    "url": "https://www.eyesopen.com",
+    "description": "OpenEye ist ein innovatives KI-Tool, das in der Chemiebranche neue Maßstäbe setzt. Es bietet eine fortschrittliche Plattform zur Moleküldesign und -analyse, die Forscher und Chemiker in ihrem Bestreben unterstützt, präzise und effiziente Ergebnisse zu erzielen. Durch den Einsatz modernster Algorithmen ermöglicht OpenEye die schnelle und akkurate Vorhersage von Moleküleigenschaften und Interaktionen, was entscheidend für die Entwicklung neuer Medikamente, Materialien und chemischer Prozesse ist.\n\nDie intuitive Benutzeroberfläche von OpenEye erleichtert den Zugriff auf umfangreiche Datenbanken und ermöglicht eine nahtlose Integration in bestehende Arbeitsabläufe. Mit Funktionen wie virtueller Screening, QSAR (Quantitative Structure-Activity Relationship) Modelling und molekularer Simulation ist OpenEye ein unverzichtbares Werkzeug für Forschungseinrichtungen und Unternehmen, die an der Spitze der chemischen Innovation stehen wollen.\n\nDarüber hinaus unterstützt OpenEye die Zusammenarbeit in interdisziplinären Teams, indem es Forschern ermöglicht, ihre Erkenntnisse und Ergebnisse in Echtzeit zu teilen und zu diskutieren. Mit OpenEye profitieren Chemiker von einer verkürzten Entwicklungszeit und können qualitativ hochwertige Ergebnisse liefern, die den Anforderungen der modernen Wissenschaft gerecht werden.",
+    "tags": [
+      "Chemoinformatik",
+      "Molekülmodellierung",
+      "Docking",
+      "Software",
+      "Drug Discovery",
+      "Pharma"
+    ],
+    "category": "analysis",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "Babel",
+    "slug": "babel",
+    "url": "https://www.xam.com/babel",
+    "description": "Babel ist ein innovatives KI-Tool, das speziell für Fachleute im Bereich Chemie entwickelt wurde. Es revolutioniert den Zugang zu chemischen Informationen und Datenanalysen, indem es eine intuitive Benutzeroberfläche bietet, die es Nutzern ermöglicht, komplexe chemische Fragestellungen schnell und präzise zu bearbeiten. Babel nutzt fortschrittliche Algorithmen des maschinellen Lernens, um molekulare Strukturen zu analysieren, chemische Reaktionen vorherzusagen und Literaturquellen effizient zu durchsuchen.\n\nMit Babel können Chemiker und Wissenschaftler nicht nur experimentelle Daten eingeben, sondern auch realistische Simulationen durchführen, die auf bestehenden Erkenntnissen basieren. Die zentrale Datenbank umfasst umfangreiche chemische Daten, Publikationen und Patente, sodass Nutzer stets auf aktuelle Informationen zugreifen können. Darüber hinaus fördert Babel die Zusammenarbeit im Forschungsteam durch integrierte Tools für den Datenaustausch und die gemeinsame Analyse.\n\nEin besonderes Merkmal von Babel ist seine Fähigkeit, benutzerdefinierte Berichte zu generieren, die für die Präsentation von Forschungsergebnissen und die Vorbereitung von Publikationen unerlässlich sind. Mit Babel wird die chemische Forschung effizienter, präziser und zugänglicher, was letztlich zu schnelleren wissenschaftlichen Fortschritten führt.",
+    "tags": [
+      "Open Source",
+      "Dateikonvertierung",
+      "Cheminformatik",
+      "Drug Discovery",
+      "Software",
+      "Interoperabilität"
     ],
     "category": "analysis",
     "screenshot": "assets/placeholder.png"
