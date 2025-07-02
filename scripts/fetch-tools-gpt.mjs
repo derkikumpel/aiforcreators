@@ -12,18 +12,32 @@ async function fetchToolDescriptions(tools) {
 
   for (const tool of tools) {
     try {
-      const prompt = `Schreibe eine kurze, professionelle Beschreibung von 150-250 Wötern für das AI-Tool "${tool.name}" im Bereich Chemie.`;
-      console.log(`\nGeneriere Beschreibung für Tool: ${tool.name}`);
+      const prompt = `Write two descriptions for the AI tool "${tool.name}" used in chemistry:
+
+      1. Short description (30–50 words) for a tools overview page.
+      2. Long description (150–250 words) for a detailed page.
+
+      Respond in the following JSON format:
+        {
+        "short_description": "...",
+        "long_description": "..."
+      }`;
 
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [{ role: 'user', content: prompt }],
       });
 
-      const description = completion.choices[0].message.content.trim();
+      const raw = completion.choices[0].message.content.trim();
+      const parsed = JSON.parse(raw);
 
-      updatedTools.push({ ...tool, description });
-      console.log(`✅ Beschreibung für ${tool.name} generiert.`);
+      updatedTools.push({
+        ...tool,
+        short_description: parsed.short_description,
+        long_description: parsed.long_description,
+      });
+      console.log(`✅ Beschreibungen für ${tool.name} generiert.`);
+      
     } catch (error) {
       console.error(`❌ Fehler bei ${tool.name}:`, error.message);
       updatedTools.push({ ...tool, description: 'Beschreibung konnte nicht geladen werden.' });
