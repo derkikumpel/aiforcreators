@@ -3,146 +3,160 @@
     "name": "DeepChem",
     "slug": "deepchem",
     "url": "https://deepchem.io",
-    "short_description": "DeepChem is an open-source AI tool designed to revolutionize computational chemistry through deep learning techniques. It provides researchers with advanced tools for molecular modeling, drug discovery, and materials science, enabling faster and more efficient analysis of chemical data.",
-    "long_description": "DeepChem is an innovative open-source AI platform tailored for researchers and professionals in the field of chemistry. It harnesses the power of deep learning to address complex challenges in molecular modeling, drug discovery, and materials science. By integrating machine learning algorithms with chemical knowledge, DeepChem accelerates the development of new drugs and materials, making the discovery process more efficient and cost-effective. The tool offers a comprehensive suite of features, including data processing, model training, and visualization capabilities, facilitating seamless integration into existing chemistry workflows. With its user-friendly interface and extensive documentation, DeepChem empowers users to leverage state-of-the-art neural networks to predict molecular properties, simulate chemical reactions, and analyze chemical datasets. By bridging the gap between artificial intelligence and chemistry, DeepChem is paving the way for future advancements in the field and opening new avenues for innovation in research and industry alike.",
+    "short_description": "DeepChem is an innovative AI tool designed for computational chemistry, enabling researchers to accelerate drug discovery and materials science through advanced machine learning algorithms. It integrates seamlessly with existing workflows to predict molecular properties and optimize chemical processes.",
+    "long_description": "DeepChem is a cutting-edge artificial intelligence tool specifically tailored for the field of chemistry, facilitating significant advancements in both drug discovery and materials science. By harnessing the power of machine learning algorithms, DeepChem enables researchers to predict molecular properties, optimize chemical reactions, and identify potential compounds much faster than traditional methods. Its user-friendly interface and robust integration capabilities make it a versatile choice for chemists working in a variety of domains. DeepChem leverages a vast array of datasets to train its models, allowing for highly accurate predictions that can guide experimental design and save valuable time in research processes. Additionally, it supports a wide range of chemistry-related tasks, from molecular modeling to quantitative structure-activity relationship (QSAR) studies. Whether you are working in pharmaceutical development or material engineering, DeepChem offers essential tools that enhance productivity and innovation, ultimately pushing the boundaries of what is possible in chemical research. Experience the future of chemistry with DeepChem, where AI meets molecular discovery.",
     "tags": [
-      "machine learning",
+      "deep learning",
       "cheminformatics",
       "drug discovery",
       "open source",
-      "deep learning"
+      "machine learning",
+      "molecular modeling"
     ],
     "category": "analysis",
-    "screenshot": "assets/placeholder.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444630/chem-ai-tools/deepchem.png"
   },
   {
     "name": "ChemAxon",
     "slug": "chemaxon",
     "url": "https://chemaxon.com",
-    "short_description": "ChemAxon is a comprehensive software suite designed for cheminformatics, enabling scientists to visualize, analyze, and manipulate chemical structures and data. It offers powerful tools for molecular modeling, data management, and predictive analytics, streamlining the research process in chemistry.",
-    "long_description": "ChemAxon is an advanced cheminformatics software platform that provides chemists and researchers with a robust set of tools for molecular modeling, structure visualization, and data analysis. Its user-friendly interface allows for seamless interaction with complex chemical data, making it suitable for both novice and experienced chemists. ChemAxon supports a wide range of functionalities, including cheminformatics, database management, and predictive modeling, enabling users to manage chemical information efficiently and gain insights into molecular properties. Key features include structure search, atom and bond manipulation, and various calculations for predicting physical properties. Additionally, ChemAxon integrates well with existing laboratory information management systems (LIMS) and provides resources for data interoperability. By employing cutting-edge algorithms and machine learning techniques, ChemAxon enhances research capabilities and accelerates discovery in fields such as drug design, material science, and environmental chemistry. With a commitment to innovation, ChemAxon continues to evolve, offering solutions that cater to the diverse needs of the scientific community and helping drive advancements in chemical research.",
+    "short_description": "ChemAxon is an innovative software suite for chemical informatics, enabling researchers to visualize, analyze, and manage chemical data efficiently. With its powerful tools for molecular modeling, structure search, and property prediction, ChemAxon accelerates drug discovery and materials science research.",
+    "long_description": "ChemAxon provides a comprehensive suite of software solutions tailored for chemists and researchers in the field of chemical informatics. Designed to facilitate the visualization, analysis, and management of chemical compounds and data, ChemAxon’s tools enhance productivity and precision in various research applications. Key features include robust molecular modeling capabilities, advanced algorithms for structure search and prediction, and user-friendly interfaces that streamline workflows. Researchers can quickly assess compounds and their properties, making informed decisions faster. Additionally, ChemAxon supports extensive data formats and integrates seamlessly with other tools and databases, ensuring compatibility within diverse research environments. The platform also offers cheminformatics capabilities, allowing users to mine, analyze, and visualize large chemical datasets effectively. By enabling customizable workflows and automation, ChemAxon empowers users to focus on innovative research and accelerates drug discovery processes, materials development, and chemical education. With a strong commitment to advancing scientific inquiry, ChemAxon continues to be an essential tool for professionals in chemistry, making complex analyses straightforward and accessible.",
     "tags": [
       "cheminformatics",
+      "data management",
+      "visualization",
+      "pharmaceutical",
+      "structure",
+      "software"
+    ],
+    "category": "synthesis",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444635/chem-ai-tools/chemaxon.png"
+  },
+  {
+    "name": "ChEMBL",
+    "slug": "chembl",
+    "url": "https://www.ebi.ac.uk/chembl/",
+    "short_description": "A database of bioactive drug-like small molecules and their biological activities.",
+    "long_description": "ChEMBL is a large-scale database that aggregates information on bioactive drug-like small molecules and their biological activities. Managed by the European Bioinformatics Institute, it provides chemists and biologists with access to a wealth of data relevant for drug discovery, including compound structures, target information, and bioactivity data. Researchers can use ChEMBL to identify potential drug candidates, understand molecular interactions, and explore structure-activity relationships. The database is continuously updated and includes tools for data retrieval and analysis, making it essential for anyone involved in pharmaceutical research.",
+    "tags": [
+      "database",
+      "bioactivity",
       "drug discovery",
-      "software",
-      "molecular modeling",
-      "data analysis"
+      "bioinformatics",
+      "pharmaceutical",
+      "research"
     ],
-    "category": "analysis",
-    "screenshot": "assets/placeholder.png"
-  },
-  {
-    "name": "Schrödinger",
-    "slug": "schrodinger",
-    "url": "https://schrodinger.com",
-    "short_description": "Advanced software solutions for molecular modeling and drug design.",
-    "long_description": "Schrödinger provides industry-leading software for molecular modeling, drug design, and computational chemistry. Their platform enables researchers to simulate molecular interactions, predict drug efficacy, and optimize lead compounds. With a focus on accuracy and efficiency, Schrödinger's tools support various aspects of drug discovery, from virtual screening to molecular dynamics simulations. The software is widely used in both academic and industrial settings, empowering chemists and biologists to make informed decisions in their research. Schrödinger also offers extensive training and support to ensure users maximize the potential of their tools.",
-    "tags": [
-      "molecular modeling",
-      "drug design",
-      "computational chemistry",
-      "software",
-      "virtual screening"
-    ],
-    "category": "analysis",
+    "category": "database",
     "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "assets/placeholder.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444640/chem-ai-tools/chembl.png"
   },
   {
-    "name": "OpenEye Scientific Software",
-    "slug": "openeye-scientific-software",
-    "url": "https://openeye.scientific.com",
-    "short_description": "Tools for molecular modeling, cheminformatics, and drug discovery.",
-    "long_description": "OpenEye Scientific Software specializes in molecular modeling and cheminformatics solutions designed to enhance the drug discovery process. Their suite of tools allows researchers to visualize molecular structures, perform conformational analysis, and conduct virtual screening. OpenEye's software is particularly known for its speed and accuracy in molecular simulations, making it ideal for both academic research and pharmaceutical applications. The company also emphasizes collaboration, providing APIs and integrations for seamless use alongside other software tools, thus maximizing productivity and innovation in drug discovery.",
+    "name": "Open Babel",
+    "slug": "open-babel",
+    "url": "http://openbabel.org",
+    "short_description": "An open-source chemical toolbox for conversion and manipulation of molecular structures.",
+    "long_description": "Open Babel is an open-source chemical toolbox designed for the interconversion and manipulation of molecular formats. With support for numerous file types, it allows researchers to convert, analyze, and visualize chemical structures easily. Open Babel's extensive functionality includes molecular descriptor calculations, molecular modeling, and cheminformatics applications, making it a versatile tool for computational chemists. Its command-line interface and scripting capabilities enable users to automate workflows, while its integration with various programming languages allows for further customization. Open Babel is a valuable resource for anyone working in cheminformatics or drug discovery.",
     "tags": [
-      "molecular modeling",
+      "open source",
       "cheminformatics",
-      "virtual screening",
-      "software",
-      "drug discovery"
+      "molecular modeling",
+      "toolbox",
+      "conversion",
+      "automation"
     ],
     "category": "analysis",
     "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "assets/placeholder.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444645/chem-ai-tools/open-babel.png"
   },
   {
     "name": "RDKit",
     "slug": "rdkit",
-    "url": "https://www.rdkit.org",
-    "short_description": "RDKit is an open-source cheminformatics toolkit that provides tools for chemical informatics, molecular modeling, and data analysis. It enables the manipulation and visualization of chemical structures, alongside the integration of machine learning algorithms for chemical property prediction.",
-    "long_description": "RDKit is a versatile and powerful open-source cheminformatics toolkit widely used in the field of computational chemistry and drug discovery. It offers a comprehensive set of features for handling chemical information, including tools for molecular representation, manipulation, and visualization. With the ability to calculate molecular descriptors, perform substructure searching, and manage chemical databases, RDKit facilitates efficient analysis of chemical properties and relationships. Additionally, RDKit supports integration with machine learning frameworks, enabling researchers to develop predictive models for various chemical properties. The toolkit is compatible with Python and C++, allowing for seamless integration into existing workflows and software applications. RDKit's robust community support and extensive documentation make it a favored choice among chemists and researchers looking to leverage computational techniques for chemical research and discovery. Whether you are involved in drug design or materials science, RDKit provides the necessary tools to accelerate your research and unlock new insights in chemistry.",
+    "url": "http://www.rdkit.org",
+    "short_description": "A collection of cheminformatics tools and libraries for data analysis and molecular manipulation.",
+    "long_description": "RDKit is a powerful open-source cheminformatics toolkit that provides extensive functionality for the manipulation, analysis, and visualization of chemical data. It is widely used in both academic and industrial settings for tasks such as molecular descriptor calculation, substructure searching, and cheminformatics data mining. RDKit's Python-based interface allows for easy integration into data analysis workflows, enabling researchers to develop custom applications for drug discovery. With its robust documentation and active community, RDKit is an essential tool for computational chemists and cheminformatics researchers looking to enhance their research capabilities.",
     "tags": [
       "cheminformatics",
       "open source",
-      "toolkit",
       "data analysis",
-      "molecular modeling"
+      "molecular manipulation",
+      "toolkit",
+      "Python"
     ],
     "category": "analysis",
-    "screenshot": "assets/placeholder.png"
+    "description": "Beschreibung konnte nicht geladen werden.",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444649/chem-ai-tools/rdkit.png"
   },
   {
-    "name": "Atomwise",
-    "slug": "atomwise",
-    "url": "https://atomwise.com",
-    "short_description": "Atomwise is an advanced AI tool that utilizes deep learning algorithms to predict molecular interactions and accelerate drug discovery, enabling researchers to identify potential compounds more efficiently and with greater accuracy in the field of chemistry.",
-    "long_description": "Atomwise leverages the power of artificial intelligence and machine learning to transform the drug discovery process in chemistry. By employing deep learning algorithms, Atomwise analyzes vast chemical libraries and predicts how different molecules will interact at the atomic level. This capability allows researchers to efficiently screen for potent drug candidates, significantly reducing the time and cost associated with traditional methods. Atomwise's platform provides scientists with insights into molecular behavior and potential therapeutic effects, enabling them to make informed decisions in their research. Furthermore, the tool supports collaborative efforts, allowing pharmaceutical companies and academic institutions to share data and insights, ultimately driving innovation in drug design. With its user-friendly interface and robust computational capabilities, Atomwise empowers chemists to explore new chemical entities and optimize lead compounds, paving the way for the development of novel therapies for a wide range of diseases.",
+    "name": "Schrödinger",
+    "slug": "schrodinger",
+    "url": "https://www.schrodinger.com",
+    "short_description": "Provides advanced software solutions for drug discovery and materials science.",
+    "long_description": "Schrödinger offers a comprehensive suite of molecular modeling and simulation software designed for drug discovery and materials science. Their tools, such as Maestro and Glide, enable researchers to visualize molecular structures, perform docking studies, and predict molecular interactions with high accuracy. Schrödinger's platform integrates advanced computational techniques with machine learning algorithms to streamline the drug design process, helping scientists to efficiently screen compounds and optimize lead candidates. With a strong emphasis on user experience and collaboration, Schrödinger is a leading solution in computational chemistry and drug discovery.",
     "tags": [
-      "AI",
+      "molecular modeling",
+      "drug discovery",
+      "simulation",
+      "software",
+      "materials science",
+      "computational chemistry"
+    ],
+    "category": "analysis",
+    "description": "Beschreibung konnte nicht geladen werden.",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444653/chem-ai-tools/schrodinger.png"
+  },
+  {
+    "name": "Cresset",
+    "slug": "cresset",
+    "url": "https://www.cresset-group.com",
+    "short_description": "Software for molecular modeling, 3D visualization, and structure-based design.",
+    "long_description": "Cresset specializes in molecular modeling software that enhances structure-based drug design and molecular visualization. Their products, such as Forge and Spark, allow researchers to analyze molecular interactions and optimize compounds using advanced computational techniques. Cresset's innovative tools facilitate 3D visualization of molecular structures, making it easier to identify potential binding sites and evaluate ligand efficacy. By integrating cheminformatics with advanced modeling capabilities, Cresset provides a unique approach to drug discovery, enabling researchers to make informed decisions and streamline their design processes.",
+    "tags": [
+      "molecular modeling",
+      "3D visualization",
       "drug design",
-      "virtual screening",
-      "deep learning",
-      "pharmaceuticals"
+      "cheminformatics",
+      "software",
+      "binding"
     ],
-    "category": "synthesis",
-    "screenshot": "assets/placeholder.png"
+    "category": "analysis",
+    "description": "Beschreibung konnte nicht geladen werden.",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444659/chem-ai-tools/cresset.png"
   },
   {
-    "name": "CureMetrix",
-    "slug": "curemetrix",
-    "url": "https://curemetrix.com",
-    "short_description": "CureMetrix is an advanced AI tool designed for chemists to accelerate drug discovery and optimize molecular structures. Leveraging machine learning algorithms, it analyzes chemical data to predict compounds' effectiveness and safety, streamlining the research process and reducing time-to-market for new pharmaceuticals.",
-    "long_description": "CureMetrix revolutionizes the field of chemistry by integrating powerful artificial intelligence tools to enhance drug discovery and molecular design processes. Designed for chemists and researchers, CureMetrix harnesses the capabilities of advanced machine learning algorithms to analyze extensive chemical datasets. By predicting the effectiveness and safety profiles of various compounds, it allows for more informed decision-making throughout the research and development phase. With its user-friendly interface, CureMetrix not only accelerates the identification of promising drug candidates but also facilitates the optimization of molecular structures, significantly reducing the time required to bring new pharmaceuticals to market. Additionally, the platform offers features such as real-time data visualization and comprehensive reporting, empowering users to draw meaningful insights from their research. Whether you're working in academia or the pharmaceutical industry, CureMetrix provides the tools you need to push the boundaries of innovation in chemistry and improve health outcomes on a global scale.",
+    "name": "BioAssay",
+    "slug": "bioassay",
+    "url": "https://www.bioassay.org",
+    "short_description": "A platform for managing and analyzing biological assay data in drug discovery.",
+    "long_description": "BioAssay is a specialized platform designed for managing and analyzing biological assay data related to drug discovery. It helps researchers to efficiently organize, visualize, and interpret data from various biological experiments, including high-throughput screening and dose-response studies. With built-in statistical tools, BioAssay enables scientists to derive meaningful insights from their data, facilitating the identification of promising drug candidates. The platform's user-friendly interface and data integration capabilities make it an essential resource for drug discovery teams looking to streamline their data management processes and enhance collaboration.",
     "tags": [
-      "AI",
+      "data management",
+      "biological assays",
       "drug discovery",
-      "cancer",
-      "therapeutics",
-      "software"
-    ],
-    "category": "synthesis",
-    "screenshot": "assets/placeholder.png"
-  },
-  {
-    "name": "Insilico Medicine",
-    "slug": "insilico-medicine",
-    "url": "https://insilico.com",
-    "short_description": "Insilico Medicine is an AI-driven platform that accelerates drug discovery and development by leveraging machine learning and deep learning techniques to analyze chemical compounds, predict biological activity, and optimize lead candidates efficiently.",
-    "long_description": "Insilico Medicine is a cutting-edge AI tool designed to revolutionize the fields of chemistry and drug discovery. Utilizing advanced machine learning and deep learning algorithms, Insilico Medicine enables researchers to analyze vast datasets of chemical compounds and biological interactions. The platform excels in predicting the biological activity of molecules, thereby streamlining the identification of potential drug candidates. By optimizing lead compounds through in silico simulations, Insilico Medicine significantly reduces the time and costs associated with traditional drug development processes. Additionally, its innovative molecular design capabilities allow scientists to generate novel compounds with tailored properties. With a user-friendly interface and powerful analytical tools, Insilico Medicine serves both academic and industrial researchers, facilitating collaboration and accelerating the pace of biomedical innovation. Whether identifying new therapeutic targets or optimizing existing drug candidates, Insilico Medicine is at the forefront of integrating artificial intelligence into chemistry, making it an invaluable resource in the quest for effective treatments and breakthroughs in healthcare.",
-    "tags": [
-      "AI",
-      "drug discovery",
-      "aging",
-      "pharmaceuticals",
+      "high-throughput",
+      "analysis",
       "platform"
     ],
-    "category": "synthesis",
+    "category": "analysis",
+    "description": "Beschreibung konnte nicht geladen werden.",
     "screenshot": "assets/placeholder.png"
   },
   {
-    "name": "BenevolentAI",
-    "slug": "benevolentai",
-    "url": "https://benevolent.ai",
-    "short_description": "BenevolentAI is an advanced AI-driven platform designed to accelerate drug discovery and chemical research by analyzing vast datasets and generating insights that enhance decision-making in pharmaceutical development.",
-    "long_description": "BenevolentAI harnesses the power of artificial intelligence and machine learning to transform the landscape of drug discovery and chemistry research. By integrating vast amounts of scientific literature, biological data, and chemical properties, the platform enables researchers to swiftly identify novel therapeutic candidates and optimize chemical compounds. BenevolentAI's sophisticated algorithms sift through extensive datasets to reveal hidden relationships and insights that may not be apparent through traditional methods. This capability not only expedites the research process but also significantly reduces costs associated with drug development. The platform is designed for scientists in various domains, providing a user-friendly interface that facilitates collaboration and knowledge sharing. By streamlining workflows, BenevolentAI empowers researchers to focus on innovative solutions and breakthrough discoveries in the pharmaceutical field. The tool's robust analytics capabilities and predictive modeling further enhance the decision-making process, ensuring that chemists and researchers have access to the best possible insights in their quest for new treatments and solutions to complex medical challenges.",
+    "name": "MolSoft",
+    "slug": "molsoft",
+    "url": "https://www.molsoft.com",
+    "short_description": "Offers tools for molecular modeling, visualization, and drug design.",
+    "long_description": "MolSoft provides cutting-edge software solutions for molecular modeling, visualization, and drug design. Their flagship product, ICM, is a powerful platform that supports a range of applications including molecular docking, virtual screening, and structure-based drug design. MolSoft's tools enable researchers to analyze complex molecular interactions, visualize chemical structures in 3D, and optimize lead compounds with precision. With an emphasis on user-friendly interfaces and high-performance algorithms, MolSoft is widely recognized in the pharmaceutical industry for its contributions to accelerating drug discovery and enhancing research productivity.",
     "tags": [
-      "AI",
-      "drug discovery",
-      "pharmaceuticals",
-      "biomedical",
-      "technology"
+      "molecular modeling",
+      "drug design",
+      "visualization",
+      "software",
+      "docking",
+      "screening"
     ],
-    "category": "synthesis",
-    "screenshot": "assets/placeholder.png"
+    "category": "analysis",
+    "description": "Beschreibung konnte nicht geladen werden.",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444665/chem-ai-tools/molsoft.png"
   }
 ]
