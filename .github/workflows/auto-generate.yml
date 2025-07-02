@@ -16,29 +16,29 @@ jobs:
     environment:
       name: github-pages
     steps:
-      - name: Repository auschecken
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Node.js einrichten
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Abhängigkeiten installieren
+      - name: Install dependencies
         run: npm install
 
-      - name: Detailseiten generieren
+      - name: Generate detail pages
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: npm run generate
 
-      - name: Seiten-Artefakt hochladen
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./tools
-
-      - name: GitHub Pages konfigurieren
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: GitHub Pages deployen
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'   # Gesamtes Repo root deployen (index.html + tools/)
+
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
