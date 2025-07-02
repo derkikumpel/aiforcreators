@@ -10,6 +10,23 @@ async function loadTools() {
   }
 }
 
+// Filter-Checkboxen dynamisch generieren
+function renderFilterOptions(tools) {
+  const form = document.getElementById('filter-form');
+  if (!form) return;
+
+  // Alle Kategorien sammeln und Duplikate entfernen
+  const categories = [...new Set(tools.map(tool => tool.category).filter(Boolean))];
+  
+  // Checkboxen als HTML einfügen
+  form.innerHTML = categories.map(cat => `
+    <label>
+      <input type="checkbox" name="category" value="${cat}" />
+      ${cat}
+    </label>
+  `).join('');
+}
+
 // Tools rendern
 function renderTools(tools) {
   const container = document.getElementById('toolGrid');
@@ -58,16 +75,17 @@ function setupFiltering(tools) {
 document.addEventListener('DOMContentLoaded', async () => {
   const tools = await loadTools();
 
+  renderFilterOptions(tools);   // Filter vor Tool-Rendern generieren
   renderTools(tools);
   setupFiltering(tools);
 
-// Aktualisierungsdatum und -zeit setzen, falls vorhanden
-const updateEl = document.getElementById('update-date');
-if (updateEl) {
-  const now = new Date();
-  updateEl.textContent = now.toLocaleString('en-US', {
-    dateStyle: 'medium',
-    timeStyle: 'short'
-  });
-}
+  // Aktualisierungsdatum und -zeit setzen
+  const updateEl = document.getElementById('update-date');
+  if (updateEl) {
+    const now = new Date();
+    updateEl.textContent = now.toLocaleString('en-US', {
+      dateStyle: 'medium',
+      timeStyle: 'short'
+    });
+  }
 });
