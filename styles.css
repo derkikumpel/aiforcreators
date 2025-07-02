@@ -63,9 +63,9 @@ main {
   transition: background-color 0.2s;
 }
 
-#filter-form label:hover {
-  background-color: #4c6d55;
-}
+/* #filter-form label:hover {
+background-color: #4c6d55;
+}*/
 
 #filter-form input[type="checkbox"] {
   margin-right: 0.5rem;
