@@ -95,6 +95,27 @@ function setupFiltering(tools) {
   });
 }
 
+// Suche anwenden
+function setupSearch(tools) {
+  const searchInput = document.getElementById('search-bar');
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+
+    const filteredByCategory = applyFilters(tools);
+
+    const searched = filteredByCategory.filter(tool => {
+      const inName = tool.name?.toLowerCase().includes(query);
+      const inDesc = tool.short_description?.toLowerCase().includes(query);
+      const inTags = tool.tags?.some(tag => tag.toLowerCase().includes(query));
+      return inName || inDesc || inTags;
+    });
+
+    renderTools(searched);
+  });
+  
+}
 // Zeitstempel laden
 async function loadLastUpdated() {
   try {
@@ -116,6 +137,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderFilters(tags);
   renderTools(tools);
   setupFiltering(tools);
+  setupSearch(tools);
 
   const updateEl = document.getElementById('update-date');
   const updatedDate = await loadLastUpdated();
