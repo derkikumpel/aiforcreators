@@ -61,6 +61,8 @@ header {
   gap: 8px;
   margin-top: 1rem;
   max-width: 800px;
+  color: #fff;
+  font-size: 0.85rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem; /* neuer Abstand zu den Karten */
