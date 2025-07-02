@@ -55,7 +55,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-#filter-form label {
+/* #filter-form label {
   background-color: var(--card-bg);
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -63,7 +63,7 @@ main {
   transition: background-color 0.2s;
 }
 
-/* #filter-form label:hover {
+#filter-form label:hover {
 background-color: #4c6d55;
 }*/
 
