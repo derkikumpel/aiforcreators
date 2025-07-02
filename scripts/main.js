@@ -89,6 +89,19 @@ function setupFiltering(tools) {
   });
 }
 
+// Zeitstempel
+async function loadLastUpdated() {
+  try {
+    const res = await fetch('data/last-updated.json');
+    if (!res.ok) throw new Error('last-updated.json not found');
+    const json = await res.json();
+    return new Date(json.updated);
+  } catch (err) {
+    console.error('Fehler beim Laden des Aktualisierungsdatums:', err);
+    return null;
+  }
+}
+
 // Initialisierung
 document.addEventListener('DOMContentLoaded', async () => {
   const tools = await loadTools();
@@ -99,12 +112,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupFiltering(tools);
 
   // Aktualisierungsdatum und -zeit setzen
-  const updateEl = document.getElementById('update-date');
-  if (updateEl) {
-    const now = new Date();
-    updateEl.textContent = now.toLocaleString('en-US', {
-      dateStyle: 'medium',
-      timeStyle: 'short'
-    });
+    const updateEl = document.getElementById('update-date');
+    const updatedDate = await loadLastUpdated();
+    if (updateEl && updatedDate) {
+      updateEl.textContent = updatedDate.toLocaleString('en-US', {
+        dateStyle: 'medium',
+        timeStyle: 'short'
+      });
+    }
   }
 });
