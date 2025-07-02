@@ -1,90 +1,70 @@
-let allTools = [];
-let activeTags = new Set();
-
-// Tools laden
+// tools.json laden
 async function loadTools() {
-  const response = await fetch('data/tools.json');
-  if (!response.ok) {
-    console.error('❌ Failed to load tools.json');
+  try {
+    const response = await fetch('data/tools.json');
+    if (!response.ok) throw new Error("Failed to load tools.json");
+    return await response.json();
+  } catch (err) {
+    console.error(err);
     return [];
   }
-  return await response.json();
 }
 
 // Tools rendern
 function renderTools(tools) {
-  const grid = document.getElementById('toolGrid');
-  grid.innerHTML = '';
-
-  // Sortiere Tools alphabetisch
-  const visible = tools.filter(tool => {
-    if (activeTags.size === 0) return true;
-    return tool.tags?.some(tag => activeTags.has(capitalize(tag)));
-  });
-
-  if (visible.length === 0) {
-    grid.innerHTML = `<p>No tools match the selected filters.</p>`;
-    return;
-  }
-
-  for (const tool of visible) {
-    const card = document.createElement('div');
-    card.className = 'tool-card';
-
-    card.innerHTML = `
-      <img src="${tool.screenshot || 'assets/placeholder.png'}" alt="${tool.name}" onerror="this.src='assets/placeholder.png'" />
-      <div class="content">
+  const container = document.getElementById('toolGrid');
+  container.innerHTML = tools.map(tool => `
+    <div class="tool-card">
+      <img 
+        src="${tool.image || 'assets/placeholder.png'}" 
+        alt="${tool.name}" 
+        onerror="this.src='assets/placeholder.png'" 
+      />
+      <div class="tool-info">
         <h3>${tool.name}</h3>
-        <p>${tool.short_description || tool.long_description?.substring(0, 100) + '...' || ''}</p>
+        <p>${tool.description ? tool.description.substring(0, 100) + '…' : ''}</p>
         <a href="tools/${tool.slug}.html">Details →</a>
       </div>
-    `;
-
-    grid.appendChild(card);
-  }
+    </div>
+  `).join('');
 }
 
-// Filter erzeugen
-function generateFilters(tools) {
-  const container = document.getElementById('filters');
-  const tagSet = new Set();
+// Tools nach ausgewählten Filtern filtern
+function applyFilters(tools) {
+  const checkedBoxes = [...document.querySelectorAll('#filter-form input[type="checkbox"]:checked')];
+  const selectedCategories = checkedBoxes.map(cb => cb.value);
 
-  for (const tool of tools) {
-    if (Array.isArray(tool.tags)) {
-      tool.tags.forEach(tag => tagSet.add(capitalize(tag)));
-    }
+  if (selectedCategories.length === 0) {
+    return tools;
   }
 
-  const sortedTags = Array.from(tagSet).sort();
-
-  for (const tag of sortedTags) {
-    const filter = document.createElement('div');
-    filter.className = 'filter-option';
-    filter.textContent = tag;
-    filter.dataset.tag = tag;
-
-    filter.addEventListener('click', () => {
-      filter.classList.toggle('active');
-      if (activeTags.has(tag)) {
-        activeTags.delete(tag);
-      } else {
-        activeTags.add(tag);
-      }
-      renderTools(allTools);
-    });
-
-    container.appendChild(filter);
-  }
+  return tools.filter(tool => 
+    tool.category && selectedCategories.includes(tool.category)
+  );
 }
 
-// Großbuchstaben
-function capitalize(tag) {
-  return tag.replace(/\b\w/g, char => char.toUpperCase());
+// Event-Listener für Filter setzen
+function setupFiltering(tools) {
+  const filterForm = document.getElementById('filter-form');
+  if (!filterForm) return;
+
+  filterForm.addEventListener('change', () => {
+    const filtered = applyFilters(tools);
+    renderTools(filtered);
+  });
 }
 
-// Init
+// Initialisierung beim Laden der Seite
 document.addEventListener('DOMContentLoaded', async () => {
-  allTools = await loadTools();
-  generateFilters(allTools);
-  renderTools(allTools);
+  const tools = await loadTools();
+
+  renderTools(tools);
+  setupFiltering(tools);
+
+  // Aktualisierungsdatum setzen, falls vorhanden
+  const updateEl = document.getElementById('update-date');
+  if (updateEl) {
+    const today = new Date();
+    updateEl.textContent = today.toLocaleDateString();
+  }
 });
