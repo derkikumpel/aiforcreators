@@ -1,3 +1,8 @@
+// Hilfsfunktion: Erstes Zeichen groß (für Filter-Labels)
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 // tools.json laden
 async function loadTools() {
   try {
@@ -10,26 +15,38 @@ async function loadTools() {
   }
 }
 
-// Filter-Checkboxen dynamisch generieren
-function renderFilterOptions(tools) {
-  const form = document.getElementById('filter-form');
-  if (!form) return;
+// Alle Kategorien aus Tools extrahieren, großgeschrieben und sortiert, unique
+function extractCategories(tools) {
+  const cats = new Set();
+  tools.forEach(tool => {
+    if (tool.category) {
+      cats.add(capitalize(tool.category));
+    }
+  });
+  return Array.from(cats).sort();
+}
 
-  // Alle Kategorien sammeln und Duplikate entfernen
-  const categories = [...new Set(tools.map(tool => tool.category).filter(Boolean))];
-  
-  // Checkboxen als HTML einfügen
-  form.innerHTML = categories.map(cat => `
-    <label>
+// Filter-Checkboxen dynamisch erzeugen
+function renderFilters(categories) {
+  const form = document.getElementById('filter-form');
+  form.innerHTML = '';
+  categories.forEach(cat => {
+    const label = document.createElement('label');
+    label.innerHTML = `
       <input type="checkbox" name="category" value="${cat}" />
       ${cat}
-    </label>
-  `).join('');
+    `;
+    form.appendChild(label);
+  });
 }
 
 // Tools rendern
 function renderTools(tools) {
   const container = document.getElementById('toolGrid');
+  if (tools.length === 0) {
+    container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #bbb;">No tools match your filters.</p>';
+    return;
+  }
   container.innerHTML = tools.map(tool => `
     <div class="tool-card">
       <img 
@@ -46,7 +63,7 @@ function renderTools(tools) {
   `).join('');
 }
 
-// Tools nach ausgewählten Filtern filtern
+// Filter anwenden
 function applyFilters(tools) {
   const checkedBoxes = [...document.querySelectorAll('#filter-form input[type="checkbox"]:checked')];
   const selectedCategories = checkedBoxes.map(cb => cb.value);
@@ -55,12 +72,13 @@ function applyFilters(tools) {
     return tools;
   }
 
-  return tools.filter(tool => 
-    tool.category && selectedCategories.includes(tool.category)
-  );
+  return tools.filter(tool => {
+    if (!tool.category) return false;
+    return selectedCategories.includes(capitalize(tool.category));
+  });
 }
 
-// Event-Listener für Filter setzen
+// Filter-Listener
 function setupFiltering(tools) {
   const filterForm = document.getElementById('filter-form');
   if (!filterForm) return;
@@ -71,11 +89,12 @@ function setupFiltering(tools) {
   });
 }
 
-// Initialisierung beim Laden der Seite
+// Initialisierung
 document.addEventListener('DOMContentLoaded', async () => {
   const tools = await loadTools();
 
-  renderFilterOptions(tools);   // Filter vor Tool-Rendern generieren
+  const categories = extractCategories(tools);
+  renderFilters(categories);
   renderTools(tools);
   setupFiltering(tools);
 
