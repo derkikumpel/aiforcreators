@@ -44,11 +44,11 @@ jobs:
         env:
           # Falls dein Screenshot-Script API-Key braucht, hier mitgeben:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          CLOUDINARY_NAME: ${{ secrets.CLOUDINARY_NAME }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
           CLOUDINARY_KEY: ${{ secrets.CLOUDINARY_KEY }}
           CLOUDINARY_SECRET: ${{ secrets.CLOUDINARY_SECRET }}
         run: npm run screenshot
-
+  
       - name: Detailseiten generieren
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
