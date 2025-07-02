@@ -7,16 +7,17 @@ async function discoverTools() {
   console.log('Starte GPT-basierte Tool-Suche...');
 
   const prompt = `
-Bitte nenne mir 10 aktuelle AI-Tools im Bereich Cheminformatik / Drug Discovery.
-Gib für jedes Tool die folgenden Felder als JSON zurück:
-- name (string)
-- slug (string, name in Kleinbuchstaben, Leerzeichen durch Bindestrich)
-- url (string)
-- description (string, 150 Wörter, maximal 250)
-- tags (Array von Strings, max. 6 Tags)
-- category (string, z.B. synthesis, analysis, database)
+    Please list 10 current AI tools in the field of cheminformatics or drug discovery.
+    For each tool, return a JSON object with the following fields:
+    - name (string)
+    - slug (string, lowercase, spaces replaced by dashes)
+    - url (string)
+    - short_description (string, 30–50 words)
+    - long_description (string, 150–250 words)
+    - tags (array of up to 6 strings)
+    -  category (string, e.g., synthesis, analysis, database)
 
-Antwort nur das JSON-Array, keine weitere Erklärung.
+    Respond only with the JSON array. No additional explanation.
 `;
 
   try {
