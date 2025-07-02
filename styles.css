@@ -39,6 +39,24 @@ h1 {
 }
 
 /* FILTER SECTION */
+
+#filters label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+
+#filters input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: #56f432;
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 6px #56f432;
+  border-radius: 4px;
+}
+
 #filters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
