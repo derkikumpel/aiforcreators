@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Tools for Chemists</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chem-AI Tools Directory</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <img src="assets/logoAfC.png" alt="AI for Chemists" class="logo">
-    <h1>AI Tools for Chemistry</h1>
-    <p>Curated collection of AI-powered chemistry tools</p>
+  <header>
+    <img src="/assets/logoAfC.png" alt="Logo" class="logo"/>
+    <h1>Chem-AI Tools Directory</h1>
   </header>
 
-  <div class="filter-container">
-    <input type="text" id="search" placeholder="Search tools...">
-    <div id="tag-filters"></div>
-  </div>
+  <main>
+    <section class="filters" id="filters">
+      <!-- Dynamisch generierte Filter hier -->
+    </section>
 
-  <main id="tools-grid"></main>
+    <section class="tool-grid" id="toolGrid">
+      <!-- Dynamisch generierte Tool-Karten hier -->
+    </section>
+  </main>
 
   <footer>
-    <p>Automatically updated • Last sync: <span id="update-date"></span></p>
+    <p>&copy; 2025 Chem-AI Directory</p>
   </footer>
 
-  <script src="scripts/main.js"></script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
-
