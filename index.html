@@ -12,6 +12,11 @@
     <h1>Chem-AI Tools Directory</h1>
   </header>
 
+  <main>
+    <form id="filter-form"></form>
+    <section id="toolGrid"></section>
+  </main>
+  
   <section id="filters" style="max-width: 960px; margin: 1rem auto; color: #56f432;">
   <form id="filter-form" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
     <label><input type="checkbox" name="category" value="Chemical Data" /> Chemical Data</label>
@@ -25,7 +30,8 @@
   <section id="toolGrid">
     <!-- Tool Cards werden per JS eingefügt -->
   </section>
-
+  
+  <footer>Last updated: <span id="update-date"></span></footer>
   <script src="scripts/main.js"></script>
 </body>
 </html>
