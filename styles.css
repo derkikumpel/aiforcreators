@@ -1,10 +1,141 @@
+/* Grundfarben */
 :root {
   --bg-color: #2e422f;
-  --text-color: #e4ffe1;
-  --accent: #56f432;
-  --card-bg: #3b5640;
-  --border-radius: 10px;
-  --shadow: 0 4px 20px rgba(86, 244, 50, 0.25);
+  --accent-color: #56f432;
+  --text-color: #ffffff;
+  --card-bg: #3a5740;
+  --card-shadow: rgba(0, 0, 0, 0.6);
+  --max-width: 1200px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1e2c1f;
+  box-shadow: 0 0 20px var(--accent-color);
+}
+
+.logo {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+}
+
+/* Filterbereich */
+#filters,
+#filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+#filter-form label {
+  background-color: var(--card-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--accent-color);
+  transition: background-color 0.2s;
+}
+
+#filter-form input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* Grid für Tool-Karten */
+#toolGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.tool-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--accent-color);
+}
+
+.tool-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.tool-info {
+  padding: 1rem;
+}
+
+.tool-info h3 {
+  margin: 0 0 0.5rem;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.tool-info p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.tool-info a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tool-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer / Update-Datum */
+footer {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cccccc;
+  background: #1e2c1f;
+}
+
+/* Responsive Optimierung */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
 }
 
 * {
