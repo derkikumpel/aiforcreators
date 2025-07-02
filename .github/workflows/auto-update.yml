@@ -64,7 +64,7 @@ jobs:
       - name: Seiten-Artefakt hochladen
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public  # Pfad zu deiner gebauten Seite (anpassen wenn nötig)
+          path: ./tools  # Pfad zu deiner gebauten Seite (anpassen wenn nötig)
 
       - name: GitHub Pages deployen
         uses: actions/deploy-pages@v4
