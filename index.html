@@ -2,29 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI Tools for Chemists</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <img src="assets/logoAfC.png" alt="Chem-AI Logo" class="logo" />
-    <h1>AI Tools for Chemists</h1>
+    <div class="header-text">
+      <h1>AI Tools for Chemists</h1>
+      <p>Discover powerful tools to enhance your chemistry research using artificial intelligence</p>
+    </div>
   </header>
 
   <main>
-    <!-- Dynamisch generierter Filterbereich -->
-    <section id="filters">
-      <form id="filter-form"></form>
-    </section>
-
-    <!-- Dynamisch generiertes Tool-Grid -->
-    <section id="toolGrid"></section>
+    <form id="filter-form" aria-label="Tool category filters"></form>
+    <section id="toolGrid" aria-live="polite" aria-atomic="true"></section>
   </main>
 
-  <footer>
-    Last updated: <span id="update-date"></span>
-  </footer>
+  <footer>Last updated: <span id="update-date"></span></footer>
 
   <script src="scripts/main.js"></script>
 </body>
