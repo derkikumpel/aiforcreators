@@ -14,7 +14,8 @@
       "molecular modeling"
     ],
     "category": "analysis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444630/chem-ai-tools/deepchem.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751445332/chem-ai-tools/deepchem.png",
+    "description": "Beschreibung konnte nicht geladen werden."
   },
   {
     "name": "ChemAxon",
@@ -31,7 +32,8 @@
       "software"
     ],
     "category": "synthesis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444635/chem-ai-tools/chemaxon.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444635/chem-ai-tools/chemaxon.png",
+    "description": "Beschreibung konnte nicht geladen werden."
   },
   {
     "name": "ChEMBL",
@@ -139,7 +141,7 @@
     ],
     "category": "analysis",
     "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "assets/placeholder.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751445366/chem-ai-tools/bioassay.png"
   },
   {
     "name": "MolSoft",
