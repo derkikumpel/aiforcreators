@@ -8,13 +8,19 @@
   --max-width: 1200px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0 1rem; /* Verhindert Kartenkleben am Rand */
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
+/* Header */
 header {
   display: flex;
   align-items: center;
@@ -33,15 +39,20 @@ h1 {
   color: var(--accent-color);
 }
 
+/* Hauptinhalt begrenzen */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 /* Filterbereich */
 #filters,
 #filter-form {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem 2rem;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  margin-bottom: 1.5rem;
 }
 
 #filter-form label {
@@ -62,12 +73,9 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  padding: 2rem;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  box-sizing: border-box;
 }
 
+/* Tool-Karten */
 .tool-card {
   background-color: var(--card-bg);
   border-radius: 10px;
@@ -75,202 +83,8 @@ h1 {
   box-shadow: 0 0 15px var(--card-shadow);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tool-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px var(--accent-color);
-}
-
-.tool-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-bottom: 2px solid var(--accent-color);
-}
-
-.tool-info {
-  padding: 1rem;
-}
-
-.tool-info h3 {
-  margin: 0 0 0.5rem;
-  color: var(--accent-color);
-  font-size: 1.2rem;
-}
-
-.tool-info p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.tool-info a {
-  display: inline-block;
-  margin-top: 0.8rem;
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.tool-info a:hover {
-  text-decoration: underline;
-}
-
-/* Footer / Update-Datum */
-footer {
-  padding: 1rem 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #cccccc;
-  background: #1e2c1f;
-}
-
-/* Responsive Optimierung */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo {
-    margin-bottom: 0.5rem;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding: 1rem;
-  line-height: 1.5;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-header img.logo {
-  height: 50px;
-}
-
-h1 {
-  font-size: 2rem;
-  color: var(--accent);
-  text-shadow: 0 0 10px var(--accent);
-}
-
-/* FILTER SECTION */
-
-#filters label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-weight: 600;
-  user-select: none;
-}
-
-#filters input[type="checkbox"] {
-  margin-right: 0.5rem;
-  accent-color: #56f432;
-  width: 18px;
-  height: 18px;
-  box-shadow: 0 0 6px #56f432;
-  border-radius: 4px;
-}
-
-#filters {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.filter-option {
-  background-color: var(--card-bg);
-  padding: 0.75rem 1rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  cursor: pointer;
-  user-select: none;
-  text-align: center;
-  font-weight: bold;
-  transition: background-color 0.2s;
-}
-
-.filter-option.active {
-  background-color: var(--accent);
-  color: #000;
-}
-
-/* TOOL GRID */
-#toolGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.tool-card {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  transition: transform 0.2s;
-}
-
-.tool-card:hover {
-  transform: scale(1.02);
-}
-
-.tool-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.tool-card .content {
-  padding: 1rem;
-}
-
-.tool-card h3 {
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-  text-shadow: 0 0 5px var(--accent);
-}
-
-.tool-card p {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.tool-card a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.tool-card a:hover {
-  text-decoration: underline;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-  #toolGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  #toolGrid {
-    grid-template-columns: 1fr;
-  }
-}
+  transform: translateY(-5
