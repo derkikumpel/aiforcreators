@@ -1,33 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Use</title>
+  <title>Terms of Use – AI for Chemists</title>
+  <link href="https://fonts.googleapis.com/css2?family=Arial+Nova+Cond&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Arial Nova Cond', Arial, sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      line-height: 1.5;
+      background-color: #121212;
+      color: white;
+      margin: 0;
+      padding: 1rem 2rem;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    header img {
+      height: 40px;
     }
     h1 {
-      margin-bottom: 1rem;
+      font-weight: normal;
+      font-size: 1.8rem;
+    }
+    main {
+      max-width: 800px;
+      line-height: 1.6;
+    }
+    button.back-btn {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 0.4rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    button.back-btn:hover {
+      background-color: white;
+      color: #121212;
+    }
+    a {
+      color: #90caf9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Terms of Use</h1>
-  <p>Welcome to our website. By accessing or using this site, you agree to comply with and be bound by the following terms and conditions.</p>
-  <h2>Use of Site</h2>
-  <p>The content provided is for informational purposes only and is provided "as is" without warranties of any kind.</p>
-  <h2>Limitation of Liability</h2>
-  <p>We are not liable for any damages arising from the use or inability to use the site or its content.</p>
-  <h2>Changes to Terms</h2>
-  <p>We reserve the right to update or modify these terms at any time without prior notice.</p>
-  <h2>Governing Law</h2>
-  <p>These terms shall be governed by the laws of the jurisdiction in which the site operator is based.</p>
+  <header>
+    <img src="assets/logo.png" alt="AI for Chemists Logo" />
+    <h1>Terms of Use</h1>
+  </header>
+  <button class="back-btn" onclick="history.back()">← Zurück</button>
+  <main>
+    <h1>Terms of Use</h1>
+    <p>Welcome to our website. By accessing or using this site, you agree to comply with and be bound by the following terms and conditions.</p>
+    <h2>Use of Site</h2>
+    <p>The content provided is for informational purposes only and is provided "as is" without warranties of any kind.</p>
+    <h2>Limitation of Liability</h2>
+    <p>We are not liable for any damages arising from the use or inability to use the site or its content.</p>
+    <h2>Changes to Terms</h2>
+    <p>We reserve the right to update or modify these terms at any time without prior notice.</p>
+    <h2>Governing Law</h2>
+    <p>These terms shall be governed by the laws of the jurisdiction in which the site operator is based.</p>
+  </main>
 </body>
 </html>
-
