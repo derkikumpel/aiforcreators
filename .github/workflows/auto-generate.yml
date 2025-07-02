@@ -1,0 +1,44 @@
+name: Site Generation and Deploy
+
+on:
+  schedule:
+    - cron: '0 4 * * 0'  # Sonntag 4 Uhr
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Abhängigkeiten installieren
+        run: npm install
+
+      - name: Detailseiten generieren
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: npm run generate
+
+      - name: Seiten-Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./tools
+
+      - name: GitHub Pages konfigurieren
+        uses: actions/configure-pages@v4
+
+      - name: GitHub Pages deployen
+        uses: actions/deploy-pages@v4
