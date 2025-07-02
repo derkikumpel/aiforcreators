@@ -27,6 +27,9 @@ jobs:
       - name: Abhängigkeiten installieren
         run: npm install
 
+      - name: Install Playwright-Browser
+        run: npx playwright install --with-deps
+  
       - name: Tools entdecken (GPT-basiert)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
