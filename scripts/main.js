@@ -61,10 +61,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderTools(tools);
   setupFiltering(tools);
 
-  // Aktualisierungsdatum setzen, falls vorhanden
-  const updateEl = document.getElementById('update-date');
-  if (updateEl) {
-    const today = new Date();
-    updateEl.textContent = today.toLocaleDateString();
-  }
+// Aktualisierungsdatum und -zeit setzen, falls vorhanden
+const updateEl = document.getElementById('update-date');
+if (updateEl) {
+  const now = new Date();
+  updateEl.textContent = now.toLocaleString('en-US', {
+    dateStyle: 'medium',
+    timeStyle: 'short'
+  });
+}
 });
