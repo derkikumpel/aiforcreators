@@ -2,7 +2,7 @@
 async function loadTools() {
   const response = await fetch('data/tools.json');
   if (!response.ok) {
-    console.error("Failed to load tools.json");
+    console.error("❌ Failed to load tools.json");
     return [];
   }
   return await response.json();
@@ -10,15 +10,15 @@ async function loadTools() {
 
 // Tools rendern
 function renderTools(tools) {
-  const container = document.getElementById('tools-grid');
+  const container = document.getElementById('toolGrid');
   container.innerHTML = tools.map(tool => `
     <div class="tool-card">
-      <img src="${tool.image || 'assets/placeholder.png'}" 
+      <img src="${tool.screenshot || 'assets/placeholder.png'}" 
            alt="${tool.name}" 
            onerror="this.src='assets/placeholder.png'">
-      <div class="tool-info">
+      <div class="content">
         <h3>${tool.name}</h3>
-        <p>${tool.description.substring(0, 100)}...</p>
+        <p>${tool.short_description.slice(0, 100)}...</p>
         <a href="tools/${tool.slug}.html">Details →</a>
       </div>
     </div>
@@ -29,5 +29,4 @@ function renderTools(tools) {
 document.addEventListener('DOMContentLoaded', async () => {
   const tools = await loadTools();
   renderTools(tools);
-  document.getElementById('update-date').textContent = new Date().toLocaleDateString();
 });
