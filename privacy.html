@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy – AI for Chemists</title>
+  <title>Terms of Use – AI for Chemists</title>
   <link href="https://fonts.googleapis.com/css2?family=Arial+Nova+Cond&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -12,6 +12,9 @@
       color: white;
       margin: 0;
       padding: 1rem 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     header {
       display: flex;
@@ -27,6 +30,7 @@
       font-size: 1.8rem;
     }
     main {
+      flex-grow: 1;
       max-width: 800px;
       line-height: 1.6;
     }
@@ -40,6 +44,7 @@
       margin-bottom: 2rem;
       border-radius: 4px;
       transition: background-color 0.3s ease;
+      align-self: flex-start;
     }
     button.back-btn:hover {
       background-color: white;
@@ -57,7 +62,7 @@
 <body>
   <header>
     <img src="assets/logoAfC.png" alt="AI for Chemists Logo" />
-    <h1>Privacy Policy</h1>
+    <h1>Terms of Use</h1>
   </header>
   <button class="back-btn" onclick="history.back()">← Back</button>
   <main>
