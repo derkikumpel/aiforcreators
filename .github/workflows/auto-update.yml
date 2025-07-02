@@ -5,6 +5,11 @@ on:
     - cron: '0 3 * * *'  # täglich um 3 Uhr morgens
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write  # ❗️ notwendig für OIDC
+  
 jobs:
   build:
     runs-on: ubuntu-latest
