@@ -204,3 +204,17 @@ footer {
   }
 }
 
+.tool-tags {
+  margin: 0.5em 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #eef2f7;
+  color: #333;
+  font-size: 0.75rem;
+  padding: 0.25em 0.5em;
+  margin: 0.1em;
+  border-radius: 4px;
+  font-weight: 500;
+}
