@@ -65,22 +65,21 @@ header {
 }
 
 #filter-form label {
-  background-color: var(--card-bg);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0;
   cursor: pointer;
-  box-shadow: none;
-  color: var(--accent-color);
-  font-weight: 600;
+  color: var(--text-color); /* weiß */
+  font-weight: normal;
   user-select: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background-color 0.2s;
+  background: none;
+  box-shadow: none;
 }
 
 #filter-form label:hover {
-  background-color: #4a7550;
+  background-color: transparent;
 }
 
 #filter-form input[type="checkbox"] {
