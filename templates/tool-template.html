@@ -2,33 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{TOOL_NAME}} – AI Tool for Chemists</title>
-  <meta name="description" content="{{TOOL_DESCRIPTION}}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{name}} – Chem-AI Tools</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="header">
-    <a href="/" class="back-link">← Back to Overview</a>
+  <header>
+    <a href="/"><img src="/assets/logoAfC.png" alt="Logo" class="logo"/></a>
+    <h1>{{name}}</h1>
   </header>
 
   <main class="tool-detail">
-    <h1>{{TOOL_NAME}}</h1>
-    <img src="{{TOOL_IMAGE}}" alt="{{TOOL_NAME}} Screenshot" class="tool-screenshot" />
+    <img class="tool-image" src="{{screenshot}}" alt="{{name}} Screenshot" />
 
-    <p class="tool-description">{{TOOL_DESCRIPTION}}</p>
+    <div class="tool-meta">
+      <p class="long-description">{{long_description}}</p>
 
-    <div class="tool-tags">
-      {{#TAGS}}
-        <span class="tag">{{.}}</span>
-      {{/TAGS}}
+      <div class="meta-section">
+        <h3>Tags</h3>
+        <ul>
+          {{#each tags}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="meta-section">
+        <h3>Category</h3>
+        <p>{{category}}</p>
+      </div>
+
+      <a class="visit-button" href="{{url}}" target="_blank">Visit Website</a>
     </div>
-
-    <a href="{{TOOL_URL}}" class="visit-button" target="_blank" rel="noopener">🔗 Visit Tool Website</a>
   </main>
 
-  <footer class="footer">
-    <p>Part of the <strong>AI Tools for Chemists</strong> initiative.</p>
+  <footer>
+    <p>&copy; 2025 Chem-AI Directory</p>
   </footer>
 </body>
 </html>
