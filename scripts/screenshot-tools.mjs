@@ -18,7 +18,11 @@ async function captureScreenshot(tool) {
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
 
-    const page = await browser.newPage();
+    // Neues Browser-Context mit ignorierten SSL-Fehlern
+    const context = await browser.newContext({
+      ignoreHTTPSErrors: true,
+    });
+    const page = await context.newPage();
     await page.setViewportSize({ width: 1280, height: 720 });
 
     const response = await page.goto(tool.url, {
@@ -30,7 +34,7 @@ async function captureScreenshot(tool) {
       throw new Error(`Seite nicht erreichbar (Status: ${response?.status() || 'n/a'})`);
     }
 
-    await page.waitForTimeout(3000); // etwas warten für visuelle Stabilität
+    await page.waitForTimeout(3000); // Warte etwas für visuelle Stabilität
     const screenshotBuffer = await page.screenshot({ fullPage: false });
 
     const base64 = `data:image/png;base64,${screenshotBuffer.toString('base64')}`;
