@@ -94,7 +94,8 @@ Respond only with the JSON array. No additional explanation.
     }
   }
 
-  if (!tools && ai21ApiKey) {
+  // AI21 Fallback auch bei leerem Array oder null
+  if ((!tools || tools.length === 0) && ai21ApiKey) {
     try {
       const ai21Response = await queryAI21(prompt);
       const jsonStart = ai21Response.indexOf('[');
@@ -110,7 +111,7 @@ Respond only with the JSON array. No additional explanation.
     }
   }
 
-  if (!tools) {
+  if (!tools || tools.length === 0) {
     console.error('❌ Konnte keine Tools entdecken.');
     tools = cache.length > 0 ? cache : [];
   } else {
