@@ -7,20 +7,38 @@ const openaiModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-3.5-turbo'];
 const cacheFile = './data/discover-cache.json';
 const toolsFile = './data/tools.json';
 
+// Erzwingt synchrones Schreiben auf stdout (nur Node.js < 20 gut unterstützt, 
+// aber hilft oft schon in CI-Umgebungen)
+if (process.stdout._handle && process.stdout._handle.setBlocking) {
+  process.stdout._handle.setBlocking(true);
+}
+if (process.stderr._handle && process.stderr._handle.setBlocking) {
+  process.stderr._handle.setBlocking(true);
+}
+
+function log(...args) {
+  process.stdout.write(new Date().toISOString() + ' LOG: ' + args.map(String).join(' ') + '\n');
+}
+
+function error(...args) {
+  process.stderr.write(new Date().toISOString() + ' ERROR: ' + args.map(String).join(' ') + '\n');
+}
+
 async function loadCache(file) {
   try {
     const raw = await fs.readFile(file, 'utf-8');
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) throw new Error('Cache ist kein Array');
+    log(`Cache geladen: ${file} (${parsed.length} Einträge)`);
     return parsed;
   } catch {
-    console.warn(`⚠️ Cache ${file} ungültig oder leer – wird neu erstellt.`);
+    log(`⚠️ Cache ${file} ungültig oder leer – wird neu erstellt.`);
     return [];
   }
 }
 
 export async function discoverTools() {
-  console.log('🚀 Starte GPT-basierte Tool-Suche...');
+  log('🚀 Starte GPT-basierte Tool-Suche...');
 
   const cache = await loadCache(cacheFile);
   const existingTools = await loadCache(toolsFile);
@@ -49,7 +67,7 @@ Respond only with the JSON array.
 
   for (const model of openaiModels) {
     try {
-      console.log(`→ Versuche OpenAI Modell: ${model}`);
+      log(`→ Versuche OpenAI Modell: ${model}`);
       const completion = await openai.chat.completions.create({
         model,
         messages: [{ role: 'user', content: prompt }],
@@ -62,15 +80,15 @@ Respond only with the JSON array.
       if (jsonStart === -1 || jsonEnd === -1) throw new Error('Kein JSON erkannt');
 
       tools = JSON.parse(raw.substring(jsonStart, jsonEnd + 1));
-      console.log(`✅ Tools gefunden mit ${model}`);
+      log(`✅ Tools gefunden mit ${model} (${tools.length} Tools)`);
       break;
-    } catch (error) {
-      console.warn(`⚠️ OpenAI-Fehler (${model}): ${error.message}`);
+    } catch (e) {
+      error(`⚠️ OpenAI-Fehler (${model}): ${e.message}`);
     }
   }
 
   if (!tools) {
-    console.error('❌ Keine neuen Tools entdeckt. Benutze nur Cache.');
+    error('❌ Keine neuen Tools entdeckt. Benutze nur Cache.');
     await fs.writeJson(toolsFile, existingTools, { spaces: 2 });
     return existingTools;
   }
@@ -82,6 +100,14 @@ Respond only with the JSON array.
   await fs.writeJson(toolsFile, updatedTools, { spaces: 2 });
   await fs.writeJson(cacheFile, updatedCache, { spaces: 2 });
 
-  console.log(`💾 Tools gespeichert: ${updatedTools.length} Einträge.`);
+  log(`💾 Tools gespeichert: ${updatedTools.length} Einträge (davon neu: ${newTools.length}).`);
   return updatedTools;
+}
+
+// Wenn du dieses Skript direkt ausführst:
+if (import.meta.url === process.argv[1] || process.argv[1].endsWith('discover-tools-gpt.mjs')) {
+  discoverTools().catch(e => {
+    error('Uncaught Error:', e);
+    process.exit(1);
+  });
 }
