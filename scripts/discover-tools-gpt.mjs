@@ -19,14 +19,13 @@ async function loadCache(file) {
   }
 }
 
-async function discoverTools() {
+export async function discoverTools() {
   console.log('🚀 Starte GPT-basierte Tool-Suche...');
 
   const cache = await loadCache(cacheFile);
   const existingTools = await loadCache(toolsFile);
   const knownSlugs = new Set(existingTools.map(t => t.slug));
 
-  // Namen und Slugs zum Ausschließen an GPT übergeben
   const exclusionList = existingTools.map(t => `- ${t.name} (${t.slug})`).slice(0, 50).join('\n');
 
   const prompt = `
@@ -73,7 +72,7 @@ Respond only with the JSON array.
   if (!tools) {
     console.error('❌ Keine neuen Tools entdeckt. Benutze nur Cache.');
     await fs.writeJson(toolsFile, existingTools, { spaces: 2 });
-    return;
+    return existingTools;
   }
 
   const newTools = tools.filter(t => !knownSlugs.has(t.slug));
@@ -84,7 +83,5 @@ Respond only with the JSON array.
   await fs.writeJson(cacheFile, updatedCache, { spaces: 2 });
 
   console.log(`💾 Tools gespeichert: ${updatedTools.length} Einträge.`);
+  return updatedTools;
 }
-
-discoverTools();
-
