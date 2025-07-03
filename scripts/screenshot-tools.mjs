@@ -76,7 +76,7 @@ export async function checkAndCaptureScreenshots() {
         console.log(`✅ Screenshot gespeichert: ${imageUrl}`);
       } catch (error) {
         console.warn(`⚠️ Tool ${tool.name} wird entfernt, da kein Screenshot möglich ist.`);
-        // Tool wird nicht zur validTools Liste hinzugefügt = entfernt
+        // Tool wird nicht in validTools aufgenommen
       }
     }
 
@@ -87,4 +87,12 @@ export async function checkAndCaptureScreenshots() {
     console.error('❌ Fehler im Screenshot-Prozess:', error.message || error);
     throw error;
   }
+}
+
+// CLI Entrypoint (damit 'node screenshot-tools.mjs' funktioniert)
+if (import.meta.url === `file://${process.argv[1]}`) {
+  checkAndCaptureScreenshots().catch(err => {
+    console.error('❌ Unerwarteter Fehler:', err);
+    process.exit(1);
+  });
 }
