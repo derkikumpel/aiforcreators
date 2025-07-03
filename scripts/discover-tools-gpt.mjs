@@ -10,7 +10,7 @@ const toolsFile = './data/tools.json';
 
 async function queryAI21(prompt) {
   console.log('→ AI21 Fallback aktiv: Versuche Jamba (large → mini)...');
-  const models = ['jamba-1.5-large', 'jamba-1.5-mini'];
+  const models = ['jamba-1.6-large', 'jamba-1.6-mini'];
 
   for (const model of models) {
     try {
