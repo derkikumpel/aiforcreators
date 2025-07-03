@@ -1,38 +1,26 @@
 import fs from 'fs-extra';
 import OpenAI from 'openai';
-import fetch from 'node-fetch';
+import { AI21 } from '@ai21/ai21';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-const ai21ApiKey = process.env.AI21_API_KEY;
+const ai21 = new AI21({
+  apiKey: process.env.AI21_API_KEY,
+});
 
 const openaiModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-3.5-turbo'];
 const cacheFile = './data/description-cache.json';
 
 async function queryAI21(prompt) {
   console.log('Versuche AI21 Jurassic-2 als Fallback...');
-  const response = await fetch('https://api.ai21.com/studio/v1/j2-large/complete', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${ai21ApiKey}`,
-    },
-    body: JSON.stringify({
-      prompt,
-      maxTokens: 400,
-      temperature: 0.7,
-      numResults: 1,
-      stopSequences: ['\n\n'],
-    }),
+  const response = await ai21.completions.generate({
+    model: 'j2-large',
+    prompt,
+    maxTokens: 800,
+    temperature: 0.7,
   });
-
-  if (!response.ok) {
-    throw new Error(`AI21 API Fehler: ${response.status} ${response.statusText}`);
-  }
-
-  const data = await response.json();
-  return data.completions[0].data.text.trim();
+  return response.completions[0].data.text.trim();
 }
 
 async function fetchToolDescriptions(tools) {
@@ -53,7 +41,6 @@ async function fetchToolDescriptions(tools) {
       continue;
     }
 
-    let description = null;
     const prompt = `Write two descriptions for the AI tool "${tool.name}" used in chemistry:
 
 1. Short description (30–50 words) for a tools overview page.
@@ -64,6 +51,8 @@ Respond in the following JSON format:
   "short_description": "...",
   "long_description": "..."
 }`;
+
+    let description = null;
 
     // OpenAI Modelle probieren
     for (const model of openaiModels) {
@@ -82,7 +71,7 @@ Respond in the following JSON format:
         console.log(`✅ Beschreibung für ${tool.name} mit ${model} generiert.`);
         break;
       } catch (error) {
-        if (error.status === 429 || (error.message && error.message.toLowerCase().includes('rate limit'))) {
+        if (error.status === 429) {
           console.warn(`Rate limit bei ${model}, versuche nächstes Modell...`);
         } else {
           console.error(`Fehler bei ${tool.name} mit ${model}:`, error.message);
@@ -91,28 +80,25 @@ Respond in the following JSON format:
       }
     }
 
-    // Falls OpenAI nicht geklappt hat, AI21 versuchen
-    if (!description && ai21ApiKey) {
+    // AI21 Fallback falls OpenAI versagt
+    if (!description) {
       try {
         const raw = await queryAI21(prompt);
         description = JSON.parse(raw);
         console.log(`✅ Beschreibung für ${tool.name} mit AI21 generiert.`);
       } catch (error) {
-        console.warn(`Keine Beschreibung für ${tool.name} von AI21 erhalten:`, error.message);
+        console.warn(`Keine Beschreibung für ${tool.name} mit AI21 generiert, benutze Standardtext.`);
+        description = {
+          short_description: tool.short_description || 'Beschreibung konnte nicht geladen werden.',
+          long_description: tool.long_description || 'Beschreibung konnte nicht geladen werden.',
+        };
       }
-    }
-
-    if (!description) {
-      console.warn(`Keine Beschreibung für ${tool.name} generiert, benutze Standardtext.`);
-      description = {
-        short_description: tool.short_description || 'Beschreibung konnte nicht geladen werden.',
-        long_description: tool.long_description || 'Beschreibung konnte nicht geladen werden.',
-      };
     }
 
     updatedTools.push({ ...tool, ...description });
     cache[tool.slug] = description;
 
+    // Cache speichern nach jedem Tool
     await fs.writeJson(cacheFile, cache, { spaces: 2 });
   }
 
@@ -134,6 +120,8 @@ async function main() {
     console.error('Fehler:', error.message);
   }
 }
+
+main();
 
 main();
 
