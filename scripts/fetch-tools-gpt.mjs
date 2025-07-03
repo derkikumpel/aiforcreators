@@ -133,6 +133,11 @@ async function main() {
     const tools = await fs.readJson('./data/tools.json');
     console.log(`tools.json enthält ${tools.length} Tools.`);
 
+    if (tools.length === 0) {
+      console.log('Keine Tools zum Beschreiben gefunden, beende.');
+      return;
+    }
+
     const updatedTools = await fetchToolDescriptions(tools);
 
     console.log('Schreibe aktualisierte Tools zurück in tools.json...');
