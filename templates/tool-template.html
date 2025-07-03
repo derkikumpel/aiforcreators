@@ -3,75 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{name}} – Chem-AI Tool</title>
+  <title>{{name}} – AI Tools for Chemists</title>
   <link rel="stylesheet" href="../styles.css" />
   <style>
-    body {
-      background-color: #2e422f;
-      color: #56f432;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0; padding: 1rem;
-    }
-    a {
-      color: #56f432;
-      text-decoration: none;
-      box-shadow: 0 0 8px #56f432;
-      transition: all 0.3s ease;
-    }
-    a:hover {
-      color: #a3f97a;
-      box-shadow: 0 0 15px #a3f97a;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-    header img {
-      height: 50px;
-      margin-right: 1rem;
-      filter: drop-shadow(0 0 3px #56f432);
-    }
     main {
-      max-width: 900px;
-      margin: auto;
-      background: #1f2e1f;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 0 15px #56f432;
+      max-width: var(--max-width);
+      margin: 2rem auto;
+      padding: 0 2rem;
     }
-    h1 {
-      margin-top: 0;
-      text-shadow: 0 0 8px #56f432;
+
+    .tool-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
     }
-    img.tool-screenshot {
+
+    .tool-image {
+      flex: 1 1 300px;
+    }
+
+    .tool-image img {
       width: 100%;
-      border-radius: 8px;
-      margin: 1rem 0;
-      box-shadow: 0 0 10px #56f432;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px var(--card-shadow);
+      background-color: #223322;
     }
-    .category {
+
+    .visit-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.6rem 1rem;
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      border-radius: 6px;
+      text-decoration: none;
       font-weight: bold;
-      margin: 1rem 0;
+      box-shadow: 0 0 10px var(--accent-color);
+      transition: background-color 0.2s ease;
     }
+
+    .visit-link:hover {
+      background-color: #8bff67;
+    }
+
+    .tool-description {
+      flex: 2 1 400px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .tool-description h2 {
+      margin-top: 0;
+      color: var(--accent-color);
+      font-size: 1.4rem;
+    }
+
     .back-link {
       display: inline-block;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    @media (max-width: 800px) {
+      .tool-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tool-description {
+        text-align: left;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="../assets/logoAfC.png" alt="Logo" />
-    <h1>{{name}}</h1>
+    <img src="../assets/logoAfC.png" alt="Chem-AI Logo" class="logo" />
+    <div class="header-text">
+      <h1>{{name}}</h1>
+      <p>AI Tools for Chemists</p>
+    </div>
   </header>
+
   <main>
     <a href="../index.html" class="back-link">← Back to Directory</a>
-    <img src="{{image || '../assets/placeholder.png'}}" alt="{{name}}" class="tool-screenshot" />
-    <p class="category">Category: {{category}}</p>
-    <p>{{description}}</p>
-    <p><a href="{{url}}" target="_blank" rel="noopener">Official Website →</a></p>
+
+    <div class="tool-content">
+      <div class="tool-image">
+        <img src="{{image || '../assets/placeholder.png'}}" alt="{{name}}" />
+        <a href="{{url}}" class="visit-link" target="_blank" rel="noopener">Visit {{name}} →</a>
+      </div>
+
+      <div class="tool-description">
+        <h2>About {{name}}</h2>
+        <p>{{long_description}}</p>
+
+        <div class="tool-tags">
+          {{#each tags}}
+            <span class="tag">{{this}}</span>
+          {{/each}}
+        </div>
+      </div>
+    </div>
   </main>
 </body>
 </html>
