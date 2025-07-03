@@ -30,7 +30,6 @@ jobs:
       - name: Generate detail pages
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          AI21_API_KEY: ${{ secrets.AI21_API_KEY }}
         run: npm run generate
         
       - name: Last updated setzen
