@@ -1,9 +1,9 @@
 name: Data Collection Old
 
-# on:
+on:
    # schedule:
     # - cron: '0 3 * * 0'  # Sonntag 3 Uhr
-  # workflow_dispatch: 
+   workflow_dispatch: 
 
 permissions:
   contents: write
