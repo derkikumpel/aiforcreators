@@ -9,7 +9,7 @@
     "fetch": "node scripts/fetch-tools-gpt.mjs",
     "screenshot": "node scripts/screenshot-tools.mjs",
     "generate": "node scripts/generate-detail-pages.js",
-    "update-data": "npm run discover && npm run fetch && npm run screenshot"
+    "update-data": "npm run discover && npm run screenshot && npm run fetch"
   },
   "author": "AI Tools for Chemists",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "fs-extra": "^11.1.1",
     "playwright": "^1.44.0",
     "cloudinary": "^1.37.1"
-   },
+  },
   "engines": {
     "node": ">=20"
   }
