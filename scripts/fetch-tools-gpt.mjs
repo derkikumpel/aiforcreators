@@ -2,65 +2,25 @@ import fs from 'fs-extra';
 import OpenAI from 'openai';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-const ai21ApiKey = process.env.AI21_API_KEY;
-
 const openaiModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-3.5-turbo'];
+
 const cacheFile = './data/description-cache.json';
+const toolsFile = './data/tools.json';
 
-async function queryAI21(prompt) {
-  console.log('→ AI21 Fallback aktiv für Beschreibung...');
-  const models = ['jamba-1.7-large', 'jamba-1.7-mini'];
-
-  for (const model of models) {
-    try {
-      console.log(`→ Versuche AI21-Modell: ${model}`);
-      const response = await fetch('https://api.ai21.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${ai21ApiKey}`,
-        },
-        body: JSON.stringify({
-          model,
-          messages: [
-            { role: 'system', content: 'Du bist ein hilfreicher Assistent.' },
-            { role: 'user', content: prompt },
-          ],
-          max_tokens: 800,
-          temperature: 0.7,
-          top_p: 1,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`API Fehler bei ${model}: ${response.status} ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      const text = data.choices?.[0]?.message?.content?.trim();
-      if (text) return text;
-
-    } catch (err) {
-      console.warn(`⚠️ Fehler bei ${model}: ${err.message}`);
-    }
+async function loadCache(file) {
+  try {
+    const raw = await fs.readFile(file, 'utf-8');
+    const parsed = JSON.parse(raw);
+    if (typeof parsed !== 'object' || Array.isArray(parsed)) throw new Error('Beschreibungscache ist kein Objekt');
+    return parsed;
+  } catch {
+    console.warn(`⚠️ Beschreibungscache ${file} ungültig oder leer – wird neu erstellt.`);
+    return {};
   }
-
-  throw new Error('❌ Kein AI21-Modell erfolgreich.');
 }
 
 async function fetchToolDescriptions(tools) {
-  let cache = {};
-  try {
-    cache = await fs.readJson(cacheFile);
-    if (typeof cache !== 'object' || cache === null) {
-      console.warn('⚠️ Beschreibungscache ist ungültig, wird zurückgesetzt.');
-      cache = {};
-    }
-    console.log(`🗂️ Beschreibungscache geladen (${Object.keys(cache).length} Einträge).`);
-  } catch {
-    console.log('ℹ️ Kein Cache gefunden, frischer Start...');
-  }
-
+  const cache = await loadCache(cacheFile);
   const updatedTools = [];
 
   for (const tool of tools) {
@@ -70,17 +30,9 @@ async function fetchToolDescriptions(tools) {
       continue;
     }
 
+    const prompt = `Write two descriptions for the AI tool "${tool.name}" used in chemistry:\n\n1. Short description (30–50 words)\n2. Long description (150–250 words)\n\nReturn as JSON:\n{\n  "short_description": "...",\n  "long_description": "..." \n}`;
+
     let description = null;
-    const prompt = `Write two descriptions for the AI tool "${tool.name}" used in chemistry:
-
-1. Short description (30–50 words)
-2. Long description (150–250 words)
-
-Return as JSON:
-{
-  "short_description": "...",
-  "long_description": "..."
-}`;
 
     for (const model of openaiModels) {
       try {
@@ -98,28 +50,16 @@ Return as JSON:
       }
     }
 
-    if (!description && ai21ApiKey) {
-      try {
-        const fallbackResponse = await queryAI21(prompt);
-        description = JSON.parse(fallbackResponse);
-        console.log(`✅ Beschreibung mit AI21 erzeugt für ${tool.name}`);
-      } catch (error) {
-        console.warn(`❌ AI21-Beschreibung fehlgeschlagen: ${error.message}`);
-      }
-    }
-
     if (!description) {
       console.warn(`⚠️ Beschreibung fehlt, Standardtext verwendet für ${tool.name}`);
       description = {
-        short_description: tool.short_description || 'Keine Beschreibung verfügbar.',
-        long_description: tool.long_description || 'Keine Beschreibung verfügbar.',
+        short_description: tool.short_description || 'No description available.',
+        long_description: tool.long_description || 'No long description available.',
       };
     }
 
-    updatedTools.push({ ...tool, ...description });
     cache[tool.slug] = description;
-
-    // Cache nach jedem Update speichern (optional, aber sicher)
+    updatedTools.push({ ...tool, ...description });
     await fs.writeJson(cacheFile, cache, { spaces: 2 });
   }
 
@@ -128,14 +68,14 @@ Return as JSON:
 
 async function main() {
   try {
-    const tools = await fs.readJson('./data/tools.json');
-    if (!Array.isArray(tools) || tools.length === 0) {
+    const tools = await fs.readJson(toolsFile);
+    if (!Array.isArray(tools) || !tools.length) {
       console.log('⚠️ Keine Tools gefunden, breche ab.');
       return;
     }
 
     const updatedTools = await fetchToolDescriptions(tools);
-    await fs.writeJson('./data/tools.json', updatedTools, { spaces: 2 });
+    await fs.writeJson(toolsFile, updatedTools, { spaces: 2 });
     console.log(`💾 Alle Beschreibungen aktualisiert (${updatedTools.length} Tools).`);
   } catch (error) {
     console.error('❌ Fehler:', error.message);
