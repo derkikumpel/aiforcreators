@@ -1,9 +1,12 @@
 import fs from 'fs-extra';
 import OpenAI from 'openai';
+import fetch from 'node-fetch';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+const ai21ApiKey = process.env.AI21_API_KEY;
 
 const openaiModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-3.5-turbo'];
 const cacheFile = './data/discover-cache.json';
@@ -14,13 +17,14 @@ async function queryAI21(prompt) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.AI21_API_KEY}`,
+      Authorization: `Bearer ${ai21ApiKey}`,
     },
     body: JSON.stringify({
       prompt,
       maxTokens: 800,
       temperature: 0.7,
-      stopSequences: ["\n\n"],
+      topKReturn: 0,
+      topP: 1,
     }),
   });
 
@@ -35,7 +39,6 @@ async function queryAI21(prompt) {
 async function discoverTools() {
   console.log('Starte GPT-basierte Tool-Suche...');
 
-  // Cache laden (falls vorhanden)
   let cache = [];
   try {
     cache = await fs.readJson(cacheFile);
@@ -60,7 +63,6 @@ Respond only with the JSON array. No additional explanation.
 
   let tools = null;
 
-  // Erst OpenAI alle Modelle probieren
   for (const model of openaiModels) {
     try {
       console.log(`Versuche Modell ${model}...`);
@@ -84,7 +86,7 @@ Respond only with the JSON array. No additional explanation.
       console.log(`✅ Tools erfolgreich mit ${model} entdeckt.`);
       break;
     } catch (error) {
-      if (error.status === 429) {
+      if (error.status === 429 || error.message.includes('Rate limit')) {
         console.warn(`Rate limit bei ${model}, versuche nächstes Modell...`);
       } else {
         console.error(`Fehler bei ${model}:`, error.message);
@@ -93,30 +95,29 @@ Respond only with the JSON array. No additional explanation.
     }
   }
 
-  // Falls OpenAI kein Ergebnis, AI21 als Fallback
-  if (!tools) {
+  if (!tools && ai21ApiKey) {
     try {
-      const raw = await queryAI21(prompt);
-
-      const jsonStart = raw.indexOf('[');
-      const jsonEnd = raw.lastIndexOf(']');
+      const ai21Response = await queryAI21(prompt);
+      const jsonStart = ai21Response.indexOf('[');
+      const jsonEnd = ai21Response.lastIndexOf(']');
       if (jsonStart === -1 || jsonEnd === -1) {
         throw new Error('Kein JSON-Array im AI21-Response gefunden');
       }
-      const jsonString = raw.substring(jsonStart, jsonEnd + 1);
+      const jsonString = ai21Response.substring(jsonStart, jsonEnd + 1);
       tools = JSON.parse(jsonString);
-
-      console.log('✅ Tools erfolgreich mit AI21 entdeckt.');
+      console.log('✅ Tools erfolgreich mit AI21 entdeckt (Fallback).');
     } catch (error) {
-      console.error('❌ Konnte keine Tools entdecken:', error.message);
-      tools = cache.length > 0 ? cache : [];
+      console.error('❌ Fehler bei AI21 Fallback:', error.message);
     }
   }
 
-  // Cache mit neuen Tools aktualisieren
-  if (tools) {
+  if (!tools) {
+    console.error('❌ Konnte keine Tools entdecken.');
+    tools = cache.length > 0 ? cache : [];
+  } else {
     const knownSlugs = new Set(cache.map(t => t.slug));
     const newTools = tools.filter(t => !knownSlugs.has(t.slug));
+
     if (newTools.length === 0) {
       console.log('Keine neuen Tools gefunden, benutze Cache.');
       tools = cache;
@@ -126,7 +127,6 @@ Respond only with the JSON array. No additional explanation.
     }
   }
 
-  // Immer in tools.json speichern
   await fs.writeJson('./data/tools.json', tools, { spaces: 2 });
   console.log(`✅ Tools gespeichert: ${tools.length} Einträge.`);
 }
