@@ -24,11 +24,16 @@ async function fetchToolDescriptions(tools) {
   const updatedTools = [];
 
   for (const tool of tools) {
-    if (cache[tool.slug]) {
-      console.log(`✔️ ${tool.name} bereits im Cache.`);
-      updatedTools.push({ ...tool, ...cache[tool.slug] });
-      continue;
-    }
+  if (!tool.slug || typeof tool.slug !== 'string') {
+    console.warn(`⚠️ Tool ohne gültigen Slug übersprungen: ${tool.name}`);
+    continue;
+  }
+
+  if (cache[tool.slug]) {
+    console.log(`✔️ ${tool.name} bereits im Cache.`);
+    updatedTools.push({ ...tool, ...cache[tool.slug] });
+    continue;
+  }
 
     const prompt = `Write two descriptions for the AI tool "${tool.name}" used in chemistry:\n\n1. Short description (30–50 words)\n2. Long description (150–250 words)\n\nReturn as JSON:\n{\n  "short_description": "...",\n  "long_description": "..." \n}`;
 
