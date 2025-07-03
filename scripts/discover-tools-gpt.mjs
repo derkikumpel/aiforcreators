@@ -26,8 +26,14 @@ async function discoverTools() {
   const existingTools = await loadCache(toolsFile);
   const knownSlugs = new Set(existingTools.map(t => t.slug));
 
+  // Namen und Slugs zum Ausschließen an GPT übergeben
+  const exclusionList = existingTools.map(t => `- ${t.name} (${t.slug})`).slice(0, 50).join('\n');
+
   const prompt = `
-Please list 10 current AI tools in the field of cheminformatics or drug discovery.
+Please list 10 current AI tools in the field of cheminformatics or drug discovery that are NOT in the following list:
+
+${exclusionList || '- (none listed)'}
+
 For each tool, return a JSON object with:
 - name
 - slug (lowercase, dash-separated)
@@ -81,3 +87,4 @@ Respond only with the JSON array.
 }
 
 discoverTools();
+
