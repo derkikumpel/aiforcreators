@@ -34,6 +34,7 @@ export async function enrichToolsWithDescriptions() {
     for (const tool of tools) {
       if (!tool.slug || typeof tool.slug !== 'string') {
         console.warn(`⚠️ Tool ohne gültigen Slug übersprungen: ${tool.name}`);
+        updatedTools.push(tool);
         continue;
       }
 
@@ -56,7 +57,10 @@ export async function enrichToolsWithDescriptions() {
             temperature: 0.7,
           });
 
-          description = JSON.parse(completion.choices[0].message.content.trim());
+          const raw = completion.choices[0].message.content.trim();
+          console.log(`📦 GPT-Antwort (erste 300 Zeichen):\n${raw.slice(0, 300)}\n...`);
+
+          description = JSON.parse(raw);
           break;
         } catch (error) {
           console.warn(`⚠️ Fehler mit ${model} für ${tool.name}: ${error.message}`);
@@ -73,6 +77,8 @@ export async function enrichToolsWithDescriptions() {
 
       cache[tool.slug] = description;
       updatedTools.push({ ...tool, ...description });
+
+      // Cache nach jedem Tool aktualisieren (sicherer)
       await fs.writeJson(cacheFile, cache, { spaces: 2 });
     }
 
@@ -83,4 +89,12 @@ export async function enrichToolsWithDescriptions() {
     console.error('❌ Fehler:', error.message || error);
     throw error;
   }
+}
+
+// CLI Entrypoint (damit 'node fetch-tools-gpt.mjs' funktioniert)
+if (import.meta.url === `file://${process.argv[1]}`) {
+  enrichToolsWithDescriptions().catch(err => {
+    console.error('❌ Unerwarteter Fehler:', err);
+    process.exit(1);
+  });
 }
