@@ -1,6 +1,5 @@
 import fs from 'fs-extra';
 import OpenAI from 'openai';
-import fetch from 'node-fetch';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
