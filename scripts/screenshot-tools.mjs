@@ -2,7 +2,6 @@ import fs from 'fs-extra';
 import { chromium } from 'playwright';
 import { v2 as cloudinary } from 'cloudinary';
 
-// Cloudinary-Konfiguration
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -18,7 +17,9 @@ async function captureScreenshot(tool) {
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
 
-    const context = await browser.newContext({ ignoreHTTPSErrors: true });
+    const context = await browser.newContext({
+      ignoreHTTPSErrors: true,
+    });
     const page = await context.newPage();
     await page.setViewportSize({ width: 1280, height: 720 });
 
@@ -31,9 +32,15 @@ async function captureScreenshot(tool) {
       throw new Error(`Seite nicht erreichbar (Status: ${response?.status() || 'n/a'})`);
     }
 
-    await page.waitForTimeout(3000);
-    const screenshotBuffer = await page.screenshot({ fullPage: false });
+    // Prüfe Titel auf mögliche Sicherheitswarnungen
+    const title = await page.title();
+    if (title.toLowerCase().includes('warnung') || title.toLowerCase().includes('security risk') || title.toLowerCase().includes('mögliches sicherheitsrisiko')) {
+      throw new Error('Sicherheitsrisiko erkannt, Screenshot wird nicht erstellt.');
+    }
 
+    await page.waitForTimeout(3000);
+
+    const screenshotBuffer = await page.screenshot({ fullPage: false });
     const base64 = `data:image/png;base64,${screenshotBuffer.toString('base64')}`;
 
     console.log(`📤 Lade Screenshot zu Cloudinary hoch...`);
@@ -46,13 +53,13 @@ async function captureScreenshot(tool) {
     return result.secure_url;
   } catch (error) {
     console.error(`⚠️ Screenshot fehlgeschlagen für ${tool.name}: ${error.message || error}`);
-    return null; // kein Platzhalter mehr!
+    throw error;
   } finally {
     if (browser) await browser.close();
   }
 }
 
-async function main() {
+export async function checkAndCaptureScreenshots() {
   try {
     const tools = await fs.readJson('./data/tools.json');
     console.log(`📸 Starte Screenshots für ${tools.length} Tools.`);
@@ -61,24 +68,23 @@ async function main() {
 
     for (let i = 0; i < tools.length; i++) {
       const tool = tools[i];
-      console.log(`\n[${i + 1}/${tools.length}] Screenshot für ${tool.name} erstellen...`);
-
-      const imageUrl = await captureScreenshot(tool);
-      if (!imageUrl) {
-        console.warn(`🚫 ${tool.name} wird aus der Liste entfernt.`);
-        continue; // Tool nicht übernehmen
+      try {
+        console.log(`\n[${i + 1}/${tools.length}] Screenshot für ${tool.name} erstellen...`);
+        const imageUrl = await captureScreenshot(tool);
+        tool.screenshot = imageUrl;
+        validTools.push(tool);
+        console.log(`✅ Screenshot gespeichert: ${imageUrl}`);
+      } catch (error) {
+        console.warn(`⚠️ Tool ${tool.name} wird entfernt, da kein Screenshot möglich ist.`);
+        // Tool wird nicht zur validTools Liste hinzugefügt = entfernt
       }
-
-      tool.screenshot = imageUrl;
-      validTools.push(tool);
-      console.log(`✅ Screenshot gespeichert: ${imageUrl}`);
     }
 
     await fs.writeJson('./data/tools.json', validTools, { spaces: 2 });
-    console.log(`\n✅ ${validTools.length} gültige Tools gespeichert.`);
+    console.log('\n✅ Screenshots aktualisiert, ungültige Tools entfernt.');
+    return validTools;
   } catch (error) {
-    console.error('❌ Fehler im Hauptprozess:', error.message || error);
+    console.error('❌ Fehler im Screenshot-Prozess:', error.message || error);
+    throw error;
   }
 }
-
-main();
