@@ -1,10 +1,12 @@
 import fs from 'fs-extra';
 import OpenAI from 'openai';
+import fetch from 'node-fetch';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+const ai21ApiKey = process.env.AI21_API_KEY;
 const openaiModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-3.5-turbo'];
 const cacheFile = './data/description-cache.json';
 
@@ -14,13 +16,14 @@ async function queryAI21(prompt) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.AI21_API_KEY}`,
+      Authorization: `Bearer ${ai21ApiKey}`,
     },
     body: JSON.stringify({
       prompt,
       maxTokens: 800,
       temperature: 0.7,
-      stopSequences: ["\n\n"],
+      topKReturn: 0,
+      topP: 1,
     }),
   });
 
@@ -52,7 +55,6 @@ async function fetchToolDescriptions(tools) {
 
     let description = null;
 
-    // OpenAI alle Modelle probieren
     for (const model of openaiModels) {
       try {
         console.log(`Generiere Beschreibungen für ${tool.name} mit Modell ${model}...`);
@@ -80,7 +82,7 @@ Respond in the following JSON format:
         console.log(`✅ Beschreibung für ${tool.name} mit ${model} generiert.`);
         break;
       } catch (error) {
-        if (error.status === 429) {
+        if (error.status === 429 || error.message.includes('Rate limit')) {
           console.warn(`Rate limit bei ${model}, versuche nächstes Modell...`);
         } else {
           console.error(`Fehler bei ${tool.name} mit ${model}:`, error.message);
@@ -89,10 +91,10 @@ Respond in the following JSON format:
       }
     }
 
-    // AI21 Fallback, falls OpenAI fehlschlägt
-    if (!description) {
+    if (!description && ai21ApiKey) {
       try {
-        const ai21Prompt = `Write two descriptions for the AI tool "${tool.name}" used in chemistry:
+        const ai21Response = await queryAI21(`
+Write two descriptions for the AI tool "${tool.name}" used in chemistry:
 
 1. Short description (30–50 words) for a tools overview page.
 2. Long description (150–250 words) for a detailed page.
@@ -101,17 +103,14 @@ Respond in the following JSON format:
 {
   "short_description": "...",
   "long_description": "..."
-}`;
-
-        const raw = await queryAI21(ai21Prompt);
-        description = JSON.parse(raw);
-        console.log(`✅ Beschreibung für ${tool.name} mit AI21 generiert.`);
+}`);
+        description = JSON.parse(ai21Response);
+        console.log(`✅ Beschreibung für ${tool.name} mit AI21 generiert (Fallback).`);
       } catch (error) {
-        console.warn(`Keine Beschreibung für ${tool.name} mit AI21 generiert:`, error.message);
+        console.warn(`AI21 Fallback Fehler für ${tool.name}:`, error.message);
       }
     }
 
-    // Falls keine Beschreibung generiert werden konnte
     if (!description) {
       console.warn(`Keine Beschreibung für ${tool.name} generiert, benutze Standardtext.`);
       description = {
@@ -123,7 +122,6 @@ Respond in the following JSON format:
     updatedTools.push({ ...tool, ...description });
     cache[tool.slug] = description;
 
-    // Cache speichern nach jedem Tool
     await fs.writeJson(cacheFile, cache, { spaces: 2 });
   }
 
