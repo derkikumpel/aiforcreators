@@ -11,25 +11,52 @@ const openaiModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-3.5-turbo'];
 const cacheFile = './data/discover-cache.json';
 
 async function queryAI21(prompt) {
-  console.log('Versuche AI21 Jurassic-2 als Fallback...');
-  const response = await fetch('https://api.ai21.com/studio/v1/j2-large/complete', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${ai21ApiKey}`,
-    },
-    body: JSON.stringify({
-      prompt,
-      maxTokens: 800,
-      temperature: 0.7,
-      topKReturn: 0,
-      topP: 1,
-    }),
-  });
+  console.log('Versuche AI21 Jamba als Fallback...');
+  const models = ['jamba-1.5-large', 'jamba-1.5-mini'];
 
-  if (!response.ok) {
-    throw new Error(`AI21 API Fehler: ${response.status} ${response.statusText}`);
+  for (const model of models) {
+    try {
+      console.log(`→ Versuche Modell: ${model}`);
+      const response = await fetch('https://api.ai21.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${process.env.AI21_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model,
+          messages: [
+            { role: 'system', content: 'Du bist ein hilfreicher Assistent.' },
+            { role: 'user', content: prompt },
+          ],
+          max_tokens: 800,
+          temperature: 0.7,
+          top_p: 1,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`API Fehler bei ${model}: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      const text = data.choices?.[0]?.message?.content?.trim();
+
+      if (text) {
+        console.log(`✅ Antwort erfolgreich mit ${model} erhalten.`);
+        return text;
+      } else {
+        throw new Error('Antwort-Parsing fehlgeschlagen');
+      }
+
+    } catch (error) {
+      console.warn(`⚠️ Fehler mit Modell ${model}: ${error.message}`);
+      // Versuch nächstes Modell
+    }
   }
+
+  throw new Error('❌ Kein AI21-Modell konnte erfolgreich verwendet werden.');
+}
 
   const data = await response.json();
   return data.completions[0].data.text.trim();
