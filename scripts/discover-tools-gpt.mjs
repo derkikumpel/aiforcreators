@@ -9,7 +9,7 @@ const cacheFile = './data/discover-cache.json';
 
 async function queryAI21(prompt) {
   console.log('→ AI21 Fallback aktiv: Versuche Jamba (large → mini)...');
-  const models = ['jamba-1.5-large', 'jamba-1.5-mini'];
+  const models = ['jamba-1.7-large', 'jamba-1.7-mini'];
 
   for (const model of models) {
     try {
