@@ -1,6 +1,1 @@
-{
-  "undefined": {
-    "short_description": "ChemGPT is a generative AI tool for molecular design, using transformer-based models to predict molecular properties and propose novel compounds.",
-    "long_description": "ChemGPT is a cutting-edge AI tool designed specifically for molecular generation and property prediction. Leveraging transformer architectures similar to those used in language models, ChemGPT can interpret chemical representations like SMILES and generate novel compounds with optimized properties. It supports tasks such as molecular optimization, similarity searching, and virtual screening, all with an intuitive web interface and API access. ChemGPT is especially valuable for medicinal chemists and computational drug designers seeking to accelerate discovery cycles and reduce lab effort. It integrates with existing cheminformatics workflows and allows export in standard formats."
-  }
-}
+[]
