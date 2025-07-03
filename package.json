@@ -18,8 +18,7 @@
     "fs-extra": "^11.1.1",
     "playwright": "^1.44.0",
     "cloudinary": "^1.37.1",
-    "@ai21/ai21": "^1.0.0"
-  },
+   },
   "engines": {
     "node": ">=20"
   }
