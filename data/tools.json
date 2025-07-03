@@ -3,162 +3,153 @@
     "name": "DeepChem",
     "slug": "deepchem",
     "url": "https://deepchem.io",
-    "short_description": "Open-source library for deep learning in drug discovery and cheminformatics.",
-    "long_description": "DeepChem is a robust open-source library designed to bring the power of deep learning to drug discovery and cheminformatics. It provides tools for molecular graph representation, machine learning algorithms, and various datasets, facilitating the development of predictive models for molecular properties, bioactivity, and other essential characteristics. Researchers can leverage DeepChem to accelerate drug discovery processes while tapping into the extensive capabilities of modern machine learning techniques.",
+    "short_description": "An open-source library for deep learning in drug discovery and cheminformatics.",
+    "long_description": "DeepChem is an open-source library designed for deep learning in the fields of drug discovery and cheminformatics. It provides a collection of tools and frameworks that enable researchers to apply deep learning techniques to molecular data, allowing for the prediction of molecular properties and the discovery of new compounds. With built-in support for various machine learning models, DeepChem facilitates the integration of computational chemistry data with AI methodologies, making it a powerful resource for both academic and industry research.",
     "tags": [
       "deep learning",
       "drug discovery",
       "cheminformatics",
-      "open source",
-      "machine learning",
-      "AI"
+      "open-source",
+      "machine learning"
     ],
     "category": "analysis",
     "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751461296/chem-ai-tools/deepchem.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751526204/chem-ai-tools/deepchem.png"
   },
   {
     "name": "ChemAxon",
     "slug": "chemaxon",
     "url": "https://chemaxon.com",
-    "short_description": "Comprehensive cheminformatics tools for molecular modeling and visualization.",
-    "long_description": "ChemAxon offers a suite of cheminformatics tools that support molecular modeling, visualization, and data management. Their software solutions cater to various stages of drug discovery, from structure elucidation to compound library design. Features include predictive modeling, molecular visualization, and database management, all aimed at enhancing the efficiency of the drug discovery process. ChemAxon's tools are widely used within pharmaceutical companies and academic institutions to facilitate research and development.",
+    "short_description": "Comprehensive cheminformatics and bioinformatics solutions for drug discovery.",
+    "long_description": "ChemAxon offers a suite of cheminformatics and bioinformatics tools that support various stages of drug discovery. Their software solutions enable researchers to visualize chemical structures, perform data analysis, and conduct virtual screenings. With features like structure search, property prediction, and molecular modeling, ChemAxon helps streamline the drug design process, ensuring that researchers can efficiently analyze chemical data and make informed decisions in their projects.",
     "tags": [
       "cheminformatics",
-      "molecular modeling",
-      "visualization",
+      "bioinformatics",
       "drug discovery",
-      "software",
-      "AI"
+      "structure visualization",
+      "data analysis"
     ],
     "category": "analysis",
     "description": "Beschreibung konnte nicht geladen werden.",
     "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444635/chem-ai-tools/chemaxon.png"
   },
   {
-    "name": "OpenEye Scientific Software",
-    "slug": "openeye-scientific-software",
-    "url": "https://www.eyesopen.com",
-    "short_description": "Provides software solutions for molecular modeling and cheminformatics.",
-    "long_description": "OpenEye Scientific Software specializes in providing advanced software tools for molecular modeling and cheminformatics. Their products are designed to assist researchers in drug discovery, offering solutions for molecular visualization, virtual screening, and structure-activity relationship (SAR) analysis. OpenEye's tools are utilized by chemists and biologists to understand molecular interactions and optimize lead compounds, ultimately accelerating the drug development process. Their solutions are built on a foundation of rigorous scientific principles and cutting-edge technology.",
-    "tags": [
-      "molecular modeling",
-      "cheminformatics",
-      "drug discovery",
-      "software",
-      "visualization",
-      "AI"
-    ],
-    "category": "analysis",
-    "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751461306/chem-ai-tools/openeye-scientific-software.png"
-  },
-  {
     "name": "Schrödinger",
     "slug": "schrodinger",
-    "url": "https://www.schrodinger.com",
-    "short_description": "Offers a comprehensive suite of software for drug discovery and molecular modeling.",
-    "long_description": "Schrödinger provides an integrated suite of software solutions that assist in drug discovery and molecular modeling. Their tools enable researchers to perform tasks such as molecular docking, virtual screening, and pharmacophore modeling. Schrödinger's powerful algorithms and advanced visualization capabilities facilitate the exploration of chemical space, helping scientists to identify potential drug candidates efficiently. The platform is utilized globally by pharmaceutical companies and academic institutions to streamline the drug development process and enhance collaborative research efforts.",
+    "url": "https://schrodinger.com",
+    "short_description": "Advanced software solutions for molecular modeling and drug design.",
+    "long_description": "Schrödinger provides a comprehensive suite of software solutions for molecular modeling, drug design, and computational chemistry. Their platform integrates various computational tools that allow researchers to simulate molecular interactions, analyze biological activity, and optimize lead compounds. With a user-friendly interface and robust algorithms, Schrödinger assists scientists in making data-driven decisions throughout the drug discovery process, ultimately accelerating the development of new therapeutics.",
     "tags": [
-      "drug discovery",
+      "computational chemistry",
       "molecular modeling",
-      "software",
-      "virtual screening",
-      "docking",
-      "AI"
+      "drug design",
+      "software solutions",
+      "lead optimization"
     ],
-    "category": "analysis",
+    "category": "synthesis",
     "description": "Beschreibung konnte nicht geladen werden.",
     "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444653/chem-ai-tools/schrodinger.png"
   },
   {
-    "name": "Cresset",
-    "slug": "cresset",
-    "url": "https://www.cresset-group.com",
-    "short_description": "Provides molecular modeling and cheminformatics solutions for drug discovery.",
-    "long_description": "Cresset specializes in molecular modeling and cheminformatics tools that enhance the drug discovery process. Their software solutions focus on the analysis of molecular interactions and the design of new compounds, utilizing innovative algorithms to visualize and predict molecular behavior. Cresset's tools support researchers in optimizing lead compounds and understanding structure-activity relationships. With a commitment to improving the efficiency of drug discovery, Cresset's software is widely adopted in pharmaceutical and biotechnology industries.",
+    "name": "OpenEye Scientific",
+    "slug": "openeye-scientific",
+    "url": "https://openeye.scientific.com",
+    "short_description": "Innovative tools for molecular modeling and visualization in drug discovery.",
+    "long_description": "OpenEye Scientific offers a range of innovative cheminformatics tools designed for molecular modeling and visualization. Their software enables researchers to perform tasks such as molecular docking, virtual screening, and molecular dynamics simulations. The platform is tailored for high-performance computing environments, allowing for the efficient processing of large datasets. With a focus on user experience and flexibility, OpenEye's tools empower scientists to explore complex molecular interactions and facilitate the drug discovery process.",
     "tags": [
       "molecular modeling",
+      "visualization",
       "cheminformatics",
       "drug discovery",
-      "software",
-      "lead optimization",
-      "AI"
+      "virtual screening"
     ],
     "category": "analysis",
     "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444659/chem-ai-tools/cresset.png"
+    "screenshot": "assets/placeholder.png"
   },
   {
-    "name": "MolSoft",
-    "slug": "molsoft",
-    "url": "https://www.molsoft.com",
-    "short_description": "Innovative molecular modeling and cheminformatics software for drug discovery.",
-    "long_description": "MolSoft offers innovative molecular modeling and cheminformatics software tailored for drug discovery applications. Their tools enable users to visualize molecular structures, perform docking studies, and analyze molecular interactions. MolSoft's solutions facilitate the identification of potential drug candidates and optimize existing compounds, enhancing the overall efficiency of the drug discovery process. With a user-friendly interface and powerful computational capabilities, MolSoft is a valuable asset for researchers in the pharmaceutical and biotechnology sectors.",
+    "name": "Atomwise",
+    "slug": "atomwise",
+    "url": "https://atomwise.com",
+    "short_description": "AI-driven drug discovery platform utilizing deep learning for compound screening.",
+    "long_description": "Atomwise is an AI-driven drug discovery platform that leverages deep learning algorithms to accelerate the screening of compounds for potential therapeutic use. By analyzing molecular interactions and predicting their biological activity, Atomwise helps researchers identify promising drug candidates more efficiently than traditional methods. The platform is designed to facilitate collaboration between academic institutions and pharmaceutical companies, aiming to reduce the time and cost associated with drug development while improving the success rate of new compounds.",
     "tags": [
-      "molecular modeling",
-      "cheminformatics",
+      "AI",
       "drug discovery",
-      "software",
-      "docking",
-      "AI"
+      "deep learning",
+      "compound screening",
+      "collaboration"
     ],
     "category": "analysis",
     "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444665/chem-ai-tools/molsoft.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751526221/chem-ai-tools/atomwise.png"
+  },
+  {
+    "name": "Insilico Medicine",
+    "slug": "insilico-medicine",
+    "url": "https://insilico.com",
+    "short_description": "AI platform for drug discovery and development, enhancing research efficiency.",
+    "long_description": "Insilico Medicine is an AI-powered platform that focuses on enhancing the efficiency of drug discovery and development processes. By combining advanced artificial intelligence algorithms with deep learning techniques, Insilico enables researchers to predict the efficacy and safety of new compounds. The platform supports the identification of novel drug candidates and biomarker discovery, significantly streamlining the research process. Through collaboration with pharmaceutical companies and research institutions, Insilico aims to bring innovative therapies to market more quickly and effectively.",
+    "tags": [
+      "AI",
+      "drug discovery",
+      "biomarker discovery",
+      "efficiency",
+      "deep learning"
+    ],
+    "category": "synthesis",
+    "description": "Beschreibung konnte nicht geladen werden.",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751526226/chem-ai-tools/insilico-medicine.png"
+  },
+  {
+    "name": "ChemSpider",
+    "slug": "chemspider",
+    "url": "http://www.chemspider.com",
+    "short_description": "Free chemical structure database providing access to over 67 million compounds.",
+    "long_description": "ChemSpider is a free chemical structure database that provides access to over 67 million chemical compounds, offering researchers a wealth of information for drug discovery and cheminformatics. Users can search for chemical structures, properties, and spectra, as well as access links to supporting data and literature. ChemSpider is an essential resource for scientists looking to explore chemical data, conduct research, and gain insights into molecular interactions, all while supporting collaboration across the scientific community.",
+    "tags": [
+      "chemical database",
+      "cheminformatics",
+      "drug discovery",
+      "research",
+      "data access"
+    ],
+    "category": "database",
+    "description": "Beschreibung konnte nicht geladen werden.",
+    "screenshot": "assets/placeholder.png"
   },
   {
     "name": "Bioinformatics.org",
     "slug": "bioinformatics-org",
     "url": "https://bioinformatics.org",
-    "short_description": "A platform providing resources and tools for bioinformatics and cheminformatics.",
-    "long_description": "Bioinformatics.org is a collaborative platform that provides a wealth of resources and software tools for bioinformatics and cheminformatics. The site hosts a variety of applications, datasets, and tutorials aimed at facilitating research in drug discovery and molecular biology. Users can access tools for sequence analysis, molecular modeling, and data visualization, supporting a broad range of research initiatives. Bioinformatics.org fosters collaboration among researchers and promotes the sharing of knowledge and resources in the life sciences.",
+    "short_description": "A community-driven platform providing resources for bioinformatics and cheminformatics.",
+    "long_description": "Bioinformatics.org is a community-driven platform that provides a plethora of resources for bioinformatics and cheminformatics researchers. It includes various tools, databases, and educational materials to support drug discovery and molecular biology research. The platform fosters collaboration between scientists and promotes the sharing of knowledge and tools within the community. By offering access to bioinformatics software, tutorials, and forums, Bioinformatics.org plays a vital role in advancing research in biomedical sciences and drug development.",
     "tags": [
       "bioinformatics",
       "cheminformatics",
-      "drug discovery",
-      "collaboration",
+      "community",
       "resources",
-      "AI"
+      "collaboration"
     ],
-    "category": "database",
+    "category": "research",
     "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751456227/chem-ai-tools/bioinformatics-org.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751526233/chem-ai-tools/bioinformatics-org.png"
   },
   {
-    "name": "ChEMBL",
-    "slug": "chembl",
-    "url": "https://www.ebi.ac.uk/chembl",
-    "short_description": "A large-scale bioactivity database for drug discovery research.",
-    "long_description": "ChEMBL is a large-scale bioactivity database that provides valuable information on drug-like molecules and their biological activities. Curated from scientific literature, ChEMBL includes data on compound properties, targets, and bioactivities, making it a vital resource for researchers in drug discovery. The database supports the identification of potential drug candidates and aids in understanding structure-activity relationships. ChEMBL's user-friendly interface and robust search capabilities enable efficient data retrieval, facilitating research in pharmacology and medicinal chemistry.",
+    "name": "Cresset",
+    "slug": "cresset",
+    "url": "https://cresset-group.com",
+    "short_description": "Innovative molecular modeling and analysis tools for drug discovery.",
+    "long_description": "Cresset provides innovative molecular modeling and analysis tools that aid researchers in drug discovery. Their software allows users to visualize molecular interactions, perform structure-based design, and analyze compound libraries. By integrating various modeling techniques with user-friendly interfaces, Cresset enhances the ability of researchers to identify and optimize lead candidates. The platform supports diverse applications, including virtual screening and ADMET predictions, making it a valuable asset in the pharmaceutical industry.",
     "tags": [
-      "database",
-      "bioactivity",
+      "molecular modeling",
       "drug discovery",
-      "research",
-      "pharmacology",
-      "AI"
+      "visualization",
+      "structure-based design",
+      "ADMET"
     ],
-    "category": "database",
+    "category": "analysis",
     "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444640/chem-ai-tools/chembl.png"
-  },
-  {
-    "name": "PubChem",
-    "slug": "pubchem",
-    "url": "https://pubchem.ncbi.nlm.nih.gov",
-    "short_description": "A free database of chemical molecules and their activities against biological assays.",
-    "long_description": "PubChem is a comprehensive, freely accessible database that provides detailed information on chemical molecules and their biological activities. Managed by the National Center for Biotechnology Information (NCBI), PubChem includes data on compound structures, properties, and biological activities against various assays. Researchers use PubChem as an essential tool for drug discovery, as it facilitates the exploration of chemical space and helps identify promising candidates for further investigation. The extensive dataset and advanced search features make it a vital resource for chemists and biologists alike.",
-    "tags": [
-      "database",
-      "chemical compounds",
-      "drug discovery",
-      "biological activities",
-      "research",
-      "AI"
-    ],
-    "category": "database",
-    "description": "Beschreibung konnte nicht geladen werden.",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751456236/chem-ai-tools/pubchem.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444659/chem-ai-tools/cresset.png"
   }
 ]
