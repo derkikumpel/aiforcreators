@@ -2,29 +2,40 @@
   {
     "name": "ChemGPT",
     "url": "https://chemgpt.org",
-    "tags": ["generative models", "molecular design", "language model"],
+    "tags": [
+      "generative models",
+      "molecular design",
+      "language model"
+    ],
     "category": "Cheminformatics",
     "short_description": "ChemGPT is a generative AI tool for molecular design, using transformer-based models to predict molecular properties and propose novel compounds.",
     "long_description": "ChemGPT is a cutting-edge AI tool designed specifically for molecular generation and property prediction. Leveraging transformer architectures similar to those used in language models, ChemGPT can interpret chemical representations like SMILES and generate novel compounds with optimized properties. It supports tasks such as molecular optimization, similarity searching, and virtual screening, all with an intuitive web interface and API access. ChemGPT is especially valuable for medicinal chemists and computational drug designers seeking to accelerate discovery cycles and reduce lab effort. It integrates with existing cheminformatics workflows and allows export in standard formats.",
-    "screenshot": "https://res.cloudinary.com/your-cloud-name/image/upload/v12345678/chemgpt.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751546661/chem-ai-tools/utjneuc0p1lfselfs16p.png"
   },
   {
     "name": "MoleculeMind",
     "url": "https://moleculemind.ai",
-    "tags": ["QSAR", "virtual screening", "drug discovery"],
+    "tags": [
+      "QSAR",
+      "virtual screening",
+      "drug discovery"
+    ],
     "category": "AI Tools",
-    "short_description": "MoleculeMind is a machine learning platform for QSAR modeling and virtual screening, tailored to assist chemists in predictive toxicology and bioactivity estimation.",
-    "long_description": "MoleculeMind offers a powerful suite of machine learning models for predicting compound bioactivity and toxicity. Its QSAR modeling engine can be trained on custom datasets or use pre-built models across therapeutic areas. The platform supports large-scale virtual screening workflows and outputs comprehensive molecular property reports. MoleculeMind emphasizes usability, with drag-and-drop input, batch processing, and integration with cheminformatics tools like RDKit. Designed for both academic and industry chemists, it helps prioritize candidates early in the pipeline and reduce experimental burden. Cloud deployment ensures scalability, while local installs support privacy-sensitive environments.",
-    "screenshot": "https://res.cloudinary.com/your-cloud-name/image/upload/v12345678/moleculemind.png"
+    "short_description": "ChemGPT is a generative AI tool for molecular design, using transformer-based models to predict molecular properties and propose novel compounds.",
+    "long_description": "ChemGPT is a cutting-edge AI tool designed specifically for molecular generation and property prediction. Leveraging transformer architectures similar to those used in language models, ChemGPT can interpret chemical representations like SMILES and generate novel compounds with optimized properties. It supports tasks such as molecular optimization, similarity searching, and virtual screening, all with an intuitive web interface and API access. ChemGPT is especially valuable for medicinal chemists and computational drug designers seeking to accelerate discovery cycles and reduce lab effort. It integrates with existing cheminformatics workflows and allows export in standard formats.",
+    "screenshot": "assets/placeholder.png"
   },
   {
     "name": "AIMolDesigner",
     "url": "https://aimoldesigner.com",
-    "tags": ["de novo design", "deep learning", "optimization"],
+    "tags": [
+      "de novo design",
+      "deep learning",
+      "optimization"
+    ],
     "category": "Molecular Design",
-    "short_description": "AIMolDesigner enables AI-driven de novo drug design, guiding chemists in creating optimized compounds based on pharmacophore or activity constraints.",
-    "long_description": "AIMolDesigner is a specialized platform for de novo molecular design using AI. It combines generative deep learning models with reinforcement learning to create novel compounds that satisfy user-defined criteria, such as binding affinity, lipophilicity, or ADMET properties. The interface allows chemists to set constraints, seed molecules, or pharmacophoric features and generate diverse libraries of potential candidates. AIMolDesigner is used widely in early-stage drug discovery and hit-to-lead optimization. Its real-time feedback on molecular properties and synthetic accessibility makes it a valuable tool for structure-based design. The platform can be integrated into existing pipelines via API or used interactively via a secure web interface.",
-    "screenshot": "https://res.cloudinary.com/your-cloud-name/image/upload/v12345678/aimoldesigner.png"
+    "short_description": "ChemGPT is a generative AI tool for molecular design, using transformer-based models to predict molecular properties and propose novel compounds.",
+    "long_description": "ChemGPT is a cutting-edge AI tool designed specifically for molecular generation and property prediction. Leveraging transformer architectures similar to those used in language models, ChemGPT can interpret chemical representations like SMILES and generate novel compounds with optimized properties. It supports tasks such as molecular optimization, similarity searching, and virtual screening, all with an intuitive web interface and API access. ChemGPT is especially valuable for medicinal chemists and computational drug designers seeking to accelerate discovery cycles and reduce lab effort. It integrates with existing cheminformatics workflows and allows export in standard formats.",
+    "screenshot": "assets/placeholder.png"
   }
 ]
-
