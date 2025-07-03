@@ -1,5 +1,6 @@
 import fs from 'fs-extra';
 import OpenAI from 'openai';
+import fetch from 'node-fetch';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const ai21ApiKey = process.env.AI21_API_KEY;
@@ -23,7 +24,7 @@ async function queryAI21(prompt) {
         body: JSON.stringify({
           model,
           messages: [
-            { role: 'system', content: 'Du bist ein hilfreicher Assistent.' },
+            { role: 'system', content: 'You are a helpful assistant.' },
             { role: 'user', content: prompt },
           ],
           max_tokens: 800,
@@ -51,7 +52,8 @@ async function queryAI21(prompt) {
 async function fetchToolDescriptions(tools) {
   let cache = {};
   try {
-    cache = await fs.readJson(cacheFile);
+    const raw = await fs.readJson(cacheFile);
+    cache = (raw && typeof raw === 'object' && !Array.isArray(raw)) ? raw : {};
     console.log(`🗂️ Beschreibungscache geladen (${Object.keys(cache).length} Einträge).`);
   } catch {
     console.log('ℹ️ Kein Cache gefunden, frischer Start...');
@@ -78,7 +80,8 @@ async function fetchToolDescriptions(tools) {
           temperature: 0.7,
         });
 
-        description = JSON.parse(completion.choices[0].message.content.trim());
+        const raw = completion.choices?.[0]?.message?.content?.trim() || '';
+        description = JSON.parse(raw);
         break;
       } catch (error) {
         console.warn(`⚠️ Fehler mit ${model} für ${tool.name}: ${error.message}`);
@@ -114,7 +117,7 @@ async function fetchToolDescriptions(tools) {
 async function main() {
   try {
     const tools = await fs.readJson('./data/tools.json');
-    if (!tools.length) {
+    if (!Array.isArray(tools) || tools.length === 0) {
       console.log('⚠️ Keine Tools gefunden, breche ab.');
       return;
     }
