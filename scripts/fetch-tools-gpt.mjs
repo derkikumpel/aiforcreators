@@ -9,7 +9,7 @@ const cacheFile = './data/description-cache.json';
 
 async function queryAI21(prompt) {
   console.log('→ AI21 Fallback aktiv für Beschreibung...');
-  const models = ['jamba-1.6-large', 'jamba-1.6-mini'];
+  const models = ['jamba-1.7-large', 'jamba-1.7-mini'];
 
   for (const model of models) {
     try {
@@ -23,7 +23,7 @@ async function queryAI21(prompt) {
         body: JSON.stringify({
           model,
           messages: [
-            { role: 'system', content: 'You are a helpful assistant.' },
+            { role: 'system', content: 'Du bist ein hilfreicher Assistent.' },
             { role: 'user', content: prompt },
           ],
           max_tokens: 800,
@@ -51,8 +51,11 @@ async function queryAI21(prompt) {
 async function fetchToolDescriptions(tools) {
   let cache = {};
   try {
-    const raw = await fs.readJson(cacheFile);
-    cache = (raw && typeof raw === 'object' && !Array.isArray(raw)) ? raw : {};
+    cache = await fs.readJson(cacheFile);
+    if (typeof cache !== 'object' || cache === null) {
+      console.warn('⚠️ Beschreibungscache ist ungültig, wird zurückgesetzt.');
+      cache = {};
+    }
     console.log(`🗂️ Beschreibungscache geladen (${Object.keys(cache).length} Einträge).`);
   } catch {
     console.log('ℹ️ Kein Cache gefunden, frischer Start...');
@@ -68,7 +71,16 @@ async function fetchToolDescriptions(tools) {
     }
 
     let description = null;
-    const prompt = `Write two descriptions for the AI tool "${tool.name}" used in chemistry:\n\n1. Short description (30–50 words)\n2. Long description (150–250 words)\n\nReturn as JSON:\n{\n  "short_description": "...",\n  "long_description": "..." \n}`;
+    const prompt = `Write two descriptions for the AI tool "${tool.name}" used in chemistry:
+
+1. Short description (30–50 words)
+2. Long description (150–250 words)
+
+Return as JSON:
+{
+  "short_description": "...",
+  "long_description": "..."
+}`;
 
     for (const model of openaiModels) {
       try {
@@ -79,8 +91,7 @@ async function fetchToolDescriptions(tools) {
           temperature: 0.7,
         });
 
-        const raw = completion.choices?.[0]?.message?.content?.trim() || '';
-        description = JSON.parse(raw);
+        description = JSON.parse(completion.choices[0].message.content.trim());
         break;
       } catch (error) {
         console.warn(`⚠️ Fehler mit ${model} für ${tool.name}: ${error.message}`);
@@ -107,6 +118,8 @@ async function fetchToolDescriptions(tools) {
 
     updatedTools.push({ ...tool, ...description });
     cache[tool.slug] = description;
+
+    // Cache nach jedem Update speichern (optional, aber sicher)
     await fs.writeJson(cacheFile, cache, { spaces: 2 });
   }
 
