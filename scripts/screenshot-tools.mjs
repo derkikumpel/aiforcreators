@@ -18,10 +18,7 @@ async function captureScreenshot(tool) {
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
 
-    // Neues Browser-Context mit ignorierten SSL-Fehlern
-    const context = await browser.newContext({
-      ignoreHTTPSErrors: true,
-    });
+    const context = await browser.newContext({ ignoreHTTPSErrors: true });
     const page = await context.newPage();
     await page.setViewportSize({ width: 1280, height: 720 });
 
@@ -34,7 +31,7 @@ async function captureScreenshot(tool) {
       throw new Error(`Seite nicht erreichbar (Status: ${response?.status() || 'n/a'})`);
     }
 
-    await page.waitForTimeout(3000); // Warte etwas für visuelle Stabilität
+    await page.waitForTimeout(3000);
     const screenshotBuffer = await page.screenshot({ fullPage: false });
 
     const base64 = `data:image/png;base64,${screenshotBuffer.toString('base64')}`;
@@ -49,7 +46,7 @@ async function captureScreenshot(tool) {
     return result.secure_url;
   } catch (error) {
     console.error(`⚠️ Screenshot fehlgeschlagen für ${tool.name}: ${error.message || error}`);
-    return 'assets/placeholder.png';
+    return null; // kein Platzhalter mehr!
   } finally {
     if (browser) await browser.close();
   }
@@ -60,16 +57,25 @@ async function main() {
     const tools = await fs.readJson('./data/tools.json');
     console.log(`📸 Starte Screenshots für ${tools.length} Tools.`);
 
+    const validTools = [];
+
     for (let i = 0; i < tools.length; i++) {
       const tool = tools[i];
       console.log(`\n[${i + 1}/${tools.length}] Screenshot für ${tool.name} erstellen...`);
+
       const imageUrl = await captureScreenshot(tool);
-      tools[i].screenshot = imageUrl;
+      if (!imageUrl) {
+        console.warn(`🚫 ${tool.name} wird aus der Liste entfernt.`);
+        continue; // Tool nicht übernehmen
+      }
+
+      tool.screenshot = imageUrl;
+      validTools.push(tool);
       console.log(`✅ Screenshot gespeichert: ${imageUrl}`);
     }
 
-    await fs.writeJson('./data/tools.json', tools, { spaces: 2 });
-    console.log('\n✅ Alle Screenshots erfolgreich aktualisiert und gespeichert.');
+    await fs.writeJson('./data/tools.json', validTools, { spaces: 2 });
+    console.log(`\n✅ ${validTools.length} gültige Tools gespeichert.`);
   } catch (error) {
     console.error('❌ Fehler im Hauptprozess:', error.message || error);
   }
