@@ -9,7 +9,7 @@ const cacheFile = './data/description-cache.json';
 
 async function queryAI21(prompt) {
   console.log('→ AI21 Fallback aktiv für Beschreibung...');
-  const models = ['jamba-1.5-large', 'jamba-1.5-mini'];
+  const models = ['jamba-1.6-large', 'jamba-1.6-mini'];
 
   for (const model of models) {
     try {
