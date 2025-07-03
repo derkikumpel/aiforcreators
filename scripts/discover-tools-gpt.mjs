@@ -1,12 +1,9 @@
 import fs from 'fs-extra';
 import OpenAI from 'openai';
-import { AI21 } from '@ai21/ai21';
+import fetch from 'node-fetch';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-});
-const ai21 = new AI21({
-  apiKey: process.env.AI21_API_KEY,
 });
 
 const openaiModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-3.5-turbo'];
@@ -14,13 +11,26 @@ const cacheFile = './data/discover-cache.json';
 
 async function queryAI21(prompt) {
   console.log('Versuche AI21 Jurassic-2 als Fallback...');
-  const response = await ai21.completions.generate({
-    model: 'j2-large',
-    prompt,
-    maxTokens: 800,
-    temperature: 0.7,
+  const response = await fetch('https://api.ai21.com/studio/v1/j2-large/complete', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${process.env.AI21_API_KEY}`,
+    },
+    body: JSON.stringify({
+      prompt,
+      maxTokens: 800,
+      temperature: 0.7,
+      stopSequences: ["\n\n"],
+    }),
   });
-  return response.completions[0].data.text.trim();
+
+  if (!response.ok) {
+    throw new Error(`AI21 API Fehler: ${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  return data.completions[0].data.text.trim();
 }
 
 async function discoverTools() {
@@ -51,7 +61,7 @@ Respond only with the JSON array. No additional explanation.
 
   let tools = null;
 
-  // OpenAI-Modelle ausprobieren
+  // Erst OpenAI alle Modelle probieren
   for (const model of openaiModels) {
     try {
       console.log(`Versuche Modell ${model}...`);
@@ -84,7 +94,7 @@ Respond only with the JSON array. No additional explanation.
     }
   }
 
-  // Falls OpenAI nichts gebracht hat, AI21 als Fallback
+  // Falls OpenAI kein Ergebnis, AI21 als Fallback
   if (!tools) {
     try {
       const raw = await queryAI21(prompt);
@@ -94,25 +104,20 @@ Respond only with the JSON array. No additional explanation.
       if (jsonStart === -1 || jsonEnd === -1) {
         throw new Error('Kein JSON-Array im AI21-Response gefunden');
       }
-
       const jsonString = raw.substring(jsonStart, jsonEnd + 1);
       tools = JSON.parse(jsonString);
-      console.log('✅ Tools erfolgreich mit AI21 Jurassic-2 entdeckt.');
+
+      console.log('✅ Tools erfolgreich mit AI21 entdeckt.');
     } catch (error) {
       console.error('❌ Konnte keine Tools entdecken:', error.message);
+      tools = cache.length > 0 ? cache : [];
     }
   }
 
-  if (!tools) {
-    tools = cache.length > 0 ? cache : [];
-    if (tools.length > 0) {
-      console.log('Benutze Cache, da keine neuen Tools gefunden wurden.');
-    }
-  } else {
-    // Nur neue Tools hinzufügen
+  // Cache mit neuen Tools aktualisieren
+  if (tools) {
     const knownSlugs = new Set(cache.map(t => t.slug));
     const newTools = tools.filter(t => !knownSlugs.has(t.slug));
-
     if (newTools.length === 0) {
       console.log('Keine neuen Tools gefunden, benutze Cache.');
       tools = cache;
@@ -122,6 +127,7 @@ Respond only with the JSON array. No additional explanation.
     }
   }
 
+  // Immer in tools.json speichern
   await fs.writeJson('./data/tools.json', tools, { spaces: 2 });
   console.log(`✅ Tools gespeichert: ${tools.length} Einträge.`);
 }
