@@ -57,7 +57,7 @@ header {
 /* Tag-Filter: Kompakter Stil */
 #filter-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
   gap: 8px;
   margin-top: 1rem;
   max-width: 800px;
