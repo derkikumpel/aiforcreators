@@ -2,35 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Free database of commercially available compounds for virtual screening." />
-  <title>Zinc Database – Chem-AI Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zinc Database – AI Tools for Chemists</title>
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    main {
+      max-width: var(--max-width);
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .tool-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .tool-image {
+      flex: 1 1 300px;
+    }
+
+    .tool-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px var(--card-shadow);
+      background-color: #223322;
+    }
+
+    .visit-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.6rem 1rem;
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px var(--accent-color);
+      transition: background-color 0.2s ease;
+    }
+
+    .visit-link:hover {
+      background-color: #8bff67;
+    }
+
+    .tool-description {
+      flex: 2 1 400px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .tool-description h2 {
+      margin-top: 0;
+      color: var(--accent-color);
+      font-size: 1.4rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    @media (max-width: 800px) {
+      .tool-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tool-description {
+        text-align: left;
+      }
+    }
+  </style>
 </head>
-<body class="tool-page">
+<body>
   <header>
-    <a href="/"><img src="/assets/logoAfC.png" alt="Logo" class="logo" /></a>
-    <h1>Zinc Database</h1>
+    <img src="../assets/logoAfC.png" alt="Chem-AI Logo" class="logo" />
+    <div class="header-text">
+      <h1>Zinc Database</h1>
+      <p>AI Tools for Chemists</p>
+    </div>
   </header>
-  <main class="tool-detail">
-    <img src="https://res.cloudinary.com/djd5dgqor/image/upload/v1751608532/chem-ai-tools/zinc-database.png" alt="Zinc Database" class="tool-image" />
-    <div class="tool-meta">
-      <p class="long-description">The ZINC Database is a free online resource that provides access to a vast collection of commercially available compounds suitable for virtual screening. Researchers can search for specific molecular features, download compound libraries, and utilize the database in conjunction with docking and molecular modeling studies. ZINC is widely used in the pharmaceutical industry to facilitate hit identification and optimize lead compounds, significantly enhancing the efficiency of drug discovery processes.</p>
-      <div class="meta-section">
-        <h3>Tags</h3>
-        <ul>
-          <li>Database</li><li>Virtual Screening</li><li>Hit Identification</li><li>Compound Libraries</li>
-        </ul>
+
+  <main>
+    <a href="../index.html" class="back-link">← Back to Directory</a>
+
+    <div class="tool-content">
+      <div class="tool-image">
+          <img src="https://res.cloudinary.com/djd5dgqor/image/upload/v1751608532/chem-ai-tools/zinc-database.png" alt="Zinc Database" />
+        <a href="http://zinc.docking.org" class="visit-link" target="_blank" rel="noopener">Visit Zinc Database →</a>
       </div>
-      <div class="meta-section">
-        <h3>Category</h3>
-        <p>database</p>
+
+      <div class="tool-description">
+        <h2>About Zinc Database</h2>
+        <p>The ZINC Database is a free online resource that provides access to a vast collection of commercially available compounds suitable for virtual screening. Researchers can search for specific molecular features, download compound libraries, and utilize the database in conjunction with docking and molecular modeling studies. ZINC is widely used in the pharmaceutical industry to facilitate hit identification and optimize lead compounds, significantly enhancing the efficiency of drug discovery processes.</p>
+
+        <div class="tool-tags">
+            <span class="tag">database</span>
+            <span class="tag">virtual screening</span>
+            <span class="tag">hit identification</span>
+            <span class="tag">compound libraries</span>
+        </div>
       </div>
-      <a class="visit-button" href="http://zinc.docking.org" target="_blank">Visit Zinc Database</a>
     </div>
   </main>
-  <footer>
-    <p>&copy; 2025 Chem-AI Directory</p>
-  </footer>
+
+  <footer style="margin-top: 3rem; padding: 1rem 0; border-top: 1px solid #444; text-align: center; font-size: 0.9rem; color: #888; font-family: 'Arial Nova Cond', Arial, sans-serif;">
+    <p>&copy; 2025 AI Tools for Chemists. All rights reserved.</p>
+    <p>
+      <a href="terms.html" style="color: #888; text-decoration: none; margin: 0 0.5rem; font-family: 'Arial Nova Cond', Arial, sans-serif;">Terms of Use</a> |
+      <a href="privacy.html" style="color: #888; text-decoration: none; margin: 0 0.5rem; font-family: 'Arial Nova Cond', Arial, sans-serif;">Privacy Policy</a>
+    </p>
+  </footer>  
+  
 </body>
 </html>
