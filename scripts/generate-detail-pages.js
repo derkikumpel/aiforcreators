@@ -1,61 +1,67 @@
 import fs from 'fs-extra';
 import path from 'path';
+import handlebars from 'handlebars';
 
-const template = (tool) => `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="${tool.short_description}" />
-  <title>${tool.name} – Chem-AI Tool</title>
-  <link rel="stylesheet" href="../styles.css" />
-</head>
-<body class="tool-page">
-  <header>
-    <a href="/"><img src="/assets/logoAfC.png" alt="Logo" class="logo" /></a>
-    <h1>${tool.name}</h1>
-  </header>
-  <main class="tool-detail">
-    <img src="${tool.screenshot || '../assets/placeholder.png'}" alt="${tool.name}" class="tool-image" />
-    <div class="tool-meta">
-      <p class="long-description">${tool.long_description}</p>
-      <div class="meta-section">
-        <h3>Tags</h3>
-        <ul>
-          ${(tool.tags || []).map(tag => `<li>${capitalizeWords(tag)}</li>`).join('')}
-        </ul>
-      </div>
-      <div class="meta-section">
-        <h3>Category</h3>
-        <p>${tool.category}</p>
-      </div>
-      <a class="visit-button" href="${tool.url}" target="_blank">Visit ${tool.name}</a>
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2025 Chem-AI Directory</p>
-  </footer>
-</body>
-</html>`;
-
-function capitalizeWords(str) {
-  return str.replace(/\b\w/g, c => c.toUpperCase());
-}
+const toolsFile = './data/tools.json';
+const templateFile = './templates/tool-template.html';
+const outputDir = './tools';
 
 async function generateDetailPages() {
-  const tools = await fs.readJson('./data/tools.json');
-  const outputDir = './tools';
-  await fs.ensureDir(outputDir);
+  console.log('🚀 Starte Generierung der Detailseiten...');
+
+  let tools;
+  try {
+    tools = await fs.readJson(toolsFile);
+    if (!Array.isArray(tools)) throw new Error('tools.json ist kein Array');
+    console.log(`📦 ${tools.length} Tools geladen.`);
+  } catch (err) {
+    console.error(`❌ Fehler beim Lesen von ${toolsFile}:`, err.message);
+    process.exit(1);
+  }
+
+  let rawTemplate;
+  try {
+    rawTemplate = await fs.readFile(templateFile, 'utf8');
+    console.log(`🧩 Template geladen: ${templateFile}`);
+  } catch (err) {
+    console.error(`❌ Fehler beim Laden des Templates:`, err.message);
+    process.exit(1);
+  }
+
+  const template = handlebars.compile(rawTemplate);
+
+  try {
+    await fs.ensureDir(outputDir);
+  } catch (err) {
+    console.error(`❌ Fehler beim Erstellen des Output-Ordners "${outputDir}":`, err.message);
+    process.exit(1);
+  }
+
+  let successCount = 0;
 
   for (const tool of tools) {
-    const html = template(tool);
-    const filePath = path.join(outputDir, `${tool.slug}.html`);
-    await fs.writeFile(filePath, html, 'utf8');
-    console.log(`✅ Generiert: ${filePath}`);
+    try {
+      const html = template({
+        name: tool.name,
+        url: tool.url,
+        image: tool.screenshot || '../assets/placeholder.png',
+        long_description: tool.long_description,
+        tags: tool.tags || [],
+      });
+
+      const filePath = path.join(outputDir, `${tool.slug}.html`);
+      await fs.writeFile(filePath, html, 'utf8');
+      console.log(`✅ Generiert: ${filePath}`);
+      successCount++;
+    } catch (err) {
+      console.warn(`⚠️ Fehler beim Generieren von ${tool.slug}:`, err.message);
+    }
   }
+
+  console.log(`🎉 Fertig: ${successCount} Seiten erfolgreich generiert.`);
 }
 
 generateDetailPages().catch(err => {
-  console.error('❌ Fehler beim Generieren der Detailseiten:', err);
+  console.error('❌ Unerwarteter Fehler bei der Seitengenerierung:', err);
   process.exit(1);
 });
