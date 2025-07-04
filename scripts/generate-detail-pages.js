@@ -40,10 +40,10 @@ async function generateDetailPages() {
   let successCount = 0;
 
   for (const tool of tools) {
-  if (!tool.slug) {
-    console.warn(`⚠️ Übersprungen: Tool ohne "slug": ${tool.name || 'Unbenanntes Tool'}`);
-    continue;
-  }
+    if (!tool.slug) {
+      console.warn(`⚠️ Übersprungen: Tool ohne "slug": ${tool.name || 'Unbenanntes Tool'}`);
+      continue;
+    }
 
   try {
     const html = template({
