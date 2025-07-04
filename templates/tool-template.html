@@ -94,7 +94,11 @@
 
     <div class="tool-content">
       <div class="tool-image">
-        <img src="{{image || '../assets/placeholder.png'}}" alt="{{name}}" />
+        {{#if image}}
+          <img src="{{image}}" alt="{{name}}" />
+        {{else}}
+          <img src="../assets/placeholder.png" alt="{{name}}" />
+        {{/if}}
         <a href="{{url}}" class="visit-link" target="_blank" rel="noopener">Visit {{name}} →</a>
       </div>
 
