@@ -76,7 +76,7 @@ header {
   font-weight: 400;
   color: white;
   font-family: 'Arial Nova Cond', Arial, sans-serif;
-  margin-right: 0.8rem; /* Abstand zwischen den Kästchen */
+  margin-right: 1.2rem; /* Abstand zwischen den Kästchen */
   padding: 4px 6px;
   border-radius: 4px;
   background: none;
