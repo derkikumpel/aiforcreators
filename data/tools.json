@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "name": "ChemGPT",
+    "url": "https://chemgpt.org",
+    "tags": ["molecular modeling", "generative AI", "drug discovery"],
+    "category": "Cheminformatics",
+    "description": "ChemGPT is a generative AI platform designed for molecular property prediction and drug discovery applications.",
+    "screenshot": "https://res.cloudinary.com/your-cloud-name/image/upload/v12345678/chemgpt.png"
+  },
+  {
+    "name": "MoleculeMind",
+    "url": "https://moleculemind.ai",
+    "tags": ["QSAR", "virtual screening", "ML"],
+    "category": "AI Tools",
+    "description": "MoleculeMind offers machine learning-powered QSAR predictions and virtual screening for chemists.",
+    "screenshot": "https://res.cloudinary.com/your-cloud-name/image/upload/v12345678/moleculemind.png"
+  }
+]
