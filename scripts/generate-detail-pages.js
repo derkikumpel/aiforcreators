@@ -44,7 +44,7 @@ async function generateDetailPages() {
       const html = template({
         name: tool.name,
         url: tool.url,
-        image: tool.screenshot || '../assets/placeholder.png',
+        image: tool.screenshot,
         long_description: tool.long_description,
         tags: tool.tags || [],
       });
