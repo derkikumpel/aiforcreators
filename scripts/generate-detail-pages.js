@@ -40,23 +40,28 @@ async function generateDetailPages() {
   let successCount = 0;
 
   for (const tool of tools) {
-    try {
-      const html = template({
-        name: tool.name,
-        url: tool.url,
-        image: tool.screenshot,
-        long_description: tool.long_description,
-        tags: tool.tags || [],
-      });
-
-      const filePath = path.join(outputDir, `${tool.slug}.html`);
-      await fs.writeFile(filePath, html, 'utf8');
-      console.log(`✅ Generiert: ${filePath}`);
-      successCount++;
-    } catch (err) {
-      console.warn(`⚠️ Fehler beim Generieren von ${tool.slug}:`, err.message);
-    }
+  if (!tool.slug) {
+    console.warn(`⚠️ Übersprungen: Tool ohne "slug": ${tool.name || 'Unbenanntes Tool'}`);
+    continue;
   }
+
+  try {
+    const html = template({
+      name: tool.name,
+      url: tool.url,
+      image: tool.screenshot,
+      long_description: tool.long_description,
+      tags: tool.tags || [],
+    });
+
+    const filePath = path.join(outputDir, `${tool.slug}.html`);
+    await fs.writeFile(filePath, html, 'utf8');
+    console.log(`✅ Generiert: ${filePath}`);
+    successCount++;
+  } catch (err) {
+    console.warn(`⚠️ Fehler beim Generieren von ${tool.slug}:`, err.message);
+  }
+}
 
   console.log(`🎉 Fertig: ${successCount} Seiten erfolgreich generiert.`);
 }
