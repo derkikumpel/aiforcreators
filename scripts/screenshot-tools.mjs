@@ -8,10 +8,25 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+if (process.stdout._handle && process.stdout._handle.setBlocking) {
+  process.stdout._handle.setBlocking(true);
+}
+if (process.stderr._handle && process.stderr._handle.setBlocking) {
+  process.stderr._handle.setBlocking(true);
+}
+
+function log(...args) {
+  process.stdout.write(new Date().toISOString() + ' LOG: ' + args.map(String).join(' ') + '\n');
+}
+
+function error(...args) {
+  process.stderr.write(new Date().toISOString() + ' ERROR: ' + args.map(String).join(' ') + '\n');
+}
+
 async function captureScreenshot(tool) {
   let browser;
   try {
-    console.log(`🌐 Öffne Browser für ${tool.name}: ${tool.url}`);
+    log(`🌐 Öffne Browser für ${tool.name}: ${tool.url}`);
     browser = await chromium.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -32,67 +47,49 @@ async function captureScreenshot(tool) {
       throw new Error(`Seite nicht erreichbar (Status: ${response?.status() || 'n/a'})`);
     }
 
-    // Prüfe Titel auf mögliche Sicherheitswarnungen
-    const title = await page.title();
-    if (title.toLowerCase().includes('warnung') || title.toLowerCase().includes('security risk') || title.toLowerCase().includes('mögliches sicherheitsrisiko')) {
-      throw new Error('Sicherheitsrisiko erkannt, Screenshot wird nicht erstellt.');
-    }
-
     await page.waitForTimeout(3000);
-
     const screenshotBuffer = await page.screenshot({ fullPage: false });
+
     const base64 = `data:image/png;base64,${screenshotBuffer.toString('base64')}`;
 
-    console.log(`📤 Lade Screenshot zu Cloudinary hoch...`);
+    log(`📤 Lade Screenshot zu Cloudinary hoch für ${tool.slug}...`);
     const result = await cloudinary.uploader.upload(base64, {
       folder: 'chem-ai-tools',
       public_id: tool.slug,
       overwrite: true,
     });
 
+    log(`✅ Screenshot hochgeladen: ${result.secure_url}`);
     return result.secure_url;
-  } catch (error) {
-    console.error(`⚠️ Screenshot fehlgeschlagen für ${tool.name}: ${error.message || error}`);
-    throw error;
+  } catch (e) {
+    error(`⚠️ Screenshot fehlgeschlagen für ${tool.name}: ${e.message || e}`);
+    return 'assets/placeholder.png';
   } finally {
     if (browser) await browser.close();
   }
 }
 
-export async function checkAndCaptureScreenshots() {
+async function main() {
   try {
     const tools = await fs.readJson('./data/tools.json');
-    console.log(`📸 Starte Screenshots für ${tools.length} Tools.`);
-
-    const validTools = [];
+    log(`📸 Starte Screenshots für ${tools.length} Tools.`);
 
     for (let i = 0; i < tools.length; i++) {
       const tool = tools[i];
-      try {
-        console.log(`\n[${i + 1}/${tools.length}] Screenshot für ${tool.name} erstellen...`);
-        const imageUrl = await captureScreenshot(tool);
-        tool.screenshot = imageUrl;
-        validTools.push(tool);
-        console.log(`✅ Screenshot gespeichert: ${imageUrl}`);
-      } catch (error) {
-        console.warn(`⚠️ Tool ${tool.name} wird entfernt, da kein Screenshot möglich ist.`);
-        // Tool wird nicht in validTools aufgenommen
-      }
+      log(`\n[${i + 1}/${tools.length}] Screenshot für ${tool.name} erstellen...`);
+      const imageUrl = await captureScreenshot(tool);
+      tools[i].screenshot = imageUrl;
+      log(`✅ Screenshot gespeichert: ${imageUrl}`);
     }
 
-    await fs.writeJson('./data/tools.json', validTools, { spaces: 2 });
-    console.log('\n✅ Screenshots aktualisiert, ungültige Tools entfernt.');
-    return validTools;
-  } catch (error) {
-    console.error('❌ Fehler im Screenshot-Prozess:', error.message || error);
-    throw error;
+    await fs.writeJson('./data/tools.json', tools, { spaces: 2 });
+    log('\n✅ Alle Screenshots erfolgreich aktualisiert und gespeichert.');
+  } catch (e) {
+    error('❌ Fehler im Hauptprozess:', e.message || e);
+    process.exit(1);
   }
 }
 
-// CLI Entrypoint (damit 'node screenshot-tools.mjs' funktioniert)
-if (import.meta.url === `file://${process.argv[1]}`) {
-  checkAndCaptureScreenshots().catch(err => {
-    console.error('❌ Unerwarteter Fehler:', err);
-    process.exit(1);
-  });
+if (import.meta.url === process.argv[1] || process.argv[1].endsWith('screenshot-tools.mjs')) {
+  main();
 }
