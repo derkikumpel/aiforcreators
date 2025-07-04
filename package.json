@@ -14,6 +14,7 @@
   "author": "AI Tools for Chemists",
   "license": "MIT",
   "dependencies": {
+    "handlebars": "^4.7.8",
     "openai": "^4.9.0",
     "fs-extra": "^11.1.1",
     "playwright": "^1.44.0",
