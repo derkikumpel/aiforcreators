@@ -29,7 +29,7 @@ const template = (tool) => `<!DOCTYPE html>
         <h3>Category</h3>
         <p>${tool.category}</p>
       </div>
-      <a class="visit-button" href="${tool.url}" target="_blank">Visit Website</a>
+      <a class="visit-button" href="${tool.url}" target="_blank">Visit ${tool.name}</a>
     </div>
   </main>
   <footer>
