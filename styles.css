@@ -22,7 +22,7 @@ header {
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #ce7e00;
+  background-color: #aa0505;
   box-shadow: 0 0 20px var(--accent-color);
   max-width: var(--max-width);
   margin: 0 auto;
