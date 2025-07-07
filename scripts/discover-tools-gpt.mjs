@@ -38,7 +38,7 @@ export async function discoverTools() {
   const exclusionList = existingTools.map(t => `- ${t.name} (${t.slug})`).slice(0, 50).join('\n');
 
   const prompt = `
-Please list 10 current AI tools in the field of cheminformatics or drug discovery that are NOT in the following list:
+Please list 10 current AI tools in the field of copywriting or content creation that are NOT in the following list:
 
 ${exclusionList || '- (none listed)'}
 
@@ -49,7 +49,7 @@ For each tool, return a JSON object with the following fields:
 - short_description (30–50 words)
 - long_description (must be at least 150 words – this is required and will be checked)
 - tags (maximum of 6 relevant tags)
-- category (e.g., synthesis, analysis, database, etc.)
+- category
 
 ⚠️ IMPORTANT:
 - Ensure the long_description has a minimum of 150 words. Do not summarize or skip this requirement.
