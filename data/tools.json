@@ -30,20 +30,5 @@
     ],
     "category": "copywriting",
     "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751891304/creator-ai-tools/copyai.png"
-  },
-  {
-    "name": "Cresset",
-    "slug": "cresset",
-    "url": "https://www.cresset-group.com",
-    "short_description": "Advanced molecular modeling and visualization tools for drug discovery.",
-    "long_description": "Cresset offers innovative software solutions for molecular modeling and visualization, focusing on drug discovery applications. Their tools provide insights into molecular interactions, enabling researchers to design and optimize compounds more effectively. Cresset's unique approach combines 3D molecular fields with traditional cheminformatics, enhancing the understanding of molecular behavior. The software supports various modeling techniques, including virtual screening and structure-based drug design, making it a key asset in the pharmaceutical research workflow.",
-    "tags": [
-      "molecular modeling",
-      "drug discovery",
-      "visualization",
-      "3D modeling"
-    ],
-    "category": "analysis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890661/creator-ai-tools/cresset.png"
   }
 ]
