@@ -49,7 +49,7 @@ For each tool, return a JSON object with the following fields:
 - short_description (30–50 words)
 - long_description (must be at least 150 words – this is required and will be checked)
 - tags (maximum of 6 relevant tags)
-- category
+- category (e.g. copywriting, content creation)
 
 ⚠️ IMPORTANT:
 - Ensure the long_description has a minimum of 150 words. Do not summarize or skip this requirement.
