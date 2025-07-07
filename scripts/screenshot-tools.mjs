@@ -54,7 +54,7 @@ async function captureScreenshot(tool) {
 
     log(`📤 Lade Screenshot zu Cloudinary hoch für ${tool.slug}...`);
     const result = await cloudinary.uploader.upload(base64, {
-      folder: 'chem-ai-tools',
+      folder: 'creator-ai-tools',
       public_id: tool.slug,
       overwrite: true,
     });
