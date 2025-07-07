@@ -13,7 +13,7 @@
       "open-source"
     ],
     "category": "analysis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751608490/chem-ai-tools/deepchem.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890650/creator-ai-tools/deepchem.png"
   },
   {
     "name": "ChemAxon",
@@ -28,7 +28,7 @@
       "molecular modeling"
     ],
     "category": "synthesis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444635/chem-ai-tools/chemaxon.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890655/creator-ai-tools/chemaxon.png"
   },
   {
     "name": "Cresset",
@@ -43,7 +43,7 @@
       "3D modeling"
     ],
     "category": "analysis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444659/chem-ai-tools/cresset.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890661/creator-ai-tools/cresset.png"
   },
   {
     "name": "Insilico Medicine",
@@ -58,7 +58,7 @@
       "preclinical research"
     ],
     "category": "synthesis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751526226/chem-ai-tools/insilico-medicine.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890666/creator-ai-tools/insilico-medicine.png"
   },
   {
     "name": "IBM RXN for Chemistry",
@@ -73,7 +73,7 @@
       "reaction prediction"
     ],
     "category": "synthesis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751608518/chem-ai-tools/ibm-rxn-for-chemistry.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890680/creator-ai-tools/ibm-rxn-for-chemistry.png"
   },
   {
     "name": "Schrödinger",
@@ -88,7 +88,7 @@
       "virtual screening"
     ],
     "category": "analysis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444653/chem-ai-tools/schrodinger.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890687/creator-ai-tools/schrodinger.png"
   },
   {
     "name": "MolSoft",
@@ -103,7 +103,7 @@
       "bioinformatics"
     ],
     "category": "analysis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751444665/chem-ai-tools/molsoft.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890691/creator-ai-tools/molsoft.png"
   },
   {
     "name": "Zinc Database",
@@ -118,7 +118,7 @@
       "compound libraries"
     ],
     "category": "database",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751608532/chem-ai-tools/zinc-database.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890705/creator-ai-tools/zinc-database.png"
   },
   {
     "name": "Atomwise",
@@ -133,6 +133,6 @@
       "structure-based modeling"
     ],
     "category": "synthesis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751526221/chem-ai-tools/atomwise.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890710/creator-ai-tools/atomwise.png"
   }
 ]
