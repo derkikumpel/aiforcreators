@@ -1,1 +1,14 @@
-[]
+{
+  "jasperai": {
+    "short_description": "A Robust AI writing assistant for long-form content, video scripts, SEO, and brand-guided tone.",
+    "long_description": "Formerly Jarvis, Jasper offers 50+ templates for product descriptions, blog posts, video scripts, email sequences, and ad copy. Its “Boss Mode” UI allows users to guide content generation seamlessly. Jasper emphasizes brand tone consistency and integrates with Surfer SEO for optimization. Ideal for agencies and large teams, Jasper supports team collaboration and real-time editing, producing polished long-form content efficiently."
+  },
+  "copyai": {
+    "short_description": "AI-driven platform for generating marketing copy, blog posts, social media content, and ads using customizable templates and tone settings.",
+    "long_description": "Copy.ai helps teams and individuals overcome writer’s block by offering over 90 templates covering blog intros, social captions, product descriptions, email copy, and ad creatives. Its clean interface supports multiple languages, tone adjustments (e.g. casual, professional), and quick ideation. Marketers benefit from its speed and flexibility for branding across channels. While output may need refinement to align with brand voice, Copy.ai consistently improves its performance and UX, making it ideal for entrepreneurs, agencies, and solopreneurs needing fast, quality short-form cop."
+  },
+  "cresset": {
+    "short_description": "Advanced molecular modeling and visualization tools for drug discovery.",
+    "long_description": "Cresset offers innovative software solutions for molecular modeling and visualization, focusing on drug discovery applications. Their tools provide insights into molecular interactions, enabling researchers to design and optimize compounds more effectively. Cresset's unique approach combines 3D molecular fields with traditional cheminformatics, enhancing the understanding of molecular behavior. The software supports various modeling techniques, including virtual screening and structure-based drug design, making it a key asset in the pharmaceutical research workflow."
+  }
+}
