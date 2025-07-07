@@ -1,7 +1,7 @@
 {
   "name": "cheminformatics-tools",
   "version": "1.0.0",
-  "description": "Projekt zum automatischen Entdecken und Dokumentieren von Cheminformatics-Tools mit GPT",
+  "description": "Projekt zum automatischen Entdecken und Dokumentieren von Copywrinting und Content Creation-Tools mit GPT",
   "main": "scripts/discover-tools-gpt.mjs",
   "type": "module",
   "scripts": {
