@@ -3,10 +3,10 @@
 
 /* Grundfarben */
 :root {
-  --bg-color: #2e422f;
-  --accent-color: #56f432;
-  --text-color: #ffffff;
-  --card-bg: #3a5740;
+  --bg-color: #fff8e4;
+  --accent-color: #56d1f7;
+  --text-color: #6f787d;
+  --card-bg: #f7f1df;
   --card-shadow: rgba(0, 0, 0, 0.6);
   --max-width: 1200px;
 }
@@ -22,7 +22,7 @@ header {
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #1e2c1f;
+  background-color: #ce7e00;
   box-shadow: 0 0 20px var(--accent-color);
   max-width: var(--max-width);
   margin: 0 auto;
@@ -51,7 +51,7 @@ header {
   margin: 0;
   font-size: 1rem;
   font-weight: 400;
-  color: #c4d6b0;
+  color: #f2a63c;
 }
 
 /* Tag-Filter: Kompakter Stil */
@@ -61,7 +61,7 @@ header {
   gap: 8px;
   margin-top: 1rem;
   max-width: 800px;
-  color: #fff;
+  color: #744700;
   font-size: 0.85rem;
   margin-left: auto;
   margin-right: auto;
@@ -74,7 +74,7 @@ header {
   gap: 6px;
   font-size: 0.9rem;
   font-weight: 400;
-  color: white;
+  color: #744700;
   font-family: 'Arial Nova Cond', Arial, sans-serif;
   margin-right: 1.2rem; /* Abstand zwischen den Kästchen */
   padding: 4px 6px;
