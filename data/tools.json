@@ -1,33 +1,34 @@
 [
   {
-    "name": "DeepChem",
-    "slug": "deepchem",
-    "url": "https://deepchem.io",
-    "short_description": "A robust library for deep learning in drug discovery and cheminformatics.",
-    "long_description": "DeepChem is an open-source library that provides tools for applying deep learning to various aspects of drug discovery and cheminformatics. It offers a user-friendly interface to manipulate molecular data, integrate with existing machine learning frameworks, and perform tasks such as molecular property prediction, molecular generation, and virtual screening. Its extensive collection of pre-trained models and datasets makes it an invaluable resource for researchers looking to leverage AI in drug development processes.",
+    "name": "Jasper AI",
+    "slug": "jasperai",
+    "url": "https://www.jasper.ai",
+    "short_description": "A Robust AI writing assistant for long-form content, video scripts, SEO, and brand-guided tone.",
+    "long_description": "Formerly Jarvis, Jasper offers 50+ templates for product descriptions, blog posts, video scripts, email sequences, and ad copy. Its “Boss Mode” UI allows users to guide content generation seamlessly. Jasper emphasizes brand tone consistency and integrates with Surfer SEO for optimization. Ideal for agencies and large teams, Jasper supports team collaboration and real-time editing, producing polished long-form content efficiently.",
     "tags": [
-      "deep learning",
-      "cheminformatics",
-      "drug discovery",
-      "machine learning",
-      "open-source"
+      "long-form",
+      "SEO-integration",
+      "collaboration",
+      "collaboration",
+      "brand-voice"
     ],
-    "category": "analysis",
+    "category": "copywriting",
     "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890650/creator-ai-tools/deepchem.png"
   },
   {
-    "name": "ChemAxon",
-    "slug": "chemaxon",
-    "url": "https://chemaxon.com",
-    "short_description": "Comprehensive cheminformatics tools for drug discovery and chemical research.",
-    "long_description": "ChemAxon provides a suite of cheminformatics tools designed to aid in drug discovery and chemical research. Their software solutions include molecular modeling, property prediction, and data management features that help researchers analyze chemical data efficiently. ChemAxon's tools are widely used in both academia and industry, offering integration capabilities with various databases and systems. With a focus on user-friendly interfaces and extensive documentation, ChemAxon empowers scientists to make informed decisions based on robust chemical information.",
+    "name": "Copy.ai",
+    "slug": "copyai",
+    "url": "https://copy.ai",
+    "short_description": "AI-driven platform for generating marketing copy, blog posts, social media content, and ads using customizable templates and tone settings.",
+    "long_description": "Copy.ai helps teams and individuals overcome writer’s block by offering over 90 templates covering blog intros, social captions, product descriptions, email copy, and ad creatives. Its clean interface supports multiple languages, tone adjustments (e.g. casual, professional), and quick ideation. Marketers benefit from its speed and flexibility for branding across channels. While output may need refinement to align with brand voice, Copy.ai consistently improves its performance and UX, making it ideal for entrepreneurs, agencies, and solopreneurs needing fast, quality short-form cop.",
     "tags": [
-      "cheminformatics",
-      "drug discovery",
-      "data management",
-      "molecular modeling"
+      "marketing",
+      "templates",
+      "social-media",
+      "multilingual",
+      "short-form"
     ],
-    "category": "synthesis",
+    "category": "copywriting",
     "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890655/creator-ai-tools/chemaxon.png"
   },
   {
@@ -44,95 +45,5 @@
     ],
     "category": "analysis",
     "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890661/creator-ai-tools/cresset.png"
-  },
-  {
-    "name": "Insilico Medicine",
-    "slug": "insilico-medicine",
-    "url": "https://insilico.com",
-    "short_description": "AI-driven drug discovery platform leveraging deep learning.",
-    "long_description": "Insilico Medicine utilizes artificial intelligence and deep learning techniques to streamline the drug discovery process. Their platform enables researchers to identify new drug candidates, optimize lead compounds, and predict the efficacy of potential pharmaceuticals. Insilico's tools encompass a wide range of applications, from target identification to preclinical research, making it a comprehensive solution for modern drug development. By integrating machine learning, Insilico aims to reduce the time and cost associated with bringing new drugs to market.",
-    "tags": [
-      "AI",
-      "drug discovery",
-      "deep learning",
-      "preclinical research"
-    ],
-    "category": "synthesis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890666/creator-ai-tools/insilico-medicine.png"
-  },
-  {
-    "name": "IBM RXN for Chemistry",
-    "slug": "ibm-rxn-for-chemistry",
-    "url": "https://rxn.res.ibm.com",
-    "short_description": "AI-powered platform for automating synthetic chemistry reactions.",
-    "long_description": "IBM RXN for Chemistry is an AI-driven platform that enables chemists to automate and optimize synthetic chemistry reactions. By utilizing machine learning algorithms, the platform predicts reaction outcomes and suggests synthetic routes, helping researchers save time and resources in the lab. Users can input their desired reaction conditions, and RXN provides insights based on historical reaction data. This tool is particularly beneficial for pharmaceutical and materials science applications, where efficient synthesis is crucial.",
-    "tags": [
-      "AI",
-      "synthetic chemistry",
-      "automation",
-      "reaction prediction"
-    ],
-    "category": "synthesis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890680/creator-ai-tools/ibm-rxn-for-chemistry.png"
-  },
-  {
-    "name": "Schrödinger",
-    "slug": "schrodinger",
-    "url": "https://www.schrodinger.com",
-    "short_description": "Comprehensive suite for molecular modeling and drug design.",
-    "long_description": "Schrödinger offers a powerful suite of software solutions for molecular modeling, drug design, and computational chemistry. Their platform provides researchers with tools for virtual screening, molecular dynamics simulations, and protein-ligand docking, among others. By combining physics-based simulations with machine learning, Schrödinger enhances the drug discovery process, enabling scientists to explore vast chemical spaces and identify promising candidates more efficiently. The integration of robust predictive models makes it a cornerstone in pharmaceutical research and development.",
-    "tags": [
-      "molecular modeling",
-      "drug design",
-      "computational chemistry",
-      "virtual screening"
-    ],
-    "category": "analysis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890687/creator-ai-tools/schrodinger.png"
-  },
-  {
-    "name": "MolSoft",
-    "slug": "molsoft",
-    "url": "https://www.molsoft.com",
-    "short_description": "Cheminformatics software for molecular visualization and analysis.",
-    "long_description": "MolSoft provides cheminformatics software solutions aimed at molecular visualization, analysis, and modeling. Their tools help researchers explore chemical structures, predict molecular properties, and analyze biological data. With an intuitive interface and extensive functionality, MolSoft supports a wide range of applications, including drug discovery, bioinformatics, and chemical education. Their software is designed to facilitate collaboration and data sharing among researchers, enabling a more integrated approach to scientific inquiry.",
-    "tags": [
-      "cheminformatics",
-      "molecular visualization",
-      "data analysis",
-      "bioinformatics"
-    ],
-    "category": "analysis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890691/creator-ai-tools/molsoft.png"
-  },
-  {
-    "name": "Zinc Database",
-    "slug": "zinc-database",
-    "url": "http://zinc.docking.org",
-    "short_description": "Free database of commercially available compounds for virtual screening.",
-    "long_description": "The ZINC Database is a free online resource that provides access to a vast collection of commercially available compounds suitable for virtual screening. Researchers can search for specific molecular features, download compound libraries, and utilize the database in conjunction with docking and molecular modeling studies. ZINC is widely used in the pharmaceutical industry to facilitate hit identification and optimize lead compounds, significantly enhancing the efficiency of drug discovery processes.",
-    "tags": [
-      "database",
-      "virtual screening",
-      "hit identification",
-      "compound libraries"
-    ],
-    "category": "database",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890705/creator-ai-tools/zinc-database.png"
-  },
-  {
-    "name": "Atomwise",
-    "slug": "atomwise",
-    "url": "https://www.atomwise.com",
-    "short_description": "AI platform for drug discovery using deep learning and structure-based modeling.",
-    "long_description": "Atomwise employs artificial intelligence and deep learning to enhance drug discovery through structure-based modeling. Their platform analyzes molecular interactions and predicts the binding affinities of potential drug candidates, enabling researchers to identify promising compounds more rapidly. Atomwise's technology has applications in various therapeutic areas, including oncology and neurodegenerative diseases. By leveraging vast datasets and advanced algorithms, Atomwise streamlines the drug discovery process, making it a valuable partner for pharmaceutical companies and research institutions.",
-    "tags": [
-      "AI",
-      "drug discovery",
-      "deep learning",
-      "structure-based modeling"
-    ],
-    "category": "synthesis",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751890710/creator-ai-tools/atomwise.png"
   }
 ]
