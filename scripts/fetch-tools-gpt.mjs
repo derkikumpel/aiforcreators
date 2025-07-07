@@ -45,7 +45,7 @@ async function fetchToolDescriptions(tools) {
       continue;
     }
 
-    const prompt = `Write two descriptions for the AI tool "${tool.name}" used in chemistry:
+    const prompt = `Write two descriptions for the AI tool "${tool.name}" used in copywriting or conten creation:
 
 1. Short description (30–50 words)
 2. Long description (150–250 words)
