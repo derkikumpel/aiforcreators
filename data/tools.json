@@ -13,7 +13,7 @@
       "brand-voice"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751891298/creator-ai-tools/jasperai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382355/creator-ai-tools/jasperai.png"
   },
   {
     "name": "Copy.ai",
@@ -29,6 +29,150 @@
       "short-form"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1751891304/creator-ai-tools/copyai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382361/creator-ai-tools/copyai.png"
+  },
+  {
+    "name": "Writesonic",
+    "slug": "writesonic",
+    "url": "https://writesonic.com",
+    "short_description": "Writesonic is an AI-powered copywriting tool that helps users create high-quality content quickly and efficiently. From blog posts to ad copy, it generates engaging text tailored to various needs, making content creation easier for marketers and writers alike.",
+    "long_description": "Writesonic is an innovative AI-driven copywriting tool designed to streamline the content creation process for marketers, entrepreneurs, and writers. With its advanced natural language processing capabilities, Writesonic can generate a wide range of written materials, including blog posts, social media content, ad copy, product descriptions, and more. Users simply input their ideas or keywords, and Writesonic produces engaging, high-quality text that resonates with target audiences. The platform features various templates and customization options, allowing users to tailor the content to their specific needs and tone. Additionally, Writesonic continually learns from user interactions, improving its output quality over time. This makes it an invaluable asset for anyone looking to enhance their writing efficiency while maintaining creativity and effectiveness. Whether you're a seasoned writer or new to content creation, Writesonic simplifies the process, enabling you to focus on your core message and engage your audience effectively.",
+    "tags": [
+      "AI writing",
+      "content generation",
+      "marketing",
+      "blogging",
+      "copywriting"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382366/creator-ai-tools/writesonic.png"
+  },
+  {
+    "name": "CopySmith",
+    "slug": "copysmith",
+    "url": "https://copysmith.ai",
+    "short_description": "CopySmith is an AI-based content generation tool that helps users create marketing copy, product descriptions, and more.",
+    "long_description": "CopySmith is a powerful AI-based content generation tool that specializes in helping businesses and individuals create compelling marketing copy, product descriptions, and social media content. With its advanced algorithms, CopySmith can generate high-quality text that engages audiences and drives conversions. Users can choose from a variety of templates tailored for different types of content, ensuring that they can find the right fit for their needs. The platform is designed to save time by automating the writing process, allowing users to focus on strategy and creativity rather than getting bogged down in the details of copywriting. Additionally, CopySmith provides features for collaboration, enabling teams to work together on content projects in real-time. Its intuitive interface and ease of use make it accessible for anyone, from seasoned marketers to small business owners, looking to enhance their content marketing efforts. Overall, CopySmith is an essential tool for those who want to leverage the power of AI in their writing endeavors.",
+    "tags": [
+      "AI content",
+      "marketing",
+      "automation",
+      "copywriting",
+      "product descriptions"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382370/creator-ai-tools/copysmith.png"
+  },
+  {
+    "name": "Rytr",
+    "slug": "rytr",
+    "url": "https://rytr.me",
+    "short_description": "Rytr is an AI-powered writing assistant designed to help users create high-quality content quickly and effortlessly. With its intuitive interface and versatile templates, Rytr transforms ideas into engaging copy for blogs, ads, social media, and more.",
+    "long_description": "Rytr is an innovative AI-driven writing tool that empowers users to produce high-quality content in a fraction of the time it typically takes. Whether you're a marketer, blogger, or entrepreneur, Rytr simplifies the content creation process with its user-friendly interface and extensive library of templates. Users can generate diverse types of content, including blog posts, social media updates, email campaigns, product descriptions, and more, all tailored to specific tones and styles. Rytr utilizes advanced natural language processing algorithms to understand context and deliver relevant suggestions, ensuring that your writing resonates with your target audience. Additionally, it features collaboration tools, enabling teams to work seamlessly together on projects. With Rytr, you can focus on your ideas while the AI handles the heavy lifting, helping you overcome writer's block and enhancing your productivity. Whether you need to brainstorm ideas or polish your final drafts, Rytr is the ultimate companion for anyone looking to elevate their copywriting and content creation efforts.",
+    "tags": [
+      "AI writing",
+      "assistive technology",
+      "content generation",
+      "marketing",
+      "blogging"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382374/creator-ai-tools/rytr.png"
+  },
+  {
+    "name": "Peppertype.ai",
+    "slug": "peppertype-ai",
+    "url": "https://peppertype.ai",
+    "short_description": "Peppertype.ai is an advanced AI-powered copywriting tool designed to help content creators generate high-quality text quickly. From blog posts to social media captions, it streamlines the writing process, enhancing creativity and productivity.",
+    "long_description": "Peppertype.ai is an innovative AI-driven copywriting tool that empowers content creators to produce engaging and high-quality text effortlessly. Whether you're drafting blog posts, crafting social media updates, or generating marketing copy, Peppertype.ai simplifies the writing process with its intuitive interface and advanced algorithms. Users can benefit from a variety of templates and customizable prompts, allowing for tailored content that resonates with specific audiences. The tool leverages natural language processing to understand context and tone, ensuring that the generated content aligns with your brand voice. Additionally, Peppertype.ai continually learns and evolves, providing users with fresh ideas and inspiration. By reducing the time spent on writing tasks, it enables marketers, bloggers, and businesses to focus on strategy and creativity. With its user-friendly design and powerful features, Peppertype.ai is an essential resource for anyone looking to enhance their content creation workflow and produce compelling narratives that capture attention and drive engagement.",
+    "tags": [
+      "AI content",
+      "writing assistant",
+      "marketing",
+      "blogging",
+      "copywriting"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382379/creator-ai-tools/peppertype-ai.png"
+  },
+  {
+    "name": "ContentBot",
+    "slug": "contentbot",
+    "url": "https://contentbot.ai",
+    "short_description": "ContentBot is an innovative AI tool designed for copywriting and content creation, enabling users to generate high-quality, engaging text effortlessly. Perfect for marketers, bloggers, and businesses, it streamlines the creative process and enhances productivity.",
+    "long_description": "ContentBot is a cutting-edge AI-powered tool tailored for copywriters and content creators seeking to elevate their writing process. With its advanced algorithms, ContentBot generates compelling, high-quality text in a matter of seconds, making it an invaluable asset for marketers, bloggers, and businesses looking to produce engaging content efficiently. Whether you need social media posts, blog articles, product descriptions, or email campaigns, ContentBot offers customizable templates and suggestions that cater to your specific needs. Its intuitive interface allows users to easily input keywords or prompts, and the AI delivers well-structured and relevant content that resonates with your target audience. Additionally, ContentBot continuously learns and adapts to improve its output, ensuring that your content remains fresh and aligned with industry trends. By streamlining the content creation process, ContentBot not only saves time but also enhances creativity, allowing users to focus on strategy and innovation. Embrace the future of content creation with ContentBot and transform the way you produce and share your message.",
+    "tags": [
+      "AI writing",
+      "content generation",
+      "marketing",
+      "copywriting",
+      "SEO"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382384/creator-ai-tools/contentbot.png"
+  },
+  {
+    "name": "Wordtune",
+    "slug": "wordtune",
+    "url": "https://www.wordtune.com",
+    "short_description": "Wordtune is an AI-powered writing assistant that enhances your copywriting and content creation by offering real-time suggestions for rephrasing, expanding, and improving your text, ensuring clarity and engagement with your audience.",
+    "long_description": "Wordtune is an innovative AI tool designed to elevate your writing and content creation process. Whether you're crafting marketing copy, blog posts, or social media content, Wordtune provides real-time suggestions to enhance your text. Its intelligent algorithms analyze your writing and offer multiple rephrasing options that maintain your original intent while improving clarity and engagement. With features like tone adjustment, expansion of ideas, and simplification of complex sentences, Wordtune caters to various writing styles and audience preferences. This tool not only saves time by streamlining the editing process but also helps users discover new ways to express their thoughts creatively. Ideal for marketers, content creators, and anyone looking to refine their writing, Wordtune empowers users to communicate more effectively and resonate with their audience. By integrating seamlessly into your workflow, Wordtune transforms the way you write, making it easier to produce high-quality content that captivates and informs.",
+    "tags": [
+      "AI writing",
+      "editing",
+      "content enhancement",
+      "productivity",
+      "copywriting"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382388/creator-ai-tools/wordtune.png"
+  },
+  {
+    "name": "Frase",
+    "slug": "frase",
+    "url": "https://www.frase.io",
+    "short_description": "Frase is an AI-powered content creation tool designed to streamline copywriting by generating high-quality, SEO-optimized content. It helps marketers and writers improve productivity and enhances content relevance with data-driven insights and recommendations.",
+    "long_description": "Frase is an innovative AI-driven content creation tool specifically designed to aid copywriters, marketers, and content creators in producing high-quality, engaging, and SEO-friendly content. By leveraging advanced natural language processing, Frase analyzes top-ranking web pages to uncover key topics, questions, and keywords relevant to your niche. This data-driven approach not only enhances the relevance of your content but also ensures it meets the needs of your target audience. Frase offers a user-friendly interface that allows users to generate outlines, suggest content improvements, and create entire articles with just a few clicks. Its built-in SEO optimization features help you rank higher in search engines by ensuring your content adheres to best practices. Additionally, Frase provides insights into user intent, enabling you to craft compelling narratives that resonate with your audience. With Frase, you can significantly boost your productivity, streamline your copywriting process, and ultimately create content that drives traffic and engagement.",
+    "tags": [
+      "SEO",
+      "content optimization",
+      "AI writing",
+      "marketing",
+      "research"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382393/creator-ai-tools/frase.png"
+  },
+  {
+    "name": "Kuki Chatbot",
+    "slug": "kuki-chatbot",
+    "url": "https://www.kuki.ai",
+    "short_description": "Kuki Chatbot is an AI-powered content creation tool designed to assist copywriters by generating engaging text, brainstorming ideas, and refining drafts, streamlining the writing process and enhancing creativity.",
+    "long_description": "Kuki Chatbot is an innovative AI-driven tool tailored for copywriters and content creators seeking to elevate their writing process. Leveraging advanced natural language processing, Kuki assists users in generating high-quality, engaging text that resonates with their target audience. Whether you need help brainstorming ideas, drafting compelling marketing copy, or refining existing content, Kuki provides instant support to streamline your workflow. The chatbot's intuitive interface allows users to interact seamlessly, making it easy to request specific styles, tones, or themes. Additionally, Kuki can analyze and suggest improvements to your writing, ensuring clarity and impact. With its ability to adapt to various writing needs, Kuki empowers content creators to enhance their productivity and creativity, ultimately leading to more effective communication and stronger connections with their audience. Say goodbye to writer's block and embrace a more efficient way of crafting your narratives with Kuki Chatbot.",
+    "tags": [
+      "AI chatbot",
+      "conversational content",
+      "customer support",
+      "automation",
+      "engagement"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382398/creator-ai-tools/kuki-chatbot.png"
+  },
+  {
+    "name": "CopyDash",
+    "slug": "copydash",
+    "url": "https://copydash.com",
+    "short_description": "CopyDash is an innovative AI tool designed to streamline copywriting and content creation. It helps users generate engaging, high-quality text effortlessly, making it ideal for marketers, bloggers, and businesses seeking to enhance their online presence.",
+    "long_description": "CopyDash is a cutting-edge AI tool that revolutionizes the way copywriting and content creation are approached. Designed for marketers, bloggers, and content creators, CopyDash utilizes advanced algorithms to generate high-quality, engaging text tailored to your specific needs. With its user-friendly interface, you can quickly input your requirements and receive well-crafted content that resonates with your target audience. Whether you need blog posts, social media updates, product descriptions, or email campaigns, CopyDash provides a variety of templates and styles to suit your brand's voice. The tool not only saves you time by automating the writing process but also enhances creativity by offering unique ideas and suggestions. Additionally, CopyDash incorporates SEO best practices, ensuring that your content is optimized for search engines, driving more traffic to your site. With its ability to learn from user preferences and feedback, CopyDash continuously improves, delivering increasingly relevant and effective content. Experience the future of content creation with CopyDash and elevate your writing to new heights.",
+    "tags": [
+      "AI writing",
+      "marketing",
+      "copy optimization",
+      "collaboration",
+      "content generation"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382402/creator-ai-tools/copydash.png"
   }
 ]
