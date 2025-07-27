@@ -29,7 +29,7 @@
       "short-form"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752987567/creator-ai-tools/copyai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592472/creator-ai-tools/copyai.png"
   },
   {
     "name": "Writesonic",
@@ -141,7 +141,7 @@
       "research"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752987601/creator-ai-tools/frase.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592503/creator-ai-tools/frase.png"
   },
   {
     "name": "Kuki Chatbot",
@@ -190,7 +190,7 @@
       "performance"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752987615/creator-ai-tools/anyword.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592517/creator-ai-tools/anyword.png"
   },
   {
     "name": "CopySmith",
@@ -258,7 +258,7 @@
       "efficiency"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752987633/creator-ai-tools/text-blaze.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592534/creator-ai-tools/text-blaze.png"
   },
   {
     "name": "ContentBot",
@@ -326,7 +326,7 @@
       "training"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752987654/creator-ai-tools/scribe.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592553/creator-ai-tools/scribe.png"
   },
   {
     "name": "Kuki Chatbot",
@@ -344,5 +344,141 @@
     ],
     "category": "content creation",
     "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752987659/creator-ai-tools/kuki-chatbot-pro.png"
+  },
+  {
+    "name": "Snazzy AI",
+    "slug": "snazzy-ai",
+    "url": "https://snazzy.ai",
+    "short_description": "Snazzy AI is an innovative tool designed to streamline copywriting and content creation. With its advanced AI capabilities, it generates engaging, high-quality text tailored to your needs, allowing you to produce compelling content effortlessly and efficiently.",
+    "long_description": "Snazzy AI is a cutting-edge tool that revolutionizes the way you approach copywriting and content creation. Powered by advanced artificial intelligence, it helps you generate high-quality, engaging text in mere moments, saving you time and effort. Whether you’re crafting blog posts, social media updates, marketing copy, or product descriptions, Snazzy AI adapts to your unique voice and style, ensuring that your content resonates with your target audience. With intuitive features and easy-to-use templates, it’s perfect for marketers, entrepreneurs, and writers alike. Snazzy AI not only boosts your productivity but also enhances your creativity by providing inspiration and ideas at your fingertips. Say goodbye to writer’s block and hello to seamless content generation with Snazzy AI, your go-to solution for all your copywriting needs.",
+    "tags": [
+      "AI writing",
+      "content creation",
+      "marketing",
+      "copy generation",
+      "social media",
+      "blogging"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592562/creator-ai-tools/snazzy-ai.png"
+  },
+  {
+    "name": "CopyMonkey",
+    "slug": "copymonkey",
+    "url": "https://copymonkey.ai",
+    "short_description": "CopyMonkey is an AI-powered copywriting tool that helps marketers and content creators generate high-quality, engaging content quickly. With its intuitive interface, users can create compelling copy for ads, social media, and websites in minutes, boosting productivity and creativity.",
+    "long_description": "CopyMonkey is an innovative AI-driven tool designed specifically for copywriters, marketers, and content creators looking to streamline their writing process. With its advanced algorithms, CopyMonkey generates high-quality, engaging copy tailored to your specific needs, whether for advertisements, social media posts, or website content. Users can choose from a variety of templates and prompts, allowing for quick customization to fit their brand voice and messaging. The intuitive interface makes it easy to generate ideas, refine drafts, and collaborate with team members seamlessly. By harnessing the power of AI, CopyMonkey not only saves time but also enhances creativity, enabling users to focus on strategy and storytelling rather than getting bogged down in the writing process. Ideal for businesses of all sizes, CopyMonkey helps marketers improve their content strategy, drive engagement, and ultimately boost conversions, making it a must-have tool in today's fast-paced digital landscape.",
+    "tags": [
+      "eCommerce",
+      "product descriptions",
+      "AI writing",
+      "marketing",
+      "SEO",
+      "copy generation"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592567/creator-ai-tools/copymonkey.png"
+  },
+  {
+    "name": "NeuralWriter",
+    "slug": "neuralwriter",
+    "url": "https://neuralwriter.ai",
+    "short_description": "NeuralWriter is an advanced AI tool designed for copywriting and content creation, streamlining the writing process with intelligent suggestions, topic insights, and optimized content generation tailored to your audience’s needs.",
+    "long_description": "NeuralWriter is a cutting-edge AI tool that revolutionizes the way businesses and content creators approach copywriting and content generation. Leveraging advanced natural language processing techniques, NeuralWriter offers users intelligent suggestions, insightful topic ideas, and the ability to generate high-quality, engaging content tailored to specific audiences. Whether you’re drafting blog posts, social media updates, or marketing copy, NeuralWriter provides real-time assistance to enhance your writing process. The tool analyzes existing content and user preferences, ensuring that the generated material is not only relevant but also optimized for SEO and audience engagement. With features like customizable tone settings, keyword integration, and performance analytics, NeuralWriter empowers users to create compelling content that resonates with their target demographic. Ideal for marketers, entrepreneurs, and writers alike, NeuralWriter transforms the often daunting task of content creation into an efficient and enjoyable experience, allowing you to focus on creativity while the AI handles the technical details. Discover the future of writing with NeuralWriter and elevate your content strategy to new heights.",
+    "tags": [
+      "AI writing",
+      "narrative",
+      "content creation",
+      "storytelling",
+      "blogging",
+      "marketing"
+    ],
+    "category": "copywriting",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "Textio",
+    "slug": "textio",
+    "url": "https://textio.com",
+    "short_description": "Textio is an AI-powered writing tool designed to enhance copywriting and content creation. It provides real-time feedback and suggestions, helping users craft engaging, inclusive, and effective text tailored to their audience's preferences.",
+    "long_description": "Textio is an innovative AI-driven writing assistant that revolutionizes the way copywriters and content creators develop their material. By analyzing vast amounts of successful writing, Textio offers real-time feedback on tone, style, and inclusivity, empowering users to produce high-impact content that resonates with their target audience. Whether you're drafting job descriptions, marketing copy, or social media posts, Textio's intuitive interface guides you through the writing process, suggesting improvements and alternative phrases that enhance clarity and engagement. Its unique predictive capabilities allow users to see how their writing will perform, helping to optimize content for better results. With Textio, you can also ensure that your messaging aligns with your brand voice, making it easier to maintain consistency across various platforms. Ideal for teams and individual creators alike, Textio streamlines the writing process, reduces revision time, and ultimately improves the quality of your content, making it a must-have tool for anyone looking to elevate their written communication.",
+    "tags": [
+      "AI writing",
+      "job descriptions",
+      "recruitment",
+      "professional writing",
+      "inclusivity",
+      "analytics"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592571/creator-ai-tools/textio.png"
+  },
+  {
+    "name": "AI Writer",
+    "slug": "ai-writer",
+    "url": "https://ai-writer.com",
+    "short_description": "AI Writer is an advanced content creation tool that leverages artificial intelligence to generate high-quality copy for blogs, websites, and marketing materials, helping you save time and enhance creativity in your writing process.",
+    "long_description": "AI Writer is a cutting-edge content creation platform designed to streamline the writing process for marketers, bloggers, and businesses alike. Utilizing sophisticated artificial intelligence algorithms, AI Writer generates high-quality, engaging copy tailored to your specific needs. Whether you're crafting blog posts, social media updates, product descriptions, or marketing materials, AI Writer saves you valuable time and effort. With its user-friendly interface, you can quickly input your ideas and receive polished, coherent text that resonates with your target audience. The tool also offers various customization options, allowing you to adjust tone, style, and length to fit your brand's voice. Plus, AI Writer continually learns from user interactions, improving its suggestions and outputs over time. Embrace the future of content creation with AI Writer, and unlock your creative potential while delivering compelling copy that drives engagement and conversions.",
+    "tags": [
+      "AI writing",
+      "content generation",
+      "blogging",
+      "marketing",
+      "SEO",
+      "copywriting"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592576/creator-ai-tools/ai-writer.png"
+  },
+  {
+    "name": "WriteWithAI",
+    "slug": "writewithai",
+    "url": "https://writewithai.com",
+    "short_description": "WriteWithAI assists in generating creative content ideas and drafts across various formats.",
+    "long_description": "WriteWithAI is an innovative AI-driven platform designed to assist writers, marketers, and content creators in generating creative content ideas and drafts across various formats. The platform harnesses the power of artificial intelligence to analyze user input and produce relevant, engaging content that can be used for blog posts, articles, social media updates, and more. One of the standout features of WriteWithAI is its ability to brainstorm ideas based on specific topics, helping users overcome writer's block and explore new angles for their content. Additionally, the tool offers customizable templates for different content types, ensuring that users can create polished drafts quickly and efficiently. WriteWithAI's intuitive interface makes it accessible for users of all skill levels, enabling them to harness the potential of AI without a steep learning curve. As content creation demands continue to rise, WriteWithAI serves as a valuable partner in the writing process, empowering users to produce high-quality content that captivates their audience.",
+    "tags": [
+      "AI writing",
+      "content ideas",
+      "draft generation",
+      "blogging",
+      "creative writing",
+      "marketing"
+    ],
+    "category": "copywriting",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "TextGears",
+    "slug": "textgears",
+    "url": "https://textgears.com",
+    "short_description": "TextGears is an AI-powered writing assistant designed to enhance your copywriting and content creation process. It offers grammar checks, style suggestions, and content optimization, ensuring your writing is polished, engaging, and effective.",
+    "long_description": "TextGears is an advanced AI writing assistant tailored for copywriters and content creators. It streamlines the writing process by providing comprehensive grammar checks, style enhancements, and content optimization tools. Whether you're drafting articles, advertisements, or social media posts, TextGears helps ensure your writing is not only error-free but also engaging and aligned with your intended audience. With its intuitive interface, users can easily integrate TextGears into their workflow, receiving real-time feedback and suggestions that improve clarity and impact. Additionally, TextGears offers insights on keyword usage and SEO best practices, making it an invaluable tool for digital marketing and online content strategies. By harnessing the power of AI, TextGears empowers writers to create compelling content more efficiently, allowing them to focus on creativity while ensuring their message resonates with readers. Experience the future of writing with TextGears, where every word counts and every sentence shines.",
+    "tags": [
+      "grammar check",
+      "writing assistant",
+      "style suggestions",
+      "content quality",
+      "business writing",
+      "AI tool"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592584/creator-ai-tools/textgears.png"
+  },
+  {
+    "name": "Scribbr",
+    "slug": "scribbr",
+    "url": "https://scribbr.com",
+    "short_description": "Scribbr is an AI-powered writing assistant designed to enhance your copywriting and content creation process. It offers tools for plagiarism checking, grammar correction, and style enhancement, helping you produce high-quality, original content effortlessly.",
+    "long_description": "Scribbr is an innovative AI writing assistant tailored for copywriters and content creators seeking to elevate their writing quality. With its advanced features, Scribbr simplifies the writing process by providing real-time grammar corrections, stylistic suggestions, and comprehensive plagiarism checks to ensure your work is both original and polished. Whether you're drafting blog posts, marketing materials, or academic papers, Scribbr's intuitive interface makes it easy to refine your content and maintain a consistent tone. The tool also offers insights on readability and engagement, allowing you to tailor your writing to your target audience effectively. By leveraging Scribbr, writers can not only save time but also enhance their creativity, producing compelling narratives that resonate with readers. Whether you're a seasoned professional or a novice, Scribbr is your go-to partner for achieving writing excellence.",
+    "tags": [
+      "academic writing",
+      "plagiarism check",
+      "citation generator",
+      "student tools",
+      "editing",
+      "writing assistance"
+    ],
+    "category": "copywriting",
+    "screenshot": "assets/placeholder.png"
   }
 ]
