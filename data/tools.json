@@ -45,7 +45,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197477/creator-ai-tools/writesonic.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798930/creator-ai-tools/writesonic.png"
   },
   {
     "name": "CopySmith",
@@ -93,7 +93,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197490/creator-ai-tools/peppertype-ai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798946/creator-ai-tools/peppertype-ai.png"
   },
   {
     "name": "ContentBot",
@@ -125,7 +125,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1752382388/creator-ai-tools/wordtune.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798956/creator-ai-tools/wordtune.png"
   },
   {
     "name": "Frase",
@@ -141,7 +141,7 @@
       "research"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197504/creator-ai-tools/frase.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798961/creator-ai-tools/frase.png"
   },
   {
     "name": "Kuki Chatbot",
@@ -190,7 +190,7 @@
       "performance"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592517/creator-ai-tools/anyword.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798975/creator-ai-tools/anyword.png"
   },
   {
     "name": "CopySmith",
@@ -224,7 +224,7 @@
       "productivity"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197525/creator-ai-tools/writesonic-pro.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798984/creator-ai-tools/writesonic-pro.png"
   },
   {
     "name": "Ink",
@@ -258,7 +258,7 @@
       "efficiency"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197534/creator-ai-tools/text-blaze.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798994/creator-ai-tools/text-blaze.png"
   },
   {
     "name": "ContentBot",
@@ -326,7 +326,7 @@
       "training"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197552/creator-ai-tools/scribe.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799014/creator-ai-tools/scribe.png"
   },
   {
     "name": "Kuki Chatbot",
@@ -428,7 +428,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197576/creator-ai-tools/ai-writer.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799041/creator-ai-tools/ai-writer.png"
   },
   {
     "name": "WriteWithAI",
@@ -462,7 +462,7 @@
       "AI tool"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1753592584/creator-ai-tools/textgears.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799049/creator-ai-tools/textgears.png"
   },
   {
     "name": "Scribbr",
@@ -511,7 +511,7 @@
       "optimization"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197589/creator-ai-tools/scribe-ai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799055/creator-ai-tools/scribe-ai.png"
   },
   {
     "name": "HyperWrite",
@@ -575,7 +575,7 @@
       "originality"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197604/creator-ai-tools/articoolo.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799070/creator-ai-tools/articoolo.png"
   },
   {
     "name": "Content Forge",
@@ -607,6 +607,86 @@
       "creative writing"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197613/creator-ai-tools/storylab.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799081/creator-ai-tools/storylab.png"
+  },
+  {
+    "name": "Peppertype",
+    "slug": "peppertype",
+    "url": "https://www.peppertype.ai",
+    "short_description": "Peppertype is an AI-powered content creation tool that helps users generate high-quality copy quickly and efficiently. Ideal for marketers, writers, and businesses, it provides a range of templates and suggestions to enhance creativity and streamline the writing process.",
+    "long_description": "Peppertype is a cutting-edge AI content creation tool designed to empower marketers, copywriters, and businesses in generating compelling copy with ease. By leveraging advanced artificial intelligence, Peppertype offers a diverse array of templates and writing prompts that cater to various needs—from blog posts and social media content to product descriptions and ad copies. Users can simply input their ideas or keywords, and the tool generates high-quality, engaging text in seconds. With an intuitive interface, Peppertype simplifies the writing process, allowing users to focus on their creativity rather than the mechanics of writing. Additionally, it offers collaborative features, enabling teams to work together seamlessly. Whether you're a seasoned writer or a beginner, Peppertype helps you save time and boost productivity while ensuring that your content resonates with your audience. Experience the future of content creation with Peppertype, where innovation meets inspiration.",
+    "tags": [
+      "content generation",
+      "AI",
+      "marketing",
+      "blogging",
+      "productivity"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799089/creator-ai-tools/peppertype.png"
+  },
+  {
+    "name": "INK Editor",
+    "slug": "ink-editor",
+    "url": "https://inkforall.com",
+    "short_description": "INK Editor is an AI-powered writing tool designed to enhance copywriting and content creation. It optimizes your text for SEO while ensuring clarity and engagement, helping you produce high-quality content efficiently.",
+    "long_description": "INK Editor is an innovative AI-powered writing tool that revolutionizes the way copywriters and content creators produce and optimize their content. With advanced features that focus on SEO optimization, INK Editor helps users craft text that not only resonates with their audience but also ranks higher in search engine results. The tool provides real-time suggestions, ensuring clarity, engagement, and persuasiveness in every piece of writing. Whether you're drafting blog posts, marketing copy, or social media content, INK Editor's intuitive interface makes the writing process smoother and more efficient. Additionally, it offers insights into keyword usage, readability scores, and overall content effectiveness, allowing creators to refine their work with data-driven strategies. By leveraging the power of AI, INK Editor empowers writers to produce high-quality content faster, enabling them to focus on creativity while the tool handles the technical aspects of writing and optimization. Ideal for marketers, bloggers, and businesses looking to elevate their content strategy, INK Editor is your go-to solution for impactful writing.",
+    "tags": [
+      "SEO",
+      "content optimization",
+      "AI writing",
+      "blogging",
+      "marketing"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799093/creator-ai-tools/ink-editor.png"
+  },
+  {
+    "name": "Grammarly",
+    "slug": "grammarly",
+    "url": "https://www.grammarly.com",
+    "short_description": "AI-powered writing assistant that improves grammar and style.",
+    "long_description": "Grammarly is a widely recognized AI-powered writing assistant that helps users improve their writing by providing real-time feedback on grammar, punctuation, style, and tone. Designed to cater to a diverse audience, Grammarly is suitable for students, professionals, and anyone who wants to enhance their writing skills. The tool seamlessly integrates with various platforms, including web browsers, Microsoft Word, and Google Docs, making it easily accessible for users across different writing environments. Grammarly's advanced algorithms analyze text to identify errors and offer suggestions for improvement, ensuring that written content is clear, concise, and free of mistakes. In addition to grammar checking, Grammarly provides insights into writing style, helping users maintain a consistent voice and tone throughout their work. The premium version offers additional features such as plagiarism detection and advanced style suggestions, making it a comprehensive tool for serious writers. With Grammarly, users can communicate their ideas more effectively, boosting their confidence in written communication.",
+    "tags": [
+      "writing assistant",
+      "grammar checking",
+      "AI",
+      "style improvement",
+      "productivity"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799098/creator-ai-tools/grammarly.png"
+  },
+  {
+    "name": "QuillBot",
+    "slug": "quillbot",
+    "url": "https://quillbot.com",
+    "short_description": "QuillBot is an AI-powered writing assistant that enhances your copywriting by providing grammar checks, paraphrasing, and summarization tools. It helps improve clarity, creativity, and overall content quality efficiently.",
+    "long_description": "QuillBot is an advanced AI writing tool designed to elevate your content creation process. With its powerful paraphrasing feature, QuillBot enables writers to rephrase sentences, ensuring originality and enhancing clarity. The tool offers a user-friendly interface, allowing users to quickly check grammar, improve vocabulary, and summarize lengthy texts. Ideal for copywriters, students, and professionals alike, QuillBot helps streamline the writing process while boosting productivity. Users can choose from various modes to suit their writing style, whether they need a formal tone or a more casual approach. Additionally, QuillBot integrates seamlessly with popular platforms like Google Docs and Microsoft Word, making it a versatile addition to any writer's toolkit. By leveraging machine learning and natural language processing, QuillBot not only refines your writing but also inspires creativity, helping you produce high-quality content efficiently. Whether you're drafting an essay, an article, or marketing copy, QuillBot is your go-to assistant for achieving polished and engaging writing.",
+    "tags": [
+      "paraphrasing",
+      "AI",
+      "writing enhancement",
+      "plagiarism avoidance",
+      "productivity"
+    ],
+    "category": "copywriting",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "Sudowrite",
+    "slug": "sudowrite",
+    "url": "https://www.sudowrite.com",
+    "short_description": "Sudowrite is an AI-powered writing assistant designed to help copywriters and content creators generate ideas, enhance creativity, and streamline the writing process. It offers suggestions, edits, and inspiration to elevate your writing projects effortlessly.",
+    "long_description": "Sudowrite is an innovative AI writing tool tailored for copywriters and content creators seeking to enhance their creative workflows. Utilizing advanced machine learning algorithms, Sudowrite assists users in generating fresh ideas, refining their writing style, and overcoming writer's block with ease. Whether you’re crafting compelling marketing copy, engaging blog posts, or captivating stories, Sudowrite provides intelligent suggestions and prompts that inspire creativity. Its user-friendly interface allows you to input your drafts and receive real-time feedback, helping you improve clarity, coherence, and impact. With features such as character development aids, plot generators, and tone adjustments, Sudowrite is designed to not only save time but also elevate the quality of your writing. Ideal for both seasoned professionals and novice writers, Sudowrite empowers you to produce high-quality content faster while maintaining your unique voice. Transform your writing process and unlock new levels of creativity with Sudowrite—your ultimate writing companion.",
+    "tags": [
+      "creative writing",
+      "storytelling",
+      "AI",
+      "writing prompts",
+      "productivity"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799103/creator-ai-tools/sudowrite.png"
   }
 ]
