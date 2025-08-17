@@ -29,7 +29,7 @@
       "short-form"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197472/creator-ai-tools/copyai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403098/creator-ai-tools/copyai.png"
   },
   {
     "name": "Writesonic",
@@ -45,7 +45,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798930/creator-ai-tools/writesonic.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403103/creator-ai-tools/writesonic.png"
   },
   {
     "name": "CopySmith",
@@ -125,7 +125,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798956/creator-ai-tools/wordtune.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403125/creator-ai-tools/wordtune.png"
   },
   {
     "name": "Frase",
@@ -141,7 +141,7 @@
       "research"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798961/creator-ai-tools/frase.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403130/creator-ai-tools/frase.png"
   },
   {
     "name": "Kuki Chatbot",
@@ -224,7 +224,7 @@
       "productivity"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798984/creator-ai-tools/writesonic-pro.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403152/creator-ai-tools/writesonic-pro.png"
   },
   {
     "name": "Ink",
@@ -258,7 +258,7 @@
       "efficiency"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754798994/creator-ai-tools/text-blaze.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403160/creator-ai-tools/text-blaze.png"
   },
   {
     "name": "ContentBot",
@@ -428,7 +428,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799041/creator-ai-tools/ai-writer.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403203/creator-ai-tools/ai-writer.png"
   },
   {
     "name": "WriteWithAI",
@@ -575,7 +575,7 @@
       "originality"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799070/creator-ai-tools/articoolo.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403231/creator-ai-tools/articoolo.png"
   },
   {
     "name": "Content Forge",
@@ -591,7 +591,7 @@
       "audience targeting"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754197608/creator-ai-tools/content-forge.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403236/creator-ai-tools/content-forge.png"
   },
   {
     "name": "StoryLab",
@@ -607,7 +607,7 @@
       "creative writing"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799081/creator-ai-tools/storylab.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403240/creator-ai-tools/storylab.png"
   },
   {
     "name": "Peppertype",
@@ -639,7 +639,7 @@
       "marketing"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799093/creator-ai-tools/ink-editor.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403249/creator-ai-tools/ink-editor.png"
   },
   {
     "name": "Grammarly",
@@ -687,6 +687,159 @@
       "productivity"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1754799103/creator-ai-tools/sudowrite.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403258/creator-ai-tools/sudowrite.png"
+  },
+  {
+    "name": "ContentBot",
+    "slug": "contentbot-ai",
+    "url": "https://contentbot.ai",
+    "short_description": "ContentBot is an AI-powered tool that streamlines copywriting and content creation, providing users with high-quality, engaging text tailored to their needs. Perfect for marketers, bloggers, and businesses, it enhances productivity and creativity effortlessly.",
+    "long_description": "ContentBot is an innovative AI-driven tool designed to revolutionize the way you approach copywriting and content creation. With its robust algorithms, ContentBot generates high-quality, engaging, and relevant text tailored to your specific needs, whether you are a marketer, blogger, or business owner. This versatile tool offers a variety of features, including customizable content templates, keyword optimization, and real-time suggestions, making it easier than ever to create compelling narratives that resonate with your audience. ContentBot's intuitive interface allows users to generate anything from blog posts and social media updates to product descriptions and email campaigns in just a few clicks. By harnessing the power of artificial intelligence, ContentBot not only saves time but also enhances creativity, enabling users to focus on their core strategies while the tool handles the heavy lifting of drafting and refining content. Experience a new level of efficiency and creativity in your writing process with ContentBot, and watch your engagement and conversions soar.",
+    "tags": [
+      "AI writing",
+      "content generation",
+      "blogging",
+      "marketing",
+      "SEO",
+      "automation"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403263/creator-ai-tools/contentbot-ai.png"
+  },
+  {
+    "name": "Writesonic",
+    "slug": "writesonic-ai",
+    "url": "https://writesonic.com",
+    "short_description": "Writesonic is an AI-powered copywriting tool designed to help marketers, entrepreneurs, and content creators generate high-quality written content quickly and efficiently, from blog posts to ad copies, ensuring creativity and engagement with every piece.",
+    "long_description": "Writesonic is an innovative AI copywriting tool that empowers marketers, entrepreneurs, and content creators to produce high-quality written material with ease. Using advanced natural language processing technology, Writesonic generates a variety of content types including blog posts, advertisement copies, product descriptions, social media posts, and more. The platform is designed to save time and reduce the effort involved in content creation, allowing users to focus on strategy and creativity. With customizable templates and a user-friendly interface, Writesonic ensures that users can create engaging content tailored to their specific audience and needs. The tool offers features like SEO optimization, tone adjustment, and language preferences, making it versatile for different industries and content requirements. Whether you're a seasoned copywriter or a beginner, Writesonic equips you with the resources to enhance your writing process, boost productivity, and drive results in your marketing campaigns. Experience the future of content creation with Writesonic, where inspiration meets automation.",
+    "tags": [
+      "AI writing",
+      "content generation",
+      "SEO",
+      "marketing",
+      "blogging",
+      "automation"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403267/creator-ai-tools/writesonic-ai.png"
+  },
+  {
+    "name": "CopyMonkey",
+    "slug": "copymonkey-ai",
+    "url": "https://copymonkey.ai",
+    "short_description": "AI tool for generating Amazon product descriptions and ads.",
+    "long_description": "CopyMonkey is an AI-driven tool specifically designed for generating engaging Amazon product descriptions and advertisements. In the competitive world of e-commerce, having compelling product listings can significantly impact sales, and CopyMonkey aims to simplify this process for sellers. Users can input basic product information, and the AI quickly generates optimized descriptions and ad copy that highlight key features and benefits. The tool leverages extensive data on successful listings to ensure that the output is not only persuasive but also tailored for maximum visibility on Amazon. Additionally, CopyMonkey allows users to A/B test different versions of their listings, enabling them to refine their approach based on real-time performance metrics. With its focus on e-commerce, CopyMonkey is an invaluable resource for online sellers looking to save time and improve their product marketing strategies without sacrificing quality.",
+    "tags": [
+      "e-commerce",
+      "AI writing",
+      "product descriptions",
+      "Amazon",
+      "copywriting",
+      "ads"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403272/creator-ai-tools/copymonkey-ai.png"
+  },
+  {
+    "name": "Snazzy AI",
+    "slug": "snazzyai",
+    "url": "https://snazzy.ai",
+    "short_description": "AI copywriting tool for creating marketing content and ads.",
+    "long_description": "Snazzy AI is a cutting-edge AI copywriting tool designed to help users create engaging marketing content and advertisements with ease. The platform allows users to generate a variety of text forms, including ad copy, blog content, landing pages, and social media posts. By leveraging artificial intelligence, Snazzy AI can produce high-quality writing that resonates with target audiences, making it ideal for marketers, entrepreneurs, and business owners. The intuitive interface enables users to input prompts or keywords, and the AI responds with multiple variations, allowing for quick iteration and customization. Snazzy AI also incorporates features that assist with SEO optimization, ensuring that the generated content is not only compelling but also ranks well on search engines. With its focus on streamlining the content creation process, Snazzy AI empowers users to enhance their marketing strategies and save time while producing impactful content.",
+    "tags": [
+      "AI writing",
+      "marketing",
+      "copywriting",
+      "ads",
+      "content creation",
+      "SEO"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403276/creator-ai-tools/snazzyai.png"
+  },
+  {
+    "name": "CopyDash",
+    "slug": "copydash-ai",
+    "url": "https://copydash.ai",
+    "short_description": "AI tool for creating persuasive copy for various platforms.",
+    "long_description": "CopyDash is an innovative AI tool designed to assist users in crafting persuasive copy across various platforms, including websites, social media, and email marketing. By utilizing advanced natural language processing, CopyDash can analyze user inputs and generate high-quality content that aligns with specific objectives and target audiences. Users can input prompts, and the AI will produce multiple variations, providing options for customization. This flexibility allows marketers and content creators to find the perfect tone and style that resonates with their audience. Additionally, CopyDash features an easy-to-use interface, making it accessible for users with varying levels of writing expertise. Whether you're looking to create catchy headlines, product descriptions, or engaging email campaigns, CopyDash streamlines the process and enhances overall productivity. By automating the copywriting process, this tool helps users save time and focus on other important aspects of their marketing strategies.",
+    "tags": [
+      "AI writing",
+      "copywriting",
+      "marketing",
+      "persuasive writing",
+      "automation",
+      "content creation"
+    ],
+    "category": "copywriting",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "Narrative Science",
+    "slug": "narrative-science-ai",
+    "url": "https://narrative.science",
+    "short_description": "AI tool for creating data-driven narratives and reports.",
+    "long_description": "Narrative Science is an advanced AI tool that specializes in transforming data into meaningful narratives and reports. By analyzing complex datasets, the platform generates human-readable content that distills insights and key findings into clear, engaging narratives. This is particularly beneficial for businesses and organizations that rely on data analysis for decision-making but struggle to communicate findings effectively. Users can input raw data, and Narrative Science will produce comprehensive reports, summaries, or tailored messages that convey the essential information in an accessible manner. The AI adapts its writing style based on the intended audience, ensuring that the output is relevant and understandable, whether for internal stakeholders or external clients. By automating the narrative creation process, Narrative Science saves time and enhances the clarity of data communication, making it an invaluable asset for data analysts, marketers, and executives who need to present findings persuasively.",
+    "tags": [
+      "data analysis",
+      "narrative writing",
+      "AI writing",
+      "report generation",
+      "business intelligence",
+      "automation"
+    ],
+    "category": "content creation",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "HyperWrite",
+    "slug": "hyperwrite-ai",
+    "url": "https://hyperwriteai.com",
+    "short_description": "HyperWrite is an advanced AI tool designed to streamline the copywriting process. It helps users generate high-quality content quickly, offering suggestions, enhancing creativity, and ensuring clarity, making it an indispensable resource for writers and marketers alike.",
+    "long_description": "HyperWrite is a cutting-edge AI-powered tool tailored for copywriting and content creation. It empowers writers by generating engaging, high-quality text in a fraction of the time it would typically take. With its intuitive interface, HyperWrite provides real-time suggestions, enhancing creativity and ensuring clarity in your writing. The tool understands context and tone, allowing users to create content that resonates with their target audience. Whether you’re crafting blog posts, social media updates, or marketing copy, HyperWrite offers customizable options that adapt to your unique voice and style. Additionally, it helps improve productivity by reducing writer's block and offering fresh ideas. With features like topic generation, content optimization, and grammar checks, HyperWrite is an essential ally for anyone looking to elevate their writing game. Whether you’re a seasoned professional or just starting, HyperWrite simplifies the writing process, making it easier to produce compelling content that captures attention and drives engagement. Say goodbye to tedious drafting and hello to efficient, effective writing with HyperWrite.",
+    "tags": [
+      "AI writing",
+      "brainstorming",
+      "content creation",
+      "collaboration",
+      "drafting",
+      "marketing"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403281/creator-ai-tools/hyperwrite-ai.png"
+  },
+  {
+    "name": "Scribbr",
+    "slug": "scribbr-ai",
+    "url": "https://scribbr.com",
+    "short_description": "Scribbr is an AI-powered writing tool designed to enhance content creation with features like plagiarism checking, citation generation, and grammar correction. Perfect for students, professionals, and content creators aiming for polished and original work.",
+    "long_description": "Scribbr is an innovative AI-driven writing assistant that streamlines the process of content creation for students, professionals, and writers alike. With its robust features, Scribbr provides comprehensive plagiarism detection to ensure that your work is original and properly cited. The tool also offers automated citation generation in various formats, making it easier to adhere to academic standards and avoid unintentional plagiarism. Additionally, Scribbr's advanced grammar and style checking capabilities help users refine their writing, enhancing clarity and coherence. Whether you're drafting an academic paper, blog post, or marketing content, Scribbr empowers you to produce high-quality work efficiently. Its user-friendly interface and intuitive features make it accessible for all skill levels, allowing for seamless integration into your writing workflow. With Scribbr, you can boost your productivity and confidence, knowing that your content is not only well-written but also ethically sound.",
+    "tags": [
+      "academic writing",
+      "plagiarism checking",
+      "proofreading",
+      "AI writing",
+      "citation",
+      "editing"
+    ],
+    "category": "content creation",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "ContentForge",
+    "slug": "contentforge-ai",
+    "url": "https://contentforge.ai",
+    "short_description": "ContentForge is an innovative AI-powered tool designed to streamline copywriting and content creation. It generates engaging and relevant text, helping marketers and writers save time while enhancing their creative output.",
+    "long_description": "ContentForge is a cutting-edge AI-driven tool specifically crafted for copywriters and content creators seeking to elevate their writing process. With its advanced algorithms, ContentForge analyzes your input and generates high-quality, engaging content tailored to your audience. Whether you're crafting blog posts, social media updates, or marketing copy, this tool provides inspiration and structure, ensuring your messages resonate effectively. Its user-friendly interface allows you to customize tone, style, and length, making it perfect for teams and individual creators alike. By leveraging the power of machine learning, ContentForge helps eliminate writer's block, speeds up content production, and enhances overall creativity. With features such as keyword optimization and SEO analysis, it empowers users to create not only captivating content but also search-engine-friendly text. Unlock the potential of your writing with ContentForge and transform your content creation process into a seamless and enjoyable experience.",
+    "tags": [
+      "AI writing",
+      "blogging",
+      "content generation",
+      "SEO",
+      "automation",
+      "marketing"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1755403286/creator-ai-tools/contentforge-ai.png"
   }
 ]
