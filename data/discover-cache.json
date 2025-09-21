@@ -1144,5 +1144,69 @@
       "marketing"
     ],
     "category": "copywriting"
+  },
+  {
+    "name": "Textmetrics",
+    "slug": "textmetrics",
+    "url": "https://textmetrics.com",
+    "short_description": "Textmetrics is an AI-powered platform that enhances content creation by focusing on SEO and readability.",
+    "long_description": "Textmetrics is an advanced AI-powered platform that enhances the content creation process by focusing on both SEO and readability. This tool is designed for marketers, content creators, and SEO specialists who want to improve their writing and make it more effective. Textmetrics analyzes your text in real-time, providing insights and suggestions to optimize content for search engines while ensuring it remains engaging and easy to read for your audience. The platform comes equipped with various features, including keyword recommendations, readability scores, and style guides that align with your brand voice. Users can access a library of templates tailored for specific content types, making the writing process more efficient and structured. Textmetrics also allows for collaboration, enabling teams to work together seamlessly while maintaining consistent messaging. With its robust analytics, users can track performance and refine their content strategies over time. By leveraging the capabilities of Textmetrics, businesses can create high-quality content that not only resonates with their target audience but also ranks well in search engine results, ultimately driving traffic and engagement.",
+    "tags": [
+      "AI writing",
+      "SEO",
+      "content optimization",
+      "readability",
+      "copywriting",
+      "analytics"
+    ],
+    "category": "copywriting"
+  },
+  {
+    "name": "Narrato",
+    "slug": "narrato",
+    "url": "https://narrato.co",
+    "short_description": "Narrato provides an AI-driven platform for collaborative content creation and management.",
+    "long_description": "Narrato is an innovative platform designed for collaborative content creation and management, harnessing the power of artificial intelligence to streamline the writing process. This tool is particularly valuable for content teams and marketing departments that require a centralized platform for brainstorming, drafting, and editing. Narrato enables users to create high-quality content by providing AI-generated suggestions that enhance creativity and productivity. The platform’s user-friendly interface allows for seamless collaboration, with features that enable team members to comment, edit, and provide feedback in real time. Additionally, Narrato offers built-in SEO tools that optimize content for search engines, ensuring that it reaches the intended audience effectively. Users can access various templates tailored to different content types, making it easier to maintain a consistent brand voice. With its analytics features, Narrato provides insights into content performance, helping users refine their strategies over time. By utilizing Narrato, businesses can improve their content creation efficiency, foster teamwork, and enhance the overall quality of their output.",
+    "tags": [
+      "AI writing",
+      "collaboration",
+      "content management",
+      "SEO",
+      "teamwork",
+      "marketing"
+    ],
+    "category": "content creation"
+  },
+  {
+    "name": "Kreateable",
+    "slug": "kreateable",
+    "url": "https://kreateable.com",
+    "short_description": "Kreateable is an AI tool that helps users generate creative content for various marketing needs.",
+    "long_description": "Kreateable is an AI-powered content generation tool specifically designed to assist users in creating engaging and creative content for a variety of marketing needs. This innovative platform caters to marketers, business owners, and content creators looking for a way to streamline their writing process while ensuring high-quality output. Kreateable leverages advanced algorithms to understand the nuances of language and context, enabling it to produce text that is not only relevant but also compelling. Users can take advantage of a wide range of templates tailored for different content types, such as social media posts, email campaigns, and blog articles. The platform also includes features for collaboration, allowing teams to work together effectively in producing polished content. Kreateable's AI is continually learning from user interactions, improving its suggestions and outputs over time. Additionally, the tool is designed with SEO in mind, helping users create content that ranks well in search engines. By utilizing Kreateable, businesses can significantly enhance their content marketing efforts, saving both time and resources while maximizing impact.",
+    "tags": [
+      "AI writing",
+      "content creation",
+      "marketing",
+      "collaboration",
+      "SEO",
+      "creativity"
+    ],
+    "category": "content creation"
+  },
+  {
+    "name": "Contentful",
+    "slug": "contentful",
+    "url": "https://contentful.com",
+    "short_description": "Contentful is a content management platform that helps teams create, manage, and distribute content efficiently.",
+    "long_description": "Contentful is a dynamic content management platform designed to help teams create, manage, and distribute content efficiently across various digital channels. With its user-friendly interface and powerful API, Contentful allows users to streamline their content workflows, enabling faster and more effective content delivery. This platform is particularly beneficial for businesses looking to maintain a consistent brand presence across websites, mobile apps, and other digital touchpoints. Contentful supports collaborative content creation, allowing multiple team members to work together seamlessly on projects. Its flexibility enables users to customize content models to fit their specific needs, ensuring that all content remains organized and accessible. Additionally, Contentful integrates with a variety of third-party tools and services, enhancing its functionality and expanding its capabilities. With features designed for SEO optimization, users can ensure that their content ranks well in search engines, further increasing visibility and engagement. By utilizing Contentful, businesses can enhance their content strategy and elevate their digital marketing efforts, ultimately driving growth and connection with their audience.",
+    "tags": [
+      "content management",
+      "collaboration",
+      "API",
+      "digital marketing",
+      "SEO",
+      "flexibility"
+    ],
+    "category": "content creation"
   }
 ]
