@@ -1208,5 +1208,35 @@
       "flexibility"
     ],
     "category": "content creation"
+  },
+  {
+    "name": "Scribbl",
+    "slug": "scribbl",
+    "url": "https://scribbl.ai",
+    "short_description": "Scribbl is an AI writing assistant that helps produce high-quality content quickly.",
+    "long_description": "Scribbl is an innovative AI writing assistant designed to facilitate the content creation process for writers, marketers, and businesses. With its advanced algorithms, Scribbl generates high-quality content in various forms, including articles, social media posts, and marketing copy, in a matter of minutes. Users can input keywords, topics, or even specific guidelines, and Scribbl will produce multiple content variations that suit their needs. This not only saves time but also allows users to maintain a consistent flow of content across different platforms. Scribbl’s interface is user-friendly, making it accessible to both novice writers and seasoned professionals. The tool also includes features for SEO optimization, ensuring that content is not only engaging but also ranks well in search engines. By offering suggestions for improvements and edits, Scribbl helps users refine their work, resulting in polished and effective content. Overall, Scribbl empowers users to enhance their writing process and achieve their content goals more efficiently.",
+    "tags": [
+      "AI",
+      "writing assistant",
+      "content generation",
+      "marketing",
+      "automation"
+    ],
+    "category": "content creation"
+  },
+  {
+    "name": "Kuki",
+    "slug": "kuki",
+    "url": "https://www.kuki.ai",
+    "short_description": "Kuki is a conversational AI chatbot that helps users brainstorm and generate content ideas.",
+    "long_description": "Kuki is an advanced conversational AI chatbot designed to assist users in brainstorming and generating creative content ideas. This tool is especially valuable for marketers, writers, and content creators looking to overcome writer's block or find fresh perspectives for their projects. Kuki engages users in conversation, asking questions and providing prompts that stimulate creative thinking and help refine their ideas. With its natural language processing capabilities, Kuki can understand user inputs and respond in a way that feels conversational and engaging. Users can interact with Kuki to explore different themes, topics, and styles, making it a versatile resource for generating content across various platforms, including blogs, social media, and marketing campaigns. The chatbot can also provide suggestions for headlines, taglines, and other marketing copy, ensuring that users have a steady flow of inspiration at their fingertips. By combining the power of AI with conversational interaction, Kuki empowers users to enhance their content creation process and develop compelling narratives that resonate with their audiences.",
+    "tags": [
+      "AI",
+      "chatbot",
+      "content generation",
+      "brainstorming",
+      "creativity"
+    ],
+    "category": "content creation"
   }
 ]
