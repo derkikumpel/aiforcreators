@@ -29,7 +29,7 @@
       "short-form"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240365/creator-ai-tools/copyai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845859/creator-ai-tools/copyai.png"
   },
   {
     "name": "Writesonic",
@@ -61,7 +61,7 @@
       "product descriptions"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1759635609/creator-ai-tools/copysmith.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845869/creator-ai-tools/copysmith.png"
   },
   {
     "name": "Rytr",
@@ -93,7 +93,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1759635618/creator-ai-tools/peppertype-ai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845879/creator-ai-tools/peppertype-ai.png"
   },
   {
     "name": "ContentBot",
@@ -125,7 +125,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240395/creator-ai-tools/wordtune.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845888/creator-ai-tools/wordtune.png"
   },
   {
     "name": "Frase",
@@ -141,7 +141,7 @@
       "research"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240400/creator-ai-tools/frase.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845893/creator-ai-tools/frase.png"
   },
   {
     "name": "Kuki Chatbot",
@@ -190,7 +190,7 @@
       "performance"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1759031005/creator-ai-tools/anyword.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845907/creator-ai-tools/anyword.png"
   },
   {
     "name": "CopySmith",
@@ -224,7 +224,7 @@
       "productivity"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240425/creator-ai-tools/writesonic-pro.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845916/creator-ai-tools/writesonic-pro.png"
   },
   {
     "name": "Ink",
@@ -258,7 +258,7 @@
       "efficiency"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240435/creator-ai-tools/text-blaze.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845926/creator-ai-tools/text-blaze.png"
   },
   {
     "name": "ContentBot",
@@ -428,7 +428,7 @@
       "copywriting"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240482/creator-ai-tools/ai-writer.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845971/creator-ai-tools/ai-writer.png"
   },
   {
     "name": "WriteWithAI",
@@ -511,7 +511,7 @@
       "optimization"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1759635726/creator-ai-tools/scribe-ai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845984/creator-ai-tools/scribe-ai.png"
   },
   {
     "name": "HyperWrite",
@@ -527,7 +527,7 @@
       "productivity"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240502/creator-ai-tools/hyperwrite.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760845989/creator-ai-tools/hyperwrite.png"
   },
   {
     "name": "AI Dungeon",
@@ -591,7 +591,7 @@
       "audience targeting"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240515/creator-ai-tools/content-forge.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846001/creator-ai-tools/content-forge.png"
   },
   {
     "name": "StoryLab",
@@ -623,7 +623,7 @@
       "productivity"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1759635754/creator-ai-tools/peppertype.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846011/creator-ai-tools/peppertype.png"
   },
   {
     "name": "INK Editor",
@@ -671,7 +671,7 @@
       "productivity"
     ],
     "category": "copywriting",
-    "screenshot": "assets/placeholder.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846025/creator-ai-tools/quillbot.png"
   },
   {
     "name": "Sudowrite",
@@ -721,7 +721,7 @@
       "automation"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240550/creator-ai-tools/writesonic-ai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846039/creator-ai-tools/writesonic-ai.png"
   },
   {
     "name": "CopyMonkey",
@@ -806,7 +806,7 @@
       "marketing"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240568/creator-ai-tools/hyperwrite-ai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846055/creator-ai-tools/hyperwrite-ai.png"
   },
   {
     "name": "Scribbr",
@@ -891,7 +891,7 @@
       "automation"
     ],
     "category": "content creation",
-    "screenshot": "assets/placeholder.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846070/creator-ai-tools/contenthero.png"
   },
   {
     "name": "Narrative Generator",
@@ -959,7 +959,7 @@
       "content"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240622/creator-ai-tools/writeflow.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846113/creator-ai-tools/writeflow.png"
   },
   {
     "name": "AdCreative.ai",
@@ -976,7 +976,7 @@
       "creativity"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240629/creator-ai-tools/adcreativeai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846119/creator-ai-tools/adcreativeai.png"
   },
   {
     "name": "Phrasee",
@@ -1010,7 +1010,7 @@
       "marketing"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1759635869/creator-ai-tools/writerly.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846130/creator-ai-tools/writerly.png"
   },
   {
     "name": "Merlin",
@@ -1044,7 +1044,7 @@
       "user-friendly"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1759031226/creator-ai-tools/zyro-ai-content-generator.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846140/creator-ai-tools/zyro-ai-content-generator.png"
   },
   {
     "name": "AISEO",
@@ -1146,7 +1146,7 @@
       "SEO"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240676/creator-ai-tools/copy-ai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846163/creator-ai-tools/copy-ai.png"
   },
   {
     "name": "Copy.ai",
@@ -1163,7 +1163,7 @@
       "collaboration"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240681/creator-ai-tools/copy-ai-v2.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846168/creator-ai-tools/copy-ai-v2.png"
   },
   {
     "name": "ChatGPT",
@@ -1197,7 +1197,7 @@
       "productivity"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240686/creator-ai-tools/outwrite.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846173/creator-ai-tools/outwrite.png"
   },
   {
     "name": "ContentBot",
@@ -1231,7 +1231,7 @@
       "efficiency"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240698/creator-ai-tools/scalenut.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846184/creator-ai-tools/scalenut.png"
   },
   {
     "name": "Writer",
@@ -1248,7 +1248,7 @@
       "marketing"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240703/creator-ai-tools/writer-ai.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846188/creator-ai-tools/writer-ai.png"
   },
   {
     "name": "Textmetrics",
@@ -1265,7 +1265,7 @@
       "analytics"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240710/creator-ai-tools/textmetrics.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846195/creator-ai-tools/textmetrics.png"
   },
   {
     "name": "Narrato",
@@ -1299,7 +1299,7 @@
       "creativity"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240716/creator-ai-tools/kreateable.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846200/creator-ai-tools/kreateable.png"
   },
   {
     "name": "Contentful",
@@ -1316,7 +1316,7 @@
       "flexibility"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240722/creator-ai-tools/contentful.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846206/creator-ai-tools/contentful.png"
   },
   {
     "name": "Scribbl",
@@ -1332,7 +1332,7 @@
       "automation"
     ],
     "category": "content creation",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240726/creator-ai-tools/scribbl.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846210/creator-ai-tools/scribbl.png"
   },
   {
     "name": "Kuki",
@@ -1380,6 +1380,125 @@
       "marketing"
     ],
     "category": "copywriting",
-    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760240737/creator-ai-tools/kraftful.png"
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846220/creator-ai-tools/kraftful.png"
+  },
+  {
+    "name": "Writecream",
+    "slug": "writecream",
+    "url": "https://writecream.com",
+    "short_description": "Writecream is an innovative AI-powered tool designed for copywriters and content creators. It generates high-quality, engaging content quickly, helping users craft everything from blog posts to social media updates with ease and efficiency.",
+    "long_description": "Writecream is a cutting-edge AI writing assistant tailored for copywriters, marketers, and content creators. This versatile tool harnesses advanced artificial intelligence to generate high-quality, engaging content in a matter of seconds. Whether you're looking to create compelling blog posts, catchy social media updates, or persuasive email campaigns, Writecream simplifies the writing process, enabling you to focus on your ideas and creativity. With its user-friendly interface and intuitive design, you can easily input prompts and receive multiple content suggestions, making it a valuable resource for both seasoned professionals and beginners. Writecream also offers various templates and customization options, ensuring that your content aligns with your brand voice and objectives. By streamlining the content creation process, Writecream helps users save time and boost productivity, allowing them to produce more content in less time while maintaining high quality. Experience the future of content creation with Writecream and elevate your writing game today.",
+    "tags": [
+      "AI writing",
+      "copywriting",
+      "marketing",
+      "content generation",
+      "voiceovers",
+      "automation"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846225/creator-ai-tools/writecream.png"
+  },
+  {
+    "name": "Kettle",
+    "slug": "kettle",
+    "url": "https://kettle.ai",
+    "short_description": "An AI tool that helps create engaging content by generating ideas and outlines.",
+    "long_description": "Kettle is an innovative AI-driven content creation tool designed to assist writers and marketers in developing engaging and compelling content. By leveraging advanced natural language processing, Kettle generates content ideas, outlines, and even full articles based on user input. Its intuitive interface allows users to easily input topics or keywords, and the AI delivers a variety of suggestions tailored to the specified criteria. This feature not only saves time but also sparks creativity, helping users overcome writer's block. Additionally, Kettle offers a collaborative workspace where teams can brainstorm and refine their ideas together, making it an ideal choice for content teams. The tool is also equipped with analytics that provide insights into content performance, helping users optimize their writing for better engagement. With Kettle, users can streamline their content creation process while ensuring they produce high-quality, relevant material that resonates with their target audience.",
+    "tags": [
+      "content ideas",
+      "AI writing",
+      "collaboration",
+      "blogging",
+      "content marketing",
+      "automation"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846229/creator-ai-tools/kettle.png"
+  },
+  {
+    "name": "ScribeSense",
+    "slug": "scribesense",
+    "url": "https://scribesense.com",
+    "short_description": "An AI content generation platform tailored for educational and professional writing.",
+    "long_description": "ScribeSense is a specialized AI content generation platform that caters specifically to educational and professional writing needs. Designed for students, educators, and professionals, ScribeSense streamlines the writing process by providing tailored content suggestions, outlines, and templates based on user input. This tool helps users produce high-quality essays, reports, and research papers quickly and efficiently. By analyzing the context and requirements of the writing task, ScribeSense generates relevant content that aligns with academic standards. The platform also includes citation tools, ensuring that users can reference their sources accurately. With a focus on enhancing the writing skills of its users, ScribeSense offers feedback and suggestions for improvement, making it a valuable resource for learners. Its intuitive interface and comprehensive features make it easy for users to navigate, while its commitment to quality ensures that the content produced meets the expectations of educational institutions and professional environments. ScribeSense is the go-to solution for anyone looking to elevate their writing capabilities.",
+    "tags": [
+      "education",
+      "AI writing",
+      "academic writing",
+      "professional writing",
+      "content generation",
+      "templates"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846234/creator-ai-tools/scribesense.png"
+  },
+  {
+    "name": "Narrative AI",
+    "slug": "narrative-ai",
+    "url": "https://narrativeai.com",
+    "short_description": "Narrative AI is a cutting-edge tool designed for copywriters and content creators. It generates compelling narratives and engaging content, streamlining the writing process and enhancing creativity with its intuitive AI-driven suggestions.",
+    "long_description": "Narrative AI is an innovative tool tailored for copywriters and content creators seeking to elevate their storytelling capabilities. Harnessing the power of advanced artificial intelligence, it provides users with dynamic content generation, ensuring that every piece is not only engaging but also aligned with the desired tone and voice. Whether you're crafting marketing copy, blog posts, or social media content, Narrative AI streamlines the creative process by offering real-time suggestions, optimizing ideas, and enhancing narrative flow. Its user-friendly interface allows for easy integration into existing workflows, empowering writers to focus on creativity while the AI handles the heavy lifting. With features such as topic brainstorming, style customization, and grammar checking, Narrative AI helps elevate content quality and consistency. By leveraging data-driven insights and natural language processing, it adapts to individual writing styles, making it an invaluable companion for both seasoned professionals and emerging writers. Experience the future of content creation with Narrative AI, where creativity meets technology to deliver captivating stories that resonate with audiences.",
+    "tags": [
+      "storytelling",
+      "narrative writing",
+      "AI content",
+      "marketing",
+      "creative writing",
+      "automation"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846238/creator-ai-tools/narrative-ai.png"
+  },
+  {
+    "name": "Textual",
+    "slug": "textual",
+    "url": "https://textual.com",
+    "short_description": "An AI-powered writing assistant that helps create articles, blogs, and more.",
+    "long_description": "Textual is a robust AI-powered writing assistant designed to simplify the content creation process for writers, marketers, and businesses. By utilizing cutting-edge natural language processing technology, Textual analyzes user input to generate high-quality articles, blog posts, marketing copy, and other types of content. Users can start by providing a topic or keyword, and Textual will produce multiple content variations, allowing for quick selection and customization. The tool also offers features like grammar checking, style suggestions, and readability analysis to enhance the overall quality of the written material. Textual's collaborative capabilities enable teams to work together seamlessly, sharing ideas and refining drafts in real-time. This makes it an excellent choice for content teams and agencies that require efficient workflows. With its commitment to quality and user-friendly interface, Textual empowers users to meet their content goals while saving valuable time and effort, ensuring that they produce engaging and impactful writing.",
+    "tags": [
+      "AI writing",
+      "content generation",
+      "blogging",
+      "collaboration",
+      "marketing",
+      "productivity"
+    ],
+    "category": "content creation",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846243/creator-ai-tools/textual.png"
+  },
+  {
+    "name": "WordHero",
+    "slug": "wordhero",
+    "url": "https://wordhero.com",
+    "short_description": "An AI writing tool that helps generate blog posts, product descriptions, and more.",
+    "long_description": "WordHero is a versatile AI writing tool designed to assist users in generating a wide range of written content, including blog posts, product descriptions, social media content, and more. With its intuitive interface, users can easily input their desired topics or keywords, and WordHero's AI algorithms will generate multiple content options tailored to their specifications. This feature not only saves time but also inspires creativity, helping users overcome writer's block. WordHero includes various templates and formats, making it suitable for different content needs and styles. Additionally, the platform offers editing tools that allow users to refine and enhance the generated content to align with their brand voice. WordHero is particularly beneficial for small businesses, marketers, and content creators looking to produce high-quality writing quickly and efficiently. Its commitment to user satisfaction and continuous improvement ensures that users have access to a reliable and effective writing assistant that meets their evolving content needs.",
+    "tags": [
+      "AI writing",
+      "content generation",
+      "blogging",
+      "marketing",
+      "automation",
+      "product descriptions"
+    ],
+    "category": "copywriting",
+    "screenshot": "assets/placeholder.png"
+  },
+  {
+    "name": "Compose AI",
+    "slug": "compose-ai",
+    "url": "https://compose.ai",
+    "short_description": "Compose AI is an advanced writing assistant that empowers content creators with AI-driven suggestions, helping to generate high-quality copy quickly and efficiently. From blog posts to marketing materials, Compose AI enhances creativity and productivity with intuitive features.",
+    "long_description": "Compose AI is a cutting-edge writing tool designed to streamline the content creation process for marketers, bloggers, and businesses alike. Leveraging advanced artificial intelligence, it offers real-time suggestions and enhancements that cater to various writing styles and formats. Whether you're drafting a blog post, crafting social media content, or developing marketing copy, Compose AI helps you overcome writer's block and refine your ideas. Its user-friendly interface allows you to easily input your thoughts, while the AI analyzes context and tone to provide relevant recommendations, ensuring your message resonates with your target audience. With features like keyword optimization and style adaptability, Compose AI not only saves time but also improves the overall quality of your content. Embrace the future of writing with Compose AI, where creativity meets efficiency, enabling you to produce compelling content that drives engagement and conversions.",
+    "tags": [
+      "AI writing",
+      "productivity",
+      "text suggestions",
+      "autocomplete",
+      "automation",
+      "writing assistant"
+    ],
+    "category": "copywriting",
+    "screenshot": "https://res.cloudinary.com/djd5dgqor/image/upload/v1760846248/creator-ai-tools/compose-ai.png"
   }
 ]
