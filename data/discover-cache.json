@@ -1536,5 +1536,21 @@
       "Business"
     ],
     "category": "copywriting"
+  },
+  {
+    "name": "Scribbl AI",
+    "slug": "scribbl-ai",
+    "url": "https://scribbl.ai",
+    "short_description": "Scribbl AI simplifies content creation by offering AI-generated text that is tailored to user specifications.",
+    "long_description": "Scribbl AI is an innovative platform that simplifies the content creation process by offering AI-generated text tailored to user specifications. Designed for marketers, bloggers, and businesses, Scribbl AI allows users to input topics, keywords, or prompts to generate high-quality written content quickly. The platform's advanced algorithms analyze the input to craft engaging and relevant text that meets the user's needs. Whether it's articles, blog posts, or marketing copy, Scribbl AI can produce a variety of content types efficiently. Users can also customize the tone and style of the generated text, ensuring it aligns with their brand voice and messaging strategy. Additionally, Scribbl AI provides features for optimizing content for search engines, making it easier for users to enhance their online visibility. The user-friendly interface and ability to generate content in real-time make Scribbl AI an essential tool for anyone looking to streamline their writing process and produce professional-grade content in a fraction of the time.",
+    "tags": [
+      "AI",
+      "content generation",
+      "blogging",
+      "marketing",
+      "customization",
+      "efficiency"
+    ],
+    "category": "content creation"
   }
 ]
