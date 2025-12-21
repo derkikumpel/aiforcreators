@@ -1552,5 +1552,21 @@
       "efficiency"
     ],
     "category": "content creation"
+  },
+  {
+    "name": "TextBlaze",
+    "slug": "textblaze",
+    "url": "https://blaze.today",
+    "short_description": "TextBlaze is a text expansion tool that enhances writing speed and efficiency.",
+    "long_description": "TextBlaze is a powerful text expansion tool designed to enhance writing speed and efficiency by allowing users to create templates and snippets for frequently used text. This tool is perfect for professionals who often find themselves repeating the same phrases, responses, or content across various platforms. By leveraging TextBlaze's capabilities, users can create customizable shortcuts for emails, messages, and documents, significantly reducing the time spent on repetitive writing tasks. The platform features a user-friendly interface, making it easy to set up and manage snippets. Additionally, TextBlaze includes powerful formatting options and can integrate with various applications, enhancing its versatility. Users can also collaborate with team members by sharing snippets, ensuring consistency across communications. TextBlaze is particularly beneficial for customer support teams, sales professionals, and content creators who need to maintain efficiency while delivering quality content. With this tool, users can focus more on crafting engaging messages rather than getting bogged down by repetitive writing.",
+    "tags": [
+      "text expansion",
+      "automation",
+      "productivity",
+      "collaboration",
+      "templates",
+      "writing"
+    ],
+    "category": "copywriting"
   }
 ]
